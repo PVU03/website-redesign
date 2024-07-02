@@ -17,7 +17,6 @@ body {
     transform: translate(-50%, -80%);
     text-align: center;
     font-size: 64px;
-    color: #233F89;
     z-index: 1;
   }
 
@@ -33,21 +32,35 @@ body {
     font-size: 16px;
   }
 
-  /* Home Page */
-  /* Home Page */
-  .home_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 192px 480px 1fr 344px;
-    gap: 0px 0px;
-    grid-template-areas:
-      "header"
-      "home_banner"
-      "home_content"
-      "footer";
+  /* Header Button Fonts Per Page */
+  
+  #AboutUsButton {
+    color:#812036;
   }
 
-  /* header */
+  #SacramentsButton {
+    color:#812036;
+  }
+
+  #BulletinsButton {
+    color:#812036;
+  }
+
+  #YouthButton {
+    color:#812036;
+  }
+
+  #GetInvolvedButton {
+    color:#812036;
+  }
+
+  #ContactUSButton {
+    color:#812036;
+  }
+
+  /* Header for All Pages */
+  /* Header for All Pages */
+  /* Header for All Pages */
   .header {
     grid-area: header;
     background-color: white;
@@ -66,89 +79,20 @@ body {
     cursor: pointer;
   }
 
-  #header_button {
+  .header_button {
     text-decoration: none;
     color: black;
-    background: none; 
-    border: none; 
-    padding: 0; 
+    background: none;
+    border: none;
+    padding: 0;
     margin: 0;
     cursor: pointer;
     font-size: 24px;
   }
 
-  /* logo */
-  #logo-button img {
-    width: 160px;
-    height: 160px;
-    background: #FFFFFF;
-  }
-
-  /* banner */
-  .home_banner {
-    grid-area: home_banner;
-    position: relative;
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .home_banner img {
-    width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
-  }
-
-  /* content */
-  .home_content {
-    display: grid;
-    grid-template-columns: 33% 33% 34%;
-    grid-template-rows: 2fr 0.7fr 0.3fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "home_video home_video timetable"
-      "home_message home_message timetable"
-      "home_photo_gallery home_photo_gallery timetable";
-    grid-area: home_content;
-    background-color: white;
-  }
-
-  /* video */
-  .home_video {
-    grid-area: home_video;
-    padding: 0 120px 40px;
-  }
-
-  #video_table {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* message */
-  .home_message {
-    grid-area: home_message;
-    padding: 0 120px 40px;
-    background-color: white;
-  }
-
-  /* photo gallery */
-  .home_photo_gallery {
-    grid-area: home_photo_gallery;
-    padding: 0 120px 40px;
-    background-color: white;
-  }
-
-  /* timetable */
-  .timetable {
-    grid-area: timetable;
-    padding: 0 120px 40px;
-    background-color: white;
-  }
-
-  /* footer */
+  /* Footer for All Pages */
+  /* Footer for All Pages */
+  /* Footer for All Pages */
   .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -252,12 +196,102 @@ body {
     font-size: 12px;
   }
 
+  /* Home Page */
+  /* Home Page */
+  .home_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 192px 480px 1fr 344px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "home_banner"
+      "home_content"
+      "footer";
+  }
+
+  /* logo */
+  #logo-button img {
+    width: 160px;
+    height: 160px;
+    background: #FFFFFF;
+  }
+
+  /* banner */
+  .home_banner {
+    grid-area: home_banner;
+    position: relative;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home_banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .home_banner #banner_title {
+    color: #233F89;
+  }
+
+  /* content */
+  .home_content {
+    display: grid;
+    padding: 0 120px 40px 120px;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 2fr 0.7fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "home_video home_video timetable"
+      "home_message home_message timetable"
+      "home_photo_gallery home_photo_gallery timetable";
+    grid-area: home_content;
+    background-color: white;
+  }
+
+  /* video */
+  .home_video {
+    grid-area: home_video;
+    padding: 0 0 40px;
+  }
+
+  #video_table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* message */
+  .home_message {
+    grid-area: home_message;
+    padding: 0 0 40px;
+    background-color: white;
+  }
+
+  /* photo gallery */
+  .home_photo_gallery {
+    grid-area: home_photo_gallery;
+    padding: 0 120px 40px;
+    background-color: white;
+  }
+
+  /* timetable */
+  .timetable {
+    grid-area: timetable;
+    padding: 0 120px 40px;
+    background-color: white;
+  }
+
   /* About Us Page */
   /* About Us Page */
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 192px 480px 1fr 344px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -267,20 +301,29 @@ body {
       "footer";
   }
 
-  .header {
-    grid-area: header;
-  }
-
   .about_banner {
     grid-area: about_banner;
+    position: relative;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about_banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .about_banner #banner_title {
+    color: #FFFFFF;
   }
 
   .about_content {
     grid-area: about_content;
-  }
-
-  .footer {
-    grid-area: footer;
+    padding: 0 120px 40px 120px;
   }
 
 }
