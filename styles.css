@@ -4,6 +4,9 @@ body {
 }
 
 /* media query for desktop */
+/* media query for desktop */
+/* media query for desktop */
+/* media query for desktop */
 @media only screen and (min-width: 430px) {
 
   /* font styles */
@@ -31,15 +34,16 @@ body {
   }
 
   /* Home Page */
-  .container {
+  /* Home Page */
+  .home_container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 192px 480px 1fr 344px;
     gap: 0px 0px;
     grid-template-areas:
       "header"
-      "banner"
-      "content"
+      "home_banner"
+      "home_content"
       "footer";
   }
 
@@ -70,8 +74,8 @@ body {
   }
 
   /* banner */
-  .banner {
-    grid-area: banner;
+  .home_banner {
+    grid-area: home_banner;
     position: relative;
     background-color: pink;
     display: flex;
@@ -79,7 +83,7 @@ body {
     align-items: center;
   }
 
-  .banner img {
+  .home_banner img {
     width: 100%;
     height: auto;
     max-height: 480px;
@@ -87,22 +91,22 @@ body {
   }
 
   /* content */
-  .content {
+  .home_content {
     display: grid;
     grid-template-columns: 33% 33% 34%;
     grid-template-rows: 2fr 0.7fr 0.3fr;
     gap: 0px 0px;
     grid-template-areas:
-      "video video timetable"
-      "message message timetable"
-      "photo_gallery photo_gallery timetable";
-    grid-area: content;
+      "home_video home_video timetable"
+      "home_message home_message timetable"
+      "home_photo_gallery home_photo_gallery timetable";
+    grid-area: home_content;
     background-color: white;
   }
 
   /* video */
-  .video {
-    grid-area: video;
+  .home_video {
+    grid-area: home_video;
     padding: 0 120px 40px;
   }
 
@@ -113,15 +117,15 @@ body {
   }
 
   /* message */
-  .message {
-    grid-area: message;
+  .home_message {
+    grid-area: home_message;
     padding: 0 120px 40px;
     background-color: white;
   }
 
   /* photo gallery */
-  .photo_gallery {
-    grid-area: photo_gallery;
+  .home_photo_gallery {
+    grid-area: home_photo_gallery;
     padding: 0 120px 40px;
     background-color: white;
   }
@@ -236,4 +240,7 @@ body {
   #credit {
     font-size: 12px;
   }
+
+  /* Contact Us Page */
+  
 }
