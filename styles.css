@@ -1,0 +1,239 @@
+body {
+  background-color: white;
+  margin: 0;
+}
+
+/* media query for desktop */
+@media only screen and (min-width: 430px) {
+
+  /* font styles */
+  #banner_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    text-align: center;
+    font-size: 64px;
+    color: #233F89;
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* Home Page */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 192px 480px 1fr 344px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "banner"
+      "content"
+      "footer";
+  }
+
+  /* header */
+  .header {
+    grid-area: header;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header button {
+    border: none;
+    background: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* logo */
+  #logo-button img {
+    width: 160px;
+    height: 160px;
+    background: #FFFFFF;
+  }
+
+  /* banner */
+  .banner {
+    grid-area: banner;
+    position: relative;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  /* content */
+  .content {
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 2fr 0.7fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "video video timetable"
+      "message message timetable"
+      "photo_gallery photo_gallery timetable";
+    grid-area: content;
+    background-color: white;
+  }
+
+  /* video */
+  .video {
+    grid-area: video;
+    padding: 0 120px 40px;
+  }
+
+  #video_table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* message */
+  .message {
+    grid-area: message;
+    padding: 0 120px 40px;
+    background-color: white;
+  }
+
+  /* photo gallery */
+  .photo_gallery {
+    grid-area: photo_gallery;
+    padding: 0 120px 40px;
+    background-color: white;
+  }
+
+  /* timetable */
+  .timetable {
+    grid-area: timetable;
+    padding: 0 120px 40px;
+    background-color: white;
+  }
+
+  /* footer */
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "agencies cont_info socials"
+      "agencies cont_info socials"
+      "agencies cont_info socials";
+    grid-area: footer;
+
+    background-color: #233F89;
+
+    text-align: center;
+  }
+
+  .footer div {
+    flex: 1;
+    text-align: center;
+    color: white;
+  }
+
+  .footer p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* agencies */
+  .agencies {
+    grid-area: agencies;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .agencies_link {
+    display: flex;
+    align-items: center;
+    width:375px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+  }
+
+  .agencies_link img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+
+  /* contact us */
+  .cont_info {
+    grid-area: cont_info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact_link {
+    display: flex;
+    align-items: center;
+    width:305px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+  }
+
+  .contact_link img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+
+  /* socials */
+  .socials {
+    grid-area: socials;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social_link {
+    display: flex;
+    align-items: center;
+    width:124px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+  }
+
+  .social_link img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    
+  }
+
+  /* acknowledgement sizes */
+  #credit {
+    font-size: 12px;
+  }
+}
