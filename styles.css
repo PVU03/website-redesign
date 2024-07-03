@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #233F89;
   margin: 0;
 }
 
@@ -214,6 +214,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
   }
 
   .home_banner img {
@@ -297,6 +298,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+
   }
 
   .about_banner img {
@@ -314,6 +317,8 @@ body {
   .about_content {
     grid-area: about_content;
     padding: 0 120px 40px 120px;
+    background-color: white;
+
   }
 
   /* Sacraments Page */
@@ -363,6 +368,8 @@ body {
       "side_menu sacrament_info";
     grid-area: sacraments_content;
     display: flex;
+    background-color: white;
+
   }
 
   /* Sacraments Page Content - Side Menu */
@@ -407,8 +414,9 @@ body {
   }
 
   .content-item img {
-    width: 540px;
-    height: 360px;
+    width: 100%;
+    max-width: 540px;
+    height: auto;
     display: block;
     margin: 0 auto;
   }
@@ -417,4 +425,41 @@ body {
     text-align: center;
   }
 
+  /* Sacraments Page FAQ Dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: #D9D9D9;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #D9D9D9;
+  width: 100%;
+  z-index: 1;
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 8px;
+}
+
+
+.show {
+    display: block;
+}
+
+.dropbtn.active {
+    background-color: #D9D9D9;
+}
 }

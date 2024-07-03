@@ -1,3 +1,4 @@
+// SACRAMENTS PAGE - side menu js code
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.menu-button');
     const contents = document.querySelectorAll('.content-item');
@@ -28,3 +29,29 @@ document.addEventListener('DOMContentLoaded', function() {
     buttons[0].classList.add('active');
   });
   
+// SACRAMENTS PAGE - dropdown menu js code
+function toggleDropdown(section) {
+  var dropdown = document.getElementById(section + 'Dropdown');
+  dropdown.classList.toggle("show");
+  var button = document.querySelector('.' + section + '-dropbtn');
+  button.classList.toggle("active");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+          }
+      }
+      var buttons = document.getElementsByClassName("dropbtn");
+      for (var j = 0; j < buttons.length; j++) {
+          var button = buttons[j];
+          if (button.classList.contains('active')) {
+              button.classList.remove('active');
+          }
+      }
+  }
+}
