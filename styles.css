@@ -395,7 +395,7 @@ body {
   .sacrament_info {
     grid-area: sacrament_info;
     flex-grow: 1;
-    padding: 20px;
+    padding: 0 40px 120px 0px;
   }
 
   .content-item {
