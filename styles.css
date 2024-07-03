@@ -413,4 +413,8 @@ body {
     margin: 0 auto;
   }
 
+  .content-item #sacrament_photo_credit {
+    text-align: center;
+  }
+
 }
