@@ -33,29 +33,29 @@ body {
   }
 
   /* Header Button Fonts Per Page */
-  
+
   #AboutUsButton {
-    color:#812036;
+    color: #812036;
   }
 
   #SacramentsButton {
-    color:#812036;
+    color: #812036;
   }
 
   #BulletinsButton {
-    color:#812036;
+    color: #812036;
   }
 
   #YouthButton {
-    color:#812036;
+    color: #812036;
   }
 
   #GetInvolvedButton {
-    color:#812036;
+    color: #812036;
   }
 
   #ContactUSButton {
-    color:#812036;
+    color: #812036;
   }
 
   /* Header for All Pages */
@@ -138,12 +138,6 @@ body {
     color: white;
   }
 
-  .agencies_link img {
-    width: 48px;
-    height: 48px;
-    margin-right: 10px;
-  }
-
   /* contact us */
   .cont_info {
     grid-area: cont_info;
@@ -159,12 +153,6 @@ body {
     margin: 10px 0;
     text-decoration: none;
     color: white;
-  }
-
-  .contact_link img {
-    width: 48px;
-    height: 48px;
-    margin-right: 10px;
   }
 
   /* socials */
@@ -184,11 +172,13 @@ body {
     color: white;
   }
 
+  /* icon/logo image settings */
+  .agencies_link img,
+  .contact_link img,
   .social_link img {
     width: 48px;
     height: 48px;
     margin-right: 10px;
-
   }
 
   /* acknowledgement sizes */
@@ -221,7 +211,6 @@ body {
   .home_banner {
     grid-area: home_banner;
     position: relative;
-    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,7 +277,7 @@ body {
 
   /* About Us Page */
   /* About Us Page */
-  .container {
+  .about_container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 192px 480px 1fr 344px;
@@ -301,10 +290,10 @@ body {
       "footer";
   }
 
+  /* About Page Banner */
   .about_banner {
     grid-area: about_banner;
     position: relative;
-    background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,9 +310,101 @@ body {
     color: #FFFFFF;
   }
 
+  /* About Page Content */
   .about_content {
     grid-area: about_content;
     padding: 0 120px 40px 120px;
   }
+
+  /* Sacraments Page */
+  /* Sacraments Page */
+
+  .sacraments_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 192px 480px 1fr 344px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "sacraments_banner"
+      "sacraments_content"
+      "footer";
+  }
+
+  /* Sacraments Page Banner */
+  .sacraments_banner {
+    grid-area: sacraments_banner;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sacraments_banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .sacraments_banner #banner_title {
+    color: #233F89;
+  }
+
+  /* Sacraments Page Content */
+  .sacraments_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "side_menu sacrament_info";
+    grid-area: sacraments_content;
+    display: flex;
+  }
+
+  /* Sacraments Page Content - Side Menu */
+  .side_menu {
+    grid-area: sacraments_menu;
+    width: 400px;
+    padding: 40px 0px 120px 64px;
+  }
+
+  .menu-button {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    text-align: left;
+    cursor: pointer;
+    font-size: 32px;
+    text-decoration: none;
+  }
+
+  .menu-button:hover,
+  .menu-button.active {
+    text-decoration: underline;
+  }
+
+  /* Sacraments Page Content - Information */
+  .sacrament_info {
+    grid-area: sacrament_info;
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  .content-item {
+    display: none;
+  }
+
+  .content-item.active {
+    display: block;
+  }
+
 
 }
