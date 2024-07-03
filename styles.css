@@ -430,9 +430,9 @@ body {
     position: relative;
     display: inline-block;
     width: 100%;
-}
+  }
 
-.dropbtn {
+  .dropbtn {
     background-color: #D9D9D9;
     color: black;
     padding: 16px;
@@ -441,25 +441,88 @@ body {
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
-}
+  }
 
-.dropdown-content {
-  display: none;
-  background-color: #D9D9D9;
-  width: 100%;
-  z-index: 1;
-  padding: 16px;
-  box-sizing: border-box;
-  position: relative;
-  margin-top: 8px;
-}
-
-
-.show {
-    display: block;
-}
-
-.dropbtn.active {
+  .dropdown-content {
+    display: none;
     background-color: #D9D9D9;
-}
+    width: 100%;
+    z-index: 1;
+    padding: 16px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 8px;
+  }
+
+
+  .show {
+    display: block;
+  }
+
+  .dropbtn.active {
+    background-color: #D9D9D9;
+  }
+
+  /* Bulletin Page */
+  /* Bulletin Page */
+
+  .bulletin_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 192px 480px 1fr 344px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "bulletin_banner"
+      "bulletin_content"
+      "footer";
+    background-color: white;
+  }
+
+  /* Bulletin Page Banner */
+  .bulletin_banner {
+    grid-area: bulletin_banner;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bulletin_banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .bulletin_banner #banner_title {
+    color: #233F89;
+  }
+
+/* Bulletin Page Content */
+  .bulletin_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "current_bulletin"
+      "past_bulletins";
+    grid-area: bulletin_content;
+  }
+
+  /* Bulletin Page Current Bulletin */
+  .current_bulletin {
+    grid-area: current_bulletin;
+  }
+
+  /* Bulletin Page Past Bulletins */
+  .past_bulletins {
+    grid-area: past_bulletins;
+  }
+
+
+
 }
