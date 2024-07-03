@@ -20,6 +20,17 @@ body {
     z-index: 1;
   }
 
+  .home_banner #credit,
+  .about_banner #credit,
+  .sacraments_banner #credit,
+  .bulletin_banner #credit {
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+    font-size: 14px;
+    z-index: 1;
+  }
+
   h2 {
     font-size: 48px;
   }
@@ -191,7 +202,7 @@ body {
   .home_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 480px 1fr 344px;
+    grid-template-rows: 192px 575px 1fr 344px;
     gap: 0px 0px;
     grid-template-areas:
       "header"
@@ -227,6 +238,7 @@ body {
   .home_banner #banner_title {
     color: #233F89;
   }
+
 
   /* content */
   .home_content {
@@ -281,7 +293,7 @@ body {
   .about_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 480px 1fr 344px;
+    grid-template-rows: 192px 575px 1fr 344px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -318,7 +330,6 @@ body {
     grid-area: about_content;
     padding: 0 120px 40px 120px;
     background-color: white;
-
   }
 
   /* Sacraments Page */
@@ -327,7 +338,7 @@ body {
   .sacraments_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 480px 1fr 344px;
+    grid-template-rows: 192px 575px 1fr 344px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -344,6 +355,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
   }
 
   .sacraments_banner img {
@@ -376,7 +388,7 @@ body {
   .side_menu {
     grid-area: sacraments_menu;
     width: 400px;
-    padding: 40px 0px 120px 64px;
+    padding: 40px 0px 120px 60px;
   }
 
   .menu-button {
@@ -469,7 +481,7 @@ body {
   .bulletin_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 480px 1fr 344px;
+    grid-template-rows: 192px 575px 1fr 344px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -497,20 +509,23 @@ body {
   }
 
   .bulletin_banner #banner_title {
-    color: #233F89;
+    color: #812036;
   }
 
-/* Bulletin Page Content */
+  /* Bulletin Page Content */
   .bulletin_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 700px 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "current_bulletin"
       "past_bulletins";
     grid-area: bulletin_content;
+
+    padding: 0 120px 40px 120px;
+    background-color: white;
   }
 
   /* Bulletin Page Current Bulletin */
@@ -518,11 +533,80 @@ body {
     grid-area: current_bulletin;
   }
 
+  /* Bulletin Page Current Bulletin */
+  .current_bulletin {
+    grid-area: current_bulletin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* Bulletin Page Past Bulletins */
   .past_bulletins {
     grid-area: past_bulletins;
   }
 
+  .bulletin-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .past_bulletin {
+    flex: 1 1 380px;
+    max-width: 380px;
+  }
+
+  /* Bulletin Button */
+  .bulletin-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    /* Adjust the max-width as needed */
+  }
+
+  .bulletin-button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .bulletin-button img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  /* Adjust the height of past bulletins to be the same */
+  .past_bulletin {
+    flex: 1 1 380px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ensure each bulletin occupies the same height */
+  .past_bulletin a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Optional: Center align content inside each bulletin */
+  .past_bulletin a {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
 
 }
