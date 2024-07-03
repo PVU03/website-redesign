@@ -232,7 +232,7 @@ body {
     display: grid;
     padding: 0 120px 40px 120px;
     grid-template-columns: 33% 33% 34%;
-    grid-template-rows: 2fr 0.7fr 0.3fr;
+    grid-template-rows: 1fr 0.4fr 0.2fr;
     gap: 0px 0px;
     grid-template-areas:
       "home_video home_video timetable"
@@ -245,7 +245,7 @@ body {
   /* video */
   .home_video {
     grid-area: home_video;
-    padding: 0 0 40px;
+    padding: 0 0 40px 0;
   }
 
   #video_table {
@@ -257,7 +257,7 @@ body {
   /* message */
   .home_message {
     grid-area: home_message;
-    padding: 0 0 40px;
+    padding: 0 0 40px 0;
     background-color: white;
   }
 
@@ -395,7 +395,7 @@ body {
   .sacrament_info {
     grid-area: sacrament_info;
     flex-grow: 1;
-    padding: 0 40px 120px 0px;
+    padding: 0 120px 120px 0px;
   }
 
   .content-item {
@@ -406,5 +406,11 @@ body {
     display: block;
   }
 
+  .content-item img {
+    width: 540px;
+    height: 360px;
+    display: block;
+    margin: 0 auto;
+  }
 
 }
