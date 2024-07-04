@@ -23,7 +23,8 @@ body {
   .home_banner #credit,
   .about_banner #credit,
   .sacraments_banner #credit,
-  .bulletin_banner #credit {
+  .bulletin_banner #credit,
+  .youth_banner #credit {
     position: absolute;
     bottom: 10px;
     left: 120px;
@@ -45,26 +46,11 @@ body {
 
   /* Header Button Fonts Per Page */
 
-  #AboutUsButton {
-    color: #812036;
-  }
-
-  #SacramentsButton {
-    color: #812036;
-  }
-
-  #BulletinsButton {
-    color: #812036;
-  }
-
-  #YouthButton {
-    color: #812036;
-  }
-
-  #GetInvolvedButton {
-    color: #812036;
-  }
-
+  #AboutUsButton,
+  #SacramentsButton,
+  #BulletinsButton,
+  #YouthButton,
+  #GetInvolvedButton,
   #ContactUSButton {
     color: #812036;
   }
@@ -608,5 +594,77 @@ body {
     text-align: center;
   }
 
+  /* Youth Page */
+  /* Youth Page */
+
+  .youth_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 192px 575px 1fr 344px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "youth_banner"
+      "youth_content"
+      "footer";
+  }
+
+  .youth_banner {
+    grid-area: youth_banner;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .youth_banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .youth_banner #banner_title {
+    color: #812036;
+  }
+
+
+  .youth_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "youth_intro"
+      "youth_events"
+      "youth_recap"
+      "youth_gallery";
+    grid-area: youth_content;
+    background-color: white;
+    padding: 0 120px 40px 120px;
+
+  }
+
+  .youth_intro {
+    grid-area: youth_intro;
+    background-color: red;
+  }
+
+  .youth_events {
+    grid-area: youth_events;
+    background-color: blue;
+  }
+
+  .youth_recap {
+    grid-area: youth_recap;
+    background-color: green;
+  }
+
+  .youth_gallery {
+    grid-area: youth_gallery;
+  }
 
 }
