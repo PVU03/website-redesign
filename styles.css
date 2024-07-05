@@ -534,8 +534,7 @@ body {
     color: #812036;
   }
 
-  /* Bulletin Page Content */
-  .bulletin_content {
+  /* .bulletin_content {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 700px 1fr;
@@ -550,12 +549,10 @@ body {
     background-color: white;
   }
 
-  /* Bulletin Page Current Bulletin */
   .current_bulletin {
     grid-area: current_bulletin;
   }
 
-  /* Bulletin Page Current Bulletin */
   .current_bulletin {
     grid-area: current_bulletin;
     display: flex;
@@ -563,7 +560,6 @@ body {
     align-items: center;
   }
 
-  /* Bulletin Page Past Bulletins */
   .past_bulletins {
     grid-area: past_bulletins;
   }
@@ -580,7 +576,6 @@ body {
     max-width: 380px;
   }
 
-  /* Bulletin Button */
   .bulletin-button {
     display: flex;
     flex-direction: column;
@@ -593,7 +588,6 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s, box-shadow 0.3s;
     max-width: 300px;
-    /* Adjust the max-width as needed */
   }
 
   .bulletin-button:hover {
@@ -608,7 +602,6 @@ body {
     border-radius: 5px;
   }
 
-  /* Adjust the height of past bulletins to be the same */
   .past_bulletin {
     flex: 1 1 380px;
     max-width: 380px;
@@ -616,18 +609,97 @@ body {
     flex-direction: column;
   }
 
-  /* Ensure each bulletin occupies the same height */
   .past_bulletin a {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  /* Optional: Center align content inside each bulletin */
   .past_bulletin a {
     justify-content: center;
     align-items: center;
     text-align: center;
+  } */
+
+  /* Bulletin Content */
+  .bulletin_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 700px 1fr 700px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "current_bulletin"
+      "past_bulletin_h2"
+      "past_bulletin_carousel";
+    grid-area: bulletin_content;
+  }
+
+  /* Current Bulletin */
+  .current_bulletin {
+    grid-area: current_bulletin;
+  }
+
+  .current_bulletin {
+    grid-area: current_bulletin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Past Bulletin Header */
+  .past_bulletin_h2 {
+    grid-area: past_bulletin_h2;
+  }
+
+  /* Past Bulletin Carousel */
+  .past_bulletin_carousel {
+    grid-area: past_bulletin_carousel;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .bulletin_scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 400px;
+    column-gap: 24px;
+  }
+
+  .past_bulletin {
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* Bulletin Button Styling */
+  .bulletin-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+  }
+
+  .bulletin-button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .bulletin-button img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
   }
 
   /* Youth Page */
