@@ -534,93 +534,6 @@ body {
     color: #812036;
   }
 
-  /* .bulletin_content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 700px 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "current_bulletin"
-      "past_bulletins";
-    grid-area: bulletin_content;
-
-    padding: 0 120px 40px 120px;
-    background-color: white;
-  }
-
-  .current_bulletin {
-    grid-area: current_bulletin;
-  }
-
-  .current_bulletin {
-    grid-area: current_bulletin;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .past_bulletins {
-    grid-area: past_bulletins;
-  }
-
-  .bulletin-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .past_bulletin {
-    flex: 1 1 380px;
-    max-width: 380px;
-  }
-
-  .bulletin-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    max-width: 300px;
-  }
-
-  .bulletin-button:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .bulletin-button img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-
-  .past_bulletin {
-    flex: 1 1 380px;
-    max-width: 380px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .past_bulletin a {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .past_bulletin a {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  } */
-
   /* Bulletin Content */
   .bulletin_content {
     display: grid;
@@ -633,6 +546,8 @@ body {
       "past_bulletin_h2"
       "past_bulletin_carousel";
     grid-area: bulletin_content;
+    padding: 0 120px 40px 120px;
+    background-color: white;
   }
 
   /* Current Bulletin */
