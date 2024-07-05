@@ -55,6 +55,42 @@ body {
     color: #812036;
   }
 
+  /* Facebook Popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4C7DBD;
+    border-bottom: 1px solid #4C7DBD;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    color: white;
+    transition: top 1s ease-out;
+  }
+
+  .popup-close {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+
+  .popup a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .popup.hide {
+    top: -100px;
+  }
+
+
   /* Header for All Pages */
   /* Header for All Pages */
   /* Header for All Pages */
@@ -651,20 +687,31 @@ body {
   .youth_intro {
     grid-area: youth_intro;
     background-color: red;
+    padding: 0 0 40px 0;
   }
 
   .youth_events {
     grid-area: youth_events;
     background-color: blue;
+    padding: 0 0 40px 0;
   }
 
   .youth_recap {
     grid-area: youth_recap;
     background-color: green;
+    padding: 0 0 40px 0;
+  }
+
+  #recap_video_table {
+    width: 62%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .youth_gallery {
     grid-area: youth_gallery;
+    padding: 0 0 40px 0;
   }
+
 
 }
