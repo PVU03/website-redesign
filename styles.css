@@ -24,7 +24,9 @@ body {
   .about_banner #credit,
   .sacraments_banner #credit,
   .bulletin_banner #credit,
-  .youth_banner #credit {
+  .youth_banner #credit,
+  .contact_banner #credit,
+  .involved_banner #credit {
     position: absolute;
     bottom: 10px;
     left: 120px;
@@ -51,7 +53,7 @@ body {
   #BulletinsButton,
   #YouthButton,
   #GetInvolvedButton,
-  #ContactUSButton {
+  #ContactUsButton {
     color: #812036;
   }
 
@@ -633,6 +635,7 @@ body {
       "footer";
   }
 
+  /* Youth Page Banner */
   .youth_banner {
     grid-area: youth_banner;
     position: relative;
@@ -653,7 +656,7 @@ body {
     color: #812036;
   }
 
-
+  /* Youth Page Content */
   .youth_content {
     display: grid;
     grid-template-columns: 1fr;
@@ -700,5 +703,127 @@ body {
     padding: 0 0 40px 0;
   }
 
+  /* Contact Us Page */
+  /* Contact Us Page */
+  .contact_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 192px 575px 1fr 344px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "contact_banner"
+      "contact_content"
+      "footer";
+  }
+
+  .contact_banner {
+    grid-area: contact_banner;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .contact_banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  .contact_banner #banner_title {
+    color: #812036;
+  }
+
+  .contact_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px 1fr 930px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contact_map"
+      "contact_message"
+      "contact_connections";
+    grid-area: contact_content;
+    padding: 0 120px 0 120px;
+    background-color: white;
+  }
+
+  /* Contact Page Map */
+  .contact_map {
+    grid-area: contact_map;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+  }
+
+  .contact_map iframe {
+    width: 100%;
+    height: 750px;
+    border: 0;
+    margin: auto;
+    display: block;
+  }
+
+  /* Contact Page Message */
+  .contact_message {
+    grid-area: contact_message;
+    padding: 40px 0px 40px 0px;
+  }
+
+  /* Contact Page Message Form Styling */
+  .contact_message form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact_message label {
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+    font-size: 24px;
+  }
+
+  .contact_message input[type="text"],
+  .contact_message input[type="email"],
+  .contact_message textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #d9d9d9;
+    color: black;
+  }
+
+  .contact_message textarea {
+    min-height: 150px;
+  }
+
+  .contact_message input[type="submit"] {
+    background-color: #812036;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .contact_message input[type="submit"]:hover {
+    background-color: #5e1625;
+  }
+
+  /* Contact Page Connections */
+  .contact_connections {
+    grid-area: contact_connections;
+    padding: 0 0px 40px 0px;
+  }
 
 }
