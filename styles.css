@@ -604,6 +604,7 @@ body {
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
+    
   }
 
   /* Bulletin Button Styling */
@@ -619,6 +620,7 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s, box-shadow 0.3s;
     max-width: 300px;
+    font-size: 20px;
   }
 
   .bulletin-button:hover {
@@ -670,7 +672,7 @@ body {
   .youth_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.2fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -686,19 +688,62 @@ body {
 
   .youth_intro {
     grid-area: youth_intro;
-    background-color: red;
     padding: 0 0 40px 0;
   }
 
   .youth_events {
     grid-area: youth_events;
-    background-color: blue;
     padding: 0 0 40px 0;
   }
 
+  /* CSS for Event Cards */
+.event_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust as needed for spacing between cards */
+}
+
+/* Youth Events */
+.event_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+}
+
+.event_card {
+  width: calc(33.33% - 20px);
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none; 
+  color: #333;
+  display: block;
+}
+
+.event_card:hover {
+  transform: translateY(-5px);
+}
+
+.event_card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.event_description {
+  padding: 24px;
+}
+
+.event_description h3 {
+  margin-top: 0;
+}
+
+/* Youth Recap Video */
   .youth_recap {
     grid-area: youth_recap;
-    background-color: green;
     padding: 0 0 40px 0;
   }
 
