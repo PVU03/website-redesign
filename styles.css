@@ -65,7 +65,7 @@ body {
     background-color: #4C7DBD;
     border-bottom: 1px solid #4C7DBD;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 1px;
     text-align: center;
     z-index: 1000;
     color: white;
@@ -134,8 +134,8 @@ body {
   .sacraments_banner::before,
   .bulletin_banner::before,
   .youth_banner::before,
-  .contact_banner::before,
-  .involved_banner::before {
+  .involved_banner::before,
+  .contact_banner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -151,8 +151,8 @@ body {
   .sacraments_banner #banner_title,
   .bulletin_banner #banner_title,
   .youth_banner #banner_title,
-  .contact_banner #banner_title,
-  .involved_banner #banner_title {
+  .involved_banner #banner_title,
+  .contact_banner #banner_title {
     color: #5e1625;
   }
 
@@ -604,7 +604,7 @@ body {
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
-    
+
   }
 
   /* Bulletin Button Styling */
@@ -697,51 +697,52 @@ body {
   }
 
   /* CSS for Event Cards */
-.event_cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adjust as needed for spacing between cards */
-}
+  .event_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adjust as needed for spacing between cards */
+  }
 
-/* Youth Events */
-.event_cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; 
-  justify-content: center;
-}
+  /* Youth Events */
+  .event_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
 
-.event_card {
-  width: calc(33.33% - 20px);
-  background-color: #d9d9d9;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-decoration: none; 
-  color: #333;
-  display: block;
-}
+  .event_card {
+    width: calc(33.33% - 20px);
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
 
-.event_card:hover {
-  transform: translateY(-5px);
-}
+  .event_card:hover {
+    transform: translateY(-5px);
+  }
 
-.event_card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  .event_card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-.event_description {
-  padding: 24px;
-}
+  .event_description {
+    padding: 24px;
+  }
 
-.event_description h3 {
-  margin-top: 0;
-}
+  .event_description h3 {
+    margin-top: 0;
+  }
 
-/* Youth Recap Video */
+  /* Youth Recap Video */
   .youth_recap {
     grid-area: youth_recap;
     padding: 0 0 40px 0;
@@ -756,6 +757,44 @@ body {
   .youth_gallery {
     grid-area: youth_gallery;
     padding: 0 0 40px 0;
+  }
+
+  /* Get Involved Page */
+  /* Get Involved Page */
+  .involved_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 192px 575px 1fr 344px;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "involved_banner"
+      "involved_content"
+      "footer";
+  }
+
+  .involved_banner {
+    grid-area: involved_banner;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .involved_banner img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+  }
+  }
+
+  .involved_content {
+    grid-area: involved_content;
+    
   }
 
   /* Contact Us Page */
