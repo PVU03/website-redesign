@@ -69,7 +69,7 @@ body {
     text-align: center;
     z-index: 1000;
     color: white;
-    transition: top 1s ease-out;
+    transition: top 0.5s ease-out;
   }
 
   .popup-close {

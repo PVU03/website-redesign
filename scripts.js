@@ -4,7 +4,7 @@ function closePopup() {
   popup.classList.add('hide');
   setTimeout(() => {
     popup.style.display = 'none';
-  }, 1000);
+  }, 500);
 }
 
 
