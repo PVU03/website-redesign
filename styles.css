@@ -43,7 +43,7 @@ body {
   }
 
   p {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   /* Header Button Fonts Per Page */
@@ -123,6 +123,37 @@ body {
     margin: 0;
     cursor: pointer;
     font-size: 24px;
+  }
+
+  /* Banner for All Pages */
+  /* Banner for All Pages */
+  /* Banner for All Pages */
+
+  .home_banner::before,
+  .about_banner::before,
+  .sacraments_banner::before,
+  .bulletin_banner::before,
+  .youth_banner::before,
+  .contact_banner::before,
+  .involved_banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+  }
+
+  .home_banner #banner_title,
+  .about_banner #banner_title,
+  .sacraments_banner #banner_title,
+  .bulletin_banner #banner_title,
+  .youth_banner #banner_title,
+  .contact_banner #banner_title,
+  .involved_banner #banner_title {
+    color: #5e1625;
   }
 
   /* Footer for All Pages */
@@ -259,11 +290,6 @@ body {
     object-fit: cover;
   }
 
-  .home_banner #banner_title {
-    color: #233F89;
-  }
-
-
   /* content */
   .home_content {
     display: grid;
@@ -345,10 +371,6 @@ body {
     object-fit: cover;
   }
 
-  .about_banner #banner_title {
-    color: #FFFFFF;
-  }
-
   /* About Page Content */
   .about_content {
     grid-area: about_content;
@@ -387,10 +409,6 @@ body {
     height: auto;
     max-height: 480px;
     object-fit: cover;
-  }
-
-  .sacraments_banner #banner_title {
-    color: #233F89;
   }
 
   /* Sacraments Page Content */
@@ -532,10 +550,6 @@ body {
     object-fit: cover;
   }
 
-  .bulletin_banner #banner_title {
-    color: #812036;
-  }
-
   /* Bulletin Content */
   .bulletin_content {
     display: grid;
@@ -652,10 +666,6 @@ body {
     object-fit: cover;
   }
 
-  .youth_banner #banner_title {
-    color: #812036;
-  }
-
   /* Youth Page Content */
   .youth_content {
     display: grid;
@@ -734,9 +744,6 @@ body {
     object-fit: cover;
   }
 
-  .contact_banner #banner_title {
-    color: #812036;
-  }
 
   .contact_content {
     display: grid;
