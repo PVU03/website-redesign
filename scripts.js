@@ -7,8 +7,6 @@ function closePopup() {
   }, 500);
 }
 
-
-
 // SACRAMENTS PAGE - side menu js code
 document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('.menu-button');
@@ -65,4 +63,23 @@ window.onclick = function (event) {
       }
     }
   }
+}
+
+// Get Involved Page Content Changer
+function showContent(contentId) {
+    document.getElementById('button_section').style.display = 'none';
+    
+    document.querySelectorAll('.content_section').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    document.getElementById(contentId).style.display = 'block';
+}
+
+function showButtons() {
+    document.getElementById('button_section').style.display = 'flex';
+    
+    document.querySelectorAll('.content_section').forEach(section => {
+        section.style.display = 'none';
+    });
 }

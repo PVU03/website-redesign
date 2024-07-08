@@ -34,14 +34,86 @@
         <div class="involved_banner">
             <img src="images/banner_photos/noimageyet.png" alt="No image decided yet. Will choose later">
             <div id="banner_text">
-                <h1 id="banner_title">Contact Us and<br>Our Connections</h1>
+                <h1 id="banner_title">Get Involved</h1>
             </div>
             <p id="credit">Photo by <a href="" target="_blank">[insert name]</a></p>
         </div>
 
+        <!-- content -->
         <div class="involved_content">
+            <div id="button_section">
+                <div class="group_title">
+                    <p>Whether you're looking to deepen your faith, connect with others, or offer your talents, there is
+                        a place for you here. Our parish offers a variety of groups to get involved in, including
+                        choirs, altar servers, and readers. Come and be a part of our parish family, where you can grow
+                        spiritually and contribute to our shared mission of faith and service.
+                    </p>
+                    <br>
+                    <h2>Current Groups</h2>
+                </div>
+                <div class="button_group">
+                    <button class="content_button" onclick="showContent('altar_servers_content')">
+                        <img src="images/involved_images/altar_servers.png"
+                            alt="Altar Server button with image of altar servers" id="as_image">
+                        <label>Altar Servers</label>
+                    </button>
+                    <button class="content_button" onclick="showContent('choir_content')">
+                        <img src="images/involved_images/choir.jpg" alt="Choir button with image of one of the choir"
+                            id="choir_image">
+                        <label>Choirs</label>
+                    </button>
+                    <button class="content_button" onclick="showContent('reader_content')">
+                        <img src="images/banner_photos/noimageyet.png" alt="Readers button with image of a reader"
+                            id="reader_image">
+                        <label>Readers</label>
+                    </button>
+                </div>
+            </div>
 
+            <div id="altar_servers_content" class="content_section">
+                <button class="back_button" onclick="showButtons()">Back</button>
+                <h2>Altar Servers</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis
+                    est tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt
+                    in ipsis locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra
+                    est, quod arte comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo
+                    aerumnas etiam in deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est?
+                    Nunc de hominis summo bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne
+                    fusi hostes.
+                </p>
+                <p>Please contact the parish office or attend the Mass at which you would like to serve as an altar
+                    server.
+                </p>
+            </div>
+
+            <div id="choir_content" class="content_section">
+                <button class="back_button" onclick="showButtons()">Back</button>
+                <h2>Choirs</h2>
+                <p>Within the church, there are many choirs who sing for their respective masses. Here are some introductions about these choirs:
+                </p>
+                <p>Please contact the parish office or attend the Mass at which you would like to serve as an altar
+                    server.
+                </p>
+            </div>
+
+            <div id="reader_content" class="content_section">
+                <button class="back_button" onclick="showButtons()">Back</button>
+                <h2>Readers</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis
+                    est tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt
+                    in ipsis locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra
+                    est, quod arte comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo
+                    aerumnas etiam in deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est?
+                    Nunc de hominis summo bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne
+                    fusi hostes.
+                </p>
+                <p>Please contact the parish office or attend the Mass at which you would like to serve as an altar
+                    server.
+                </p>
+            </div>
         </div>
+
+
         <!-- footer -->
         <div class="footer">
             <!-- agencies -->
@@ -111,6 +183,9 @@
             </div>
         </div>
     </div>
+
+    <script src="scripts.js"></script>
+
 </body>
 
 </html>
