@@ -299,7 +299,7 @@ body {
     display: grid;
     padding: 0 120px 40px 120px;
     grid-template-columns: 33% 33% 34%;
-    grid-template-rows: 140px 690px auto auto;
+    grid-template-rows: 0.5fr 690px auto auto;
     gap: 0px 0px;
     grid-template-areas:
       "home_video_h2 home_video_h2 timetable"
