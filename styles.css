@@ -268,38 +268,38 @@ body {
       "home_banner"
       "home_content"
       "footer";
-}
+  }
 
-/* logo */
-#logo-button img {
+  /* logo */
+  #logo-button img {
     width: 160px;
     height: 160px;
     background: #FFFFFF;
-}
+  }
 
-/* banner */
-.home_banner {
+  /* banner */
+  .home_banner {
     grid-area: home_banner;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-}
+  }
 
-.home_banner img {
+  .home_banner img {
     width: 100%;
     height: auto;
     max-height: 480px;
     object-fit: cover;
-}
+  }
 
-/* content */
-.home_content {
+  /* content */
+  .home_content {
     display: grid;
     padding: 0 120px 40px 120px;
     grid-template-columns: 33% 33% 34%;
-    grid-template-rows: 0.5fr 690px auto auto;
+    grid-template-rows: 0.5fr 500px 800px 200px;
     gap: 0px 0px;
     grid-template-areas:
       "home_video_h2 home_video_h2 timetable"
@@ -308,63 +308,100 @@ body {
       "home_photo_gallery home_photo_gallery timetable";
     grid-area: home_content;
     background-color: white;
-}
+  }
 
-/* video */
-.home_video_h2 {
-  grid-area: home_video_h2;
-}
-.home_video {
-  grid-area: home_video;
-  position: relative;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-.video-wrapper {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1153px;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
+  /* video */
+  .home_video_h2 {
+    grid-area: home_video_h2;
+  }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  max-height: 650px;
-  max-width: 1153px;
-}
+  .home_video {
+    grid-area: home_video;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* message */
-.home_message {
+  .video-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1153px;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    max-height: 500px;
+    max-width: 890px;
+  }
+
+  /* message */
+  .home_message {
     grid-area: home_message;
     padding: 0 0 40px 0;
     background-color: white;
-}
+  }
 
-/* photo gallery */
-.home_photo_gallery {
+  .home_message #priest_words {
+    font-size: 24px;
+  }
+
+  /* photo gallery */
+  .home_photo_gallery {
     grid-area: home_photo_gallery;
     padding: 0 120px 40px;
     background-color: white;
-}
+  }
 
-/* timetable */
-.timetable {
+  /* timetable */
+  .timetable {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1f 1f 1f 1f 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "timetable_english"
+      "timetable_viet"
+      "timetable_polish"
+      "timetable_rec"
+      "timetable_office";
     grid-area: timetable;
-    padding: 0 120px 40px;
+    padding: 0 120px 40px 120px;
     background-color: white;
-}
+  }
 
+
+  .timetable_english {
+    grid-area: timetable_english;
+  }
+
+  .timetable_viet {
+    grid-area: timetable_viet;
+  }
+
+  .timetable_polish {
+    grid-area: timetable_polish;
+  }
+
+  .timetable_rec {
+    grid-area: timetable_rec;
+  }
+
+  .timetable_office {
+    grid-area: timetable_office;
+  }
 
   /* About Us Page */
   /* About Us Page */
@@ -903,7 +940,7 @@ body {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size:20px;
+    font-size: 20px;
   }
 
   .back_button:hover {
@@ -1035,6 +1072,163 @@ body {
 
 /* media query for mobile */
 @media only screen and (max-width: 430px) {
-  
+
+  /* font styles */
+  #banner_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    text-align: center;
+    font-size: 64px;
+    z-index: 1;
+  }
+
+  .home_banner #credit,
+  .about_banner #credit,
+  .sacraments_banner #credit,
+  .bulletin_banner #credit,
+  .youth_banner #credit,
+  .contact_banner #credit,
+  .involved_banner #credit {
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+    font-size: 14px;
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  /* Banner for All Pages */
+  /* Banner for All Pages */
+  /* Banner for All Pages */
+
+  .home_banner::before,
+  .about_banner::before,
+  .sacraments_banner::before,
+  .bulletin_banner::before,
+  .youth_banner::before,
+  .involved_banner::before,
+  .contact_banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+  }
+
+
+  /* Home Page */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "home_banner"
+      "home_content"
+      "footer";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .home_banner {
+    grid-area: home_banner;
+  }
+
+  .home_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 234px 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "home_video_h2"
+      "home_video"
+      "home_message"
+      "timetable"
+      "home_photo_gallery";
+    grid-area: home_content;
+  }
+
+  .home_video_h2 {
+    grid-area: home_video_h2;
+  }
+
+  .home_video {
+    grid-area: home_video;
+  }
+
+  .home_message {
+    grid-area: home_message;
+  }
+
+  .timetable {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "timetable_english timetable_viet"
+      "timetable_polish ."
+      "timetable_rec timetable_office";
+    grid-area: home_timetable;
+  }
+
+  .timetable_english {
+    grid-area: timetable_english;
+    background-color: red;
+  }
+
+  .timetable_viet {
+    grid-area: timetable_viet;
+    background-color: orange;
+  }
+
+  .timetable_polish {
+    grid-area: timetable_polish;
+    background-color: yellow;
+  }
+
+  .timetable_rec {
+    grid-area: timetable_rec;
+    background-color: green;
+  }
+
+  .timetable_office {
+    grid-area: timetable_office;
+    background-color: blue;
+  }
+
+  .home_photo_gallery {
+    grid-area: home_photo_gallery;
+  }
 
 }
