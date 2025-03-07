@@ -4,346 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/sacred_heart_logo.png">
     <link rel="stylesheet" href="styles.css">
-    <title>Bulletin</title>
-    <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Bulletins</title>
 </head>
 
 <body>
     <div class="bulletin_container">
-        <!-- header -->
-        <div class="header">
-            <a class="header_button" href="about.html" alt="Button to About Page">About Us</a>
-            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page">Sacraments</a>
-            <a class="header_button" id="BulletinsButton" href="bulletin.html"
-                alt="Button to Bulletins Page">Bulletins</a>
+        <!-- Desktop Header/Nav Menu -->
+        <nav class="header">
+            <a class="header_button" href="about.html" alt="Button to About Page"><b>About Us</b></a>
+            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page"><b>Sacraments</b></a>
+            <a class="header_button" id="selectedPage" href="bulletin.html"
+                alt="Button to Bulletins Page"><b>Bulletins</b></a>
 
             <!--Logo Home Button-->
-            <button type="button" id="logo-button">
-                <a href="index.html" class="home-link">
-                    <img src="images/logos/logo.png" alt="Church Logo">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
                 </a>
             </button>
 
-            <a class="header_button" href="youth.html" alt="Button to Youth Page">Youth</a>
-            <a class="header_button" href="involved.html" alt="Button to Get Involved Page">Get Involved</a>
-            <a class="header_button" href="contact.html" alt="Button to Contact Us Page">Contact Us</a>
+            <a class="header_button" href="youth.html" alt="Button to Youth Page"><b>Youth</b></a>
+            <a class="header_button" href="involved.html" alt="Button to Get Involved Page"><b>Get Involved</b></a>
+            <a class="header_button" href="contact.html" alt="Button to Contact Us Page"><b>Contact
+                    Us</b></a>
+        </nav>
 
-        </div>
+        <!-- Mobile Header/Nav Menu -->
+        <nav class="mobile_header">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
+                </a>
+            </button>
 
-        <!-- banner -->
-        <div class="bulletin_banner">
-            <img src="images/banner_photos/bulletin_banner.jpg"
-                alt="Image of a Bible opened to the Gospel passage named 'The Sacred Heart of Jesus'. Photograph taken by Khoi Tran">
+            <!-- Dropdown Menu Button -->
+            <button id="menu_toggle">&#9776;</button>
+
+            <!-- Dropdown Menu -->
+            <div id="mobile_menu">
+                <button id="menu_close">&times;</button>
+                <a class="mobile_button" href="index.html"><b>Home</b></a>
+                <a class="mobile_button" href="about.html"><b>About Us</b></a>
+                <a class="mobile_button" href="sacraments.html"><b>Sacraments</b></a>
+                <a class="mobile_button" id="selectedPage" href="bulletin.html"><b>Bulletins</b></a>
+                <a class="mobile_button" href="youth.html"><b>Youth</b></a>
+                <a class="mobile_button" href="involved.html"><b>Get Involved</b></a>
+                <a class="mobile_button" href="contact.html"><b>Contact Us</b></a>
+            </div>
+        </nav>
+
+        <div id="overlay"></div>
+
+
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/banner_images/bulletin_banner.JPG" alt="Image of the front of the church">
             <div id="banner_text">
                 <h1 id="banner_title">Bulletins</h1>
             </div>
-            <p id="credit">Photo by Khoi Tran <a href="https://www.instagram.com/fish._.films/"
-                    target="_blank">(@fish._.films)</a></p>
         </div>
 
-        <!-- content -->
-        <div class="bulletin_content">
 
-            <!-- current bulletin -->
-            <div class="current_banner">
-                <h2>Current Bulletin</h2>
-                <!-- when adding a new bulletin, make sure to take a screenshot of the cover page -->
-                <!-- copy past bulletin from here -->
-                <div class="current_bulletin">
-                    <a href="bulletins/Bulletin_040824.pdf" target="_blank" class="bulletin-button">
-                        <img src="images/bulletin_covers/040824.png" alt="Bulletin cover page June 30th 2024">
-                        EIGHTEENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>AUGUST 4TH 2024
+
+        <!-- Content -->
+        <div class="bulletin_content">
+            <div class="current_bulletin">
+                <div class="bulletin_heading">
+                    <h2>Check out our latest Bulletin:</h2>
+                </div>
+                <div class="bulletin_card">
+                    <a href="bulletins/Bulletin_020325.pdf" target="_blank" id="bulletin_button">
+                        <img src="images/bulletin_covers/020325.jpg" alt="Bulletin cover page March 2nd 2025">
+                        EIGHTH SUNDAY IN ORDINARY TIME<br>YEAR C<br>MARCH 2ND 2025
                     </a>
                 </div>
             </div>
-
-            <!-- past bulletins -->
-            <div class="past_bulletin_h2">
-                <h2>Some of our Past Bulletins</h2>
-            </div>
-            <div class="past_bulletin_carousel">
-                <div class="bulletin_scroller">
-                    <!-- paste past bulletins here -->
-                    <!-- remember to change the class from "current_bulletin" to "past_bulletin" -->
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_280724.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/280724.png" alt="Bulletin cover page June 30th 2024">
-                            SEVENTEENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JULY 28TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_210724.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/210724.png" alt="Bulletin cover page June 30th 2024">
-                            SIXTEENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JULY 21ST 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_140724.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/140724.png" alt="Bulletin cover page June 30th 2024">
-                            FIFTEENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JULY 14TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_070724.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/070724.png" alt="Bulletin cover page June 30th 2024">
-                            FOURTEENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JULY 7TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_300624.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/300624.png" alt="Bulletin cover page June 30th 2024">
-                            THIRTEENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JUNE 30TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_230624.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/230624.png" alt="Bulletin cover page June 23rd 2024">
-                            TWELFTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JUNE 23RD 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_160624.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/160624.png" alt="Bulletin cover page June 16th 2024">
-                            ELEVENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JUNE 16TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_090624.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/090624.png" alt="Bulletin cover page June 9th 2024">
-                            TENTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JUNE 9TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_020624.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/020624.png" alt="Bulletin cover page June 2nd 2024">
-                            THE MOST HOLY BODY AND BLOOD OF CHRIST<br>YEAR B<br>JUNE 2ND 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_230524.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/230624.png" alt="Bulletin cover page May 26th 2024">
-                            THE MOST HOLY TRINITY <br>YEAR B<br>MAY 26TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_190524.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/190524.png" alt="Bulletin cover page May 19th 2024">
-                            PENTECOST SUNDAY<br>YEAR B<br>MAY 19TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_120524.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/120524.png" alt="Bulletin cover page May 12th 2024">
-                            THE ASCENSION OF THE LORD<br>YEAR B<br>MAY 12TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_050524.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/050524.png" alt="Bulletin cover page May 5th 2024">
-                            SIXTH SUNDAY OF EASTER<br>YEAR B<br>MAY 5TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_280424.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/280424.png" alt="Bulletin cover page April 28th 2024">
-                            FIFTH SUNDAY OF EASTER<br>YEAR B<br>APRIL 28TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_210424.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/210424.png" alt="Bulletin cover page April 21st 2024">
-                            FOURTH SUNDAY OF EASTER<br>YEAR B<br>APRIL 21ST 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_140424.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/140424.png" alt="Bulletin cover page April 14th 2024">
-                            THIRD SUNDAY OF EASTER<br>YEAR B<br>APRIL 14TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_070424.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/070424.png" alt="Bulletin cover page April 7th 2024">
-                            SECOND SUNDAY OF EASTER<br>YEAR B<br>APRIL 7TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_310324.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/310324.png" alt="Bulletin cover page March 31st 2024">
-                            EASTER SUNDAY OF THE RESURRECTION OF THE LORD<br>YEAR B<br>MARCH 31ST 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_240324.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/240324.png" alt="Bulletin cover page March 24th 2024">
-                            PALM SUNDAY OF THE PASSION OF THE LORD<br>YEAR B<br>MARCH 24TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_170324.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/170324.png" alt="Bulletin cover page March 17th 2024">
-                            FIFTH SUNDAY OF LENT<br>YEAR B<br>MARCH 17TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_100324.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/100324.png" alt="Bulletin cover page March 10th 2024">
-                            FOURTH SUNDAY OF LENT<br>YEAR B<br>MARCH 10TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_030324.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/030324.png" alt="Bulletin cover page March 3rd 2024">
-                            THIRD SUNDAY OF LENT<br>YEAR B<br>MARCH 3RD 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_250224.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/250224.png" alt="Bulletin cover page February 25th 2024">
-                            SECOND SUNDAY OF LENT<br>YEAR B<br>FEBRUARY 25TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_180224.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/180224.png" alt="Bulletin cover page February 18th 2024">
-                            FIRST SUNDAY OF LENT<br>YEAR B<br>FEBRUARY 18TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_110224.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/110224.png" alt="Bulletin cover page February 11th 2024">
-                            SIXTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>FEBRUARY 11TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_040224.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/040224.png" alt="Bulletin cover page February 4th 2024">
-                            FIFTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>FEBRUARY 4TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_280124.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/280124.png" alt="Bulletin cover page Janurary 28th 2024">
-                            FOURTH SUNDAY IN ORDINARY TIME<br>YEAR B<br>JANUARY 28TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_210124.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/210124.png" alt="Bulletin cover page Janurary 21st 2024">
-                            THIRD SUNDAY IN ORDINARY TIME<br>YEAR B<br>JANUARY 21ST 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_140124.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/140124.png" alt="Bulletin cover page Janurary 14th 2024">
-                            SECOND SUNDAY IN ORDINARY TIME<br>YEAR B<br>JANUARY 14TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_070124.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/070124.png" alt="Bulletin cover page Janurary 7th 2024">
-                            THE EPITHANY OF THE LORD<br>YEAR B<br>JANUARY 7TH 2024
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_241223.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/241223.png" alt="Bulletin cover page December 24th 2024">
-                            FOURTH SUNDAY OF ADVENT & CHRISTMAS<br>YEAR B<br>DECEMBER 24TH 2023
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_171223.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/171223.png" alt="Bulletin cover page December 17th 2024">
-                            THIRD SUNDAY OF ADVENT<br>YEAR B<br>DECEMBER 17TH 2023
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_101223.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/101223.png" alt="Bulletin cover page December 10th 2024">
-                            SECOND SUNDAY OF ADVENT<br>YEAR B<br>DECEMBER 10TH 2023
-                        </a>
-                    </div>
-                    <div class="past_bulletin">
-                        <a href="bulletins/Bulletin_031223.pdf" target="_blank" class="bulletin-button">
-                            <img src="images/bulletin_covers/031223.png" alt="Bulletin cover page December 3rd 2024">
-                            FIRST SUNDAY OF ADVENT<br>YEAR B<br>DECEMBER 3RD 2023
-                        </a>
-                    </div>
+            <div class="past_bulletin">
+                <div class="bulletin_heading">
+                    <h2>Our Past Bulletins:</h2>
+                </div>
+                <div class="bulletins">
+                        <li><a href="bulletins/Bulletin_230225.pdf" target="_blank">SEVENTH SUNDAY IN ORDINARY TIME - YEAR C - FEBURARY 23RD 2025</a></li>
+                        <li><a href="bulletins/Bulletin_160225.pdf" target="_blank">SIXTH SUNDAY IN ORDINARY TIME - YEAR C - FEBRUARY 16TH 2025</a></li>
+                        <li><a href="bulletins/Bulletin_090225.pdf" target="_blank">FIFTH SUNDAY IN ORDINARY TIME - YEAR C - FEBRUARY 9TH 2025</a></li>
+                        <li><a href="bulletins/Bulletin_020225.pdf" target="_blank">FOURTH SUNDAY IN ORDINARY TIME -  YEAR C - FEBRUARY 2ND 2025</a></li>
+                        <li><a href="bulletins/Bulletin_260125.pdf" target="_blank">THIRD SUNDAY IN ORDINARY TIME - YEAR C - JANUARY 26TH 2025</a></li>
+                        <li><a href="bulletins/Bulletin_190125.pdf" target="_blank">SECOND SUNDAY IN ORDINARY TIME - YEAR C - JANUARY 19TH 2025</a></li>
+                        <li><a href="bulletins/Bulletin_120125.pdf" target="_blank">FIRST SUNDAY IN ORDINARY TIME - YEAR C - JANUARY 12TH 2025</a></li>
+                        <li><a href="bulletins/Bulletin_050125.pdf" target="_blank">THE EPIPHANY OF THE LORD - YEAR C - JANUARY 5TH 2025</a></li>
+                        <li><a href="bulletins/Bulletin_291224.pdf" target="_blank">THE HOLY FAMILY OF JESUS, MARY AND JOSEPH - YEAR C - DECEMBER 29TH 2024</a></li>
+                        <li><a href="bulletins/Bulletin_251224.pdf" target="_blank">THE NATIVITY OF THE LORD - YEAR C - DECEMBER 25TH 2024</a></li>
+                        <li><a href="bulletins/Bulletin_221224.pdf" target="_blank">FOURTH SUNDAY OF ADVENT - YEAR C - DECEMBER 22ND 2024</a></li>
+                        <li><a href="bulletins/Bulletin_151224.pdf" target="_blank">THIRD SUNDAY OF ADVENT - YEAR C - DECEMBER 15TH 2024</a></li>
+                        <li><a href="bulletins/Bulletin_081224.pdf" target="_blank">SECOND SUNDAY OF ADVENT - YEAR C - DECEMBER 8TH 2024</a></li>
+                        <li><a href="bulletins/Bulletin_011224.pdf" target="_blank">FIRST SUNDAY OF ADVENT - YEAR C - DECEMBER 1ST 2024</a></li>
                 </div>
             </div>
         </div>
 
-        <!-- footer -->
-        <div class="footer">
-            <!-- agencies -->
+
+
+         <!-- Footer -->
+         <div class="footer">
             <div class="agencies">
                 <h3>Agencies</h3>
+                <div class="list">
+                    <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png" id="footer_icon"
+                            alt="Catholic Weekly Logo">The Catholic Weekly</a>
+                    <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png" id="footer_icon"
+                            alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
+                    <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
+                            src="images/footer_icons/sg_logo.png" id="footer_icon"
+                            alt="Safegarding Logo">Safeguarding</a>
 
-                <a href="https://www.sydneycatholic.org/sydney-centre-for-evangelisation/#the-catholic-weekly"
-                    target="_blank" class="agencies_link">
-                    <img src="images/logos/cw_logo.png" alt="Email Logo">
-                    The Catholic Weekly
-                </a>
-                <a href="https://www.catholiccare.org/" target="_blank" class="agencies_link">
-                    <img src="images/logos/ccs_logo.png" alt="Email Logo">
-                    CatholicCare Sydney
-                </a>
-                <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"
-                    class="agencies_link">
-                    <img src="images/logos/safeguarding_logo.png" alt="Location Logo">
-                    Catholic Archdiocese of Sydney - SafeGuarding
-                </a>
-
-                <!-- credit for design and development -->
-                <p id="credit">Website designed by <u>Peter Vu</u> and developed by <u>Cecilia Le</u></p>
+                </div>
             </div>
-
-            <!-- contact information -->
-            <div class="cont_info">
+            <div class="quick_contact">
                 <h3>Contact Us</h3>
+                <div class="list">
 
-                <a href="mailto:office@sacredheartcabramatta.org.au" class="contact_link">
-                    <img src="images/logos/email_logo.png" alt="Email Logo">
-                    office@sacredheartcabramatta.org.au
-                </a>
-                <a class="contact_link">
-                    <img src="images/logos/phone_logo.png" alt="Phone Logo">
-                    <span>(02) 9724 2151</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church+Cabramatta/@-33.8907666,150.9347195,16z/data=!3m1!4b1!4m6!3m5!1s0x6b129611fcc6d89f:0x3cc1ed8d11542b7!8m2!3d-33.8907666!4d150.9372944!16s%2Fg%2F1pt__wtm6?entry=ttu"
-                    target="_blank" class="contact_link">
-                    <img src="images/logos/location_logo.png" alt="Location Logo">
-                    13 Park Road, Cabramatta NSW 2166
-                </a>
-
-                <!-- copyright statement -->
-                <p id="credit">© 2024. Sacred Heart Parish Cabramatta</p>
-
+                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img src="images/footer_icons/email_logo.png"
+                            id="footer_icon" alt="Email icon">office@sacredheartcabramatta.org.au</a>
+                    <a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
+                        2151</a>
+                    <a
+                        href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111" target="_blank"><img
+                            src="images/footer_icons/location_logo.png" id="footer_icon" alt="Location icon">13 Park
+                        Road,
+                        Cabramatta NSW 2166</a>
+                </div>
             </div>
 
-            <!-- socials -->
-            <div class="socials">
-                <h3>Social Media</h3>
+            <div class="media">
+                <h3>Socials</h3>
+                <div class="list">
 
-                <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank" class="social_link">
-                    <img src="images/logos/youtube_logo.png" alt="YouTube Logo">
-                    YouTube
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/facebook_logo.png" alt="Facebook Logo">
-                    Facebook
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/instagram_logo.png" alt="Instagram Logo">
-                    Instagram
-                </a>
-
-                <!-- credit for icons -->
-                <p id="credit">Icons provided by Vecteezy.com.</p>
+                    <a href="https://www.facebook.com/cabraparish/" target="_blank"><img src="images/footer_icons/facebook_logo.png"
+                            id="footer_icon" alt="Facebook Logo">Facebook</a>
+                    <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
+                            src="images/footer_icons/youtube_logo.png" id="footer_icon" alt="Youtube Logo">Youtube</a>
+                    <a
+                        href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img
+                            src="images/footer_icons/instagram_logo.png" id="footer_icon"
+                            alt="Instagram Logo">Instagram</a>
+                </div>
             </div>
         </div>
+
+
+
     </div>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

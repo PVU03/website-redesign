@@ -4,214 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/sacred_heart_logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>Home</title>
-    <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-
-    <!-- popup -->
-    <div id="facebook-popup" class="popup">
-        <span class="popup-close" onclick="closePopup()">&times;</span>
-        <p><a href="https://www.facebook.com/cabraparish/" target="_blank">Follow our Facebook to keep up to date about
-                masses and activities!</a></p>
-    </div>
-
     <div class="home_container">
-        <!-- header -->
-        <div class="header">
-            <a class="header_button" href="about.html" alt="Button to About Page">About Us</a>
-            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page">Sacraments</a>
-            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page">Bulletins</a>
+        <!-- Desktop Header/Nav Menu -->
+        <nav class="header">
+            <a class="header_button" href="about.html" alt="Button to About Page"><b>About Us</b></a>
+            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page"><b>Sacraments</b></a>
+            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page"><b>Bulletins</b></a>
 
             <!--Logo Home Button-->
-            <button type="button" id="logo-button">
-                <a href="index.html" class="home-link">
-                    <img src="images/logos/logo.png" alt="Church Logo">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
                 </a>
             </button>
 
-            <a class="header_button" href="youth.html" alt="Button to Youth Page">Youth</a>
-            <a class="header_button" href="involved.html" alt="Button to Get Involved Page">Get Involved</a>
-            <a class="header_button" href="contact.html" alt="Button to Contact Us Page">Contact Us</a>
+            <a class="header_button" href="youth.html" alt="Button to Youth Page"><b>Youth</b></a>
+            <a class="header_button" href="involved.html" alt="Button to Get Involved Page"><b>Get Involved</b></a>
+            <a class="header_button" href="contact.html" alt="Button to Contact Us Page"><b>Contact
+                    Us</b></a>
+        </nav>
 
-        </div>
+        <!-- Mobile Header/Nav Menu -->
+        <nav class="mobile_header">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
+                </a>
+            </button>
 
-        <!-- banner -->
-        <div class="home_banner">
-            <img src="images/banner_photos/home_banner.jpg"
-                alt="Image of altar used as a banner. Photograph taken by Giovanni Portelli Photography">
+            <!-- Dropdown Menu Button -->
+            <button id="menu_toggle">&#9776;</button>
+
+            <!-- Dropdown Menu -->
+            <div id="mobile_menu">
+                <button id="menu_close">&times;</button>
+                <a class="mobile_button" id="selectedPage" href="index.html"><b>Home</b></a>
+                <a class="mobile_button" href="about.html"><b>About Us</b></a>
+                <a class="mobile_button" href="sacraments.html"><b>Sacraments</b></a>
+                <a class="mobile_button" href="bulletin.html"><b>Bulletins</b></a>
+                <a class="mobile_button" href="youth.html"><b>Youth</b></a>
+                <a class="mobile_button" href="involved.html"><b>Get Involved</b></a>
+                <a class="mobile_button" href="contact.html"><b>Contact Us</b></a>
+            </div>
+        </nav>
+
+        <div id="overlay"></div>
+
+
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/banner_images/home_banner.JPG" alt="Image of the front of the church">
             <div id="banner_text">
-                <h1 id="banner_title">Welcome To<br>Sacred Heart Catholic Parish</h1>
+                <h1 id="banner_title">Sacred Heart Parish<br>Cabramatta</h1>
             </div>
-            <p id="credit">Photo by <a href="https://www.giovanniportelli.com.au/" target="_blank">Giovanni Portelli
-                    Photography</a></p>
         </div>
 
 
-        <!-- content -->
+
+        <!-- Content -->
         <div class="home_content">
-
-            <!-- most recent youtube video -->
-            <div class="home_video_h2">
+            <div class="latest_video">
                 <h2>Sacred Heart Catholic Church’s Jubilant 75th Anniversary</h2>
-            </div>
-            <div class="home_video">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/jNDUfvKQrnA?si=nYqNrnsP8lcCBUd3"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                <div class="video_container">
+                <iframe src="https://www.youtube.com/embed/jNDUfvKQrnA?si=BtTeiMM6YYwqKGkg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
+            <div class="mass_times">
+                <h2>Mass Times</h2>
 
-            <!-- message from parish priest -->
-            <div class="home_message">
-                <h2>A Word From Our Parish Priest</h2>
-                <p id="priest_words">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut necesse sit omnium
-                    rerum, quae natura vigeant, similem esse finem, non eundem. A villa enim, credo, et: Si ibi te esse
-                    scissem, ad te ipse venissem. Tu enim ista lenius, hic Stoicorum more nos vexat. Hoc est vim
-                    afferre, Torquate, sensibus, extorquere ex animis cognitiones verborum, quibus inbuti sumus. Nescio
-                    quo modo praetervolavit oratio. Quod quidem iam fit etiam in Academia. Post enim Chrysippum eum non
-                    sane est disputatum. Duo Reges: constructio interrete.
-                    Hanc ergo intuens debet institutum illud quasi signum absolvere. Bork Nescio quo modo praetervolavit
-                    oratio. Isto modo ne improbos quidem, si essent boni viri. Facillimum id quidem est, inquam. Est, ut
-                    dicis, inquit;
-                    Laelius clamores sofòw ille so lebat Edere compellans gumias ex ordine nostros. Ergo omni animali
-                    illud, quod appetiti positum est in eo, quod naturae est accommodatum. Et quod est munus, quod opus
-                    sapientiae? Quamquam id quidem licebit iis existimare, qui legerint. Sed nonne merninisti licere
-                    mihi ista probare, quae sunt a te dicta? Nunc ita separantur, ut disiuncta sint, quo nihil potest
-                    esse perversius.</p>
+                <h3>English Masses</h3>
+                <p><b>Weekday Masses</b></p>
+                <p>Monday - 7:00am</p>
+                <p>Tuesday - 7:00am</p>
+                <p>Wednesday - 6:30pm</p>
+                <p>Thursday - 7:00am</p>
+                <p>Friday - 7:00am</p>
+                <p>Saturday - 9:00am</p>
+                <p><b>Weekend Masses</b></p>
+                <p>Saturday - 6:00pm</p>
+                <p>Sunday - 8:30am, 10:00am and 6:00pm</p>
+
+                <h3>Vietnamese Masses</h3>
+                <p><b>Weekday Masses</b></p>
+                <p>Tuesday - 6:30pm</p>
+                <p>Wednesday - 7:00am</p>
+                <p>Thursday - 6:30pm</p>
+                <p><b>Weekend Masses</b></p>
+                <p>Saturday - 7:30pm (Chaplain)</p>
+                <p>Sunday - 7:00am, 4:00pm (Chaplain) and 7:30pm</p>
+
+                <h3>Reconciliation</h3>
+                <p>Saturday - 8:30am to 8:50am and 5:30pm to 5:50pm</p>
+
+                <h3>Office Times</h3>
+                <p>Tuesday to Friday - 9:00am to 4:00pm</p>
             </div>
-
-            <div class="home_photo_gallery">
-
+            <div class="parish_news">
+                <h2>Parish Events</h2>
+                <li>5th March 2025</li>
+                <li id="event">Ash Wednesday</li>
+                <li>7th March - 11th April 2025</li>
+                <li id="event">Stations of the Cross at 6:00pm Every Friday</li>
             </div>
-
-            <div class="timetable">
-                <div class="timetable_english">
-                    <h2>Mass Times</h2>
-                    <!-- English Mass Times -->
-                    <h3>English Masses</h3>
-                    <!-- Weekday -->
-                    <h4 id="week_time">Weekday Masses</h4>
-                    <p>Monday - 7:00am</p>
-                    <p>Tuesday - 7:00am</p>
-                    <p>Wednesday - 6:30pm</p>
-                    <p>Thursday - 7:00am</p>
-                    <p>Friday - 7:00am</p>
-                    <p>Saturday - 9:00am</p>
-                    <!-- Weekend -->
-                    <h4>Weekend Masses</h4>
-                    <p>Saturday - 6:00pm</p>
-                    <p>Sunday - 8:30am, 10:00am, 6:00pm</p>
-                </div>
-                <div class="timetable_viet">
-                    <!-- Vietnamese Mass Times -->
-                    <h3>Vietnamese Masses</h3>
-                    <!-- Weekday -->
-                    <h4 id="week_time">Weekday Masses</h4>
-                    <p>Tuesday - 6:30pm</p>
-                    <p>Wednesday - 7:00am</p>
-                    <p>Thursday - 6:30pm</p>
-                    <!-- Weekend -->
-                    <h4 id="week_time">Weekend Masses</h4>
-                    <p>Saturday - 7:30pm (Chaplain)</p>
-                    <p>Sunday - 7:00am, 4:00pm (Chaplain), 7:30pm</p>
-                </div>
-                <div class="timetable_polish">
-                    <!-- Polish Mass Time -->
-                    <h3>Polish Mass</h3>
-                    <p>Sunday - 11:30am</p>
-                </div>
-                <div class="timetable_rec">
-                    <!-- Reconciliation -->
-                    <h3>Reconciliation</h3>
-                    <p>Saturday - 8:30am to 8:50am</p>
-                    <p> 5:30pm to 5:50pm</p>
-                </div>
-                <div class="timetable_office">
-                    <!-- Office Times -->
-                    <h3>Office Times</h3>
-                    <p>Tuesday to Friday - 9:00am to 4:00pm</p>
-                </div>
+            <div class="archdiocese_news">
+                <h2>Archdiocese News</h2>
+                <p id="indent">To read the Archdiocese news, please visit the <a href="https://catholicweekly.com.au/">Catholic Weekly Website</a></p>
             </div>
-
+            <div class="filler"></div>
         </div>
 
-        <!-- footer -->
-        <div class="footer">
-            <!-- agencies -->
+
+
+         <!-- Footer -->
+         <div class="footer">
             <div class="agencies">
                 <h3>Agencies</h3>
+                <div class="list">
+                    <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png" id="footer_icon"
+                            alt="Catholic Weekly Logo">The Catholic Weekly</a>
+                    <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png" id="footer_icon"
+                            alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
+                    <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
+                            src="images/footer_icons/sg_logo.png" id="footer_icon"
+                            alt="Safegarding Logo">Safeguarding</a>
 
-                <a href="https://www.sydneycatholic.org/sydney-centre-for-evangelisation/#the-catholic-weekly"
-                    target="_blank" class="agencies_link">
-                    <img src="images/logos/cw_logo.png" alt="Email Logo">
-                    The Catholic Weekly
-                </a>
-                <a href="https://www.catholiccare.org/" target="_blank" class="agencies_link">
-                    <img src="images/logos/ccs_logo.png" alt="Email Logo">
-                    CatholicCare Sydney
-                </a>
-                <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"
-                    class="agencies_link">
-                    <img src="images/logos/safeguarding_logo.png" alt="Location Logo">
-                    Catholic Archdiocese of Sydney - SafeGuarding
-                </a>
-
-                <!-- credit for design and development -->
-                <p id="credit">Website designed by <u>Peter Vu</u> and developed by <u>Cecilia Le</u></p>
+                </div>
             </div>
-
-            <!-- contact information -->
-            <div class="cont_info">
+            <div class="quick_contact">
                 <h3>Contact Us</h3>
+                <div class="list">
 
-                <a href="mailto:office@sacredheartcabramatta.org.au" class="contact_link">
-                    <img src="images/logos/email_logo.png" alt="Email Logo">
-                    office@sacredheartcabramatta.org.au
-                </a>
-                <a class="contact_link">
-                    <img src="images/logos/phone_logo.png" alt="Phone Logo">
-                    <span>(02) 9724 2151</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church+Cabramatta/@-33.8907666,150.9347195,16z/data=!3m1!4b1!4m6!3m5!1s0x6b129611fcc6d89f:0x3cc1ed8d11542b7!8m2!3d-33.8907666!4d150.9372944!16s%2Fg%2F1pt__wtm6?entry=ttu"
-                    target="_blank" class="contact_link">
-                    <img src="images/logos/location_logo.png" alt="Location Logo">
-                    13 Park Road, Cabramatta NSW 2166
-                </a>
-
-                <!-- copyright statement -->
-                <p id="credit">© 2024. Sacred Heart Parish Cabramatta</p>
-
+                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img src="images/footer_icons/email_logo.png"
+                            id="footer_icon" alt="Email icon">office@sacredheartcabramatta.org.au</a>
+                    <a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
+                        2151</a>
+                    <a
+                        href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111" target="_blank"><img
+                            src="images/footer_icons/location_logo.png" id="footer_icon" alt="Location icon">13 Park
+                        Road,
+                        Cabramatta NSW 2166</a>
+                </div>
             </div>
 
-            <!-- socials -->
-            <div class="socials">
-                <h3>Social Media</h3>
+            <div class="media">
+                <h3>Socials</h3>
+                <div class="list">
 
-                <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank" class="social_link">
-                    <img src="images/logos/youtube_logo.png" alt="YouTube Logo">
-                    YouTube
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/facebook_logo.png" alt="Facebook Logo">
-                    Facebook
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/instagram_logo.png" alt="Instagram Logo">
-                    Instagram
-                </a>
-
-                <!-- credit for icons -->
-                <p id="credit">Icons provided by Vecteezy.com.</p>
+                    <a href="https://www.facebook.com/cabraparish/" target="_blank"><img src="images/footer_icons/facebook_logo.png"
+                            id="footer_icon" alt="Facebook Logo">Facebook</a>
+                    <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
+                            src="images/footer_icons/youtube_logo.png" id="footer_icon" alt="Youtube Logo">Youtube</a>
+                    <a
+                        href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img
+                            src="images/footer_icons/instagram_logo.png" id="footer_icon"
+                            alt="Instagram Logo">Instagram</a>
+                </div>
             </div>
         </div>
+
+
+
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

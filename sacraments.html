@@ -4,508 +4,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/sacred_heart_logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>Sacraments</title>
-    <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="sacraments_container">
-        <!-- header -->
-        <div class="header">
-            <a class="header_button" href="about.html" alt="Button to About Page">About Us</a>
-            <a class="header_button" id="SacramentsButton" href="sacraments.html"
-                alt="Button to Sacraments Page">Sacraments</a>
-            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page">Bulletins</a>
+        <!-- Desktop Header/Nav Menu -->
+        <nav class="header">
+            <a class="header_button" href="about.html" alt="Button to About Page"><b>About Us</b></a>
+            <a class="header_button" id="selectedPage" href="sacraments.html"
+                alt="Button to Sacraments Page"><b>Sacraments</b></a>
+            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page"><b>Bulletins</b></a>
 
             <!--Logo Home Button-->
-            <button type="button" id="logo-button">
-                <a href="index.html" class="home-link">
-                    <img src="images/logos/logo.png" alt="Church Logo">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
                 </a>
             </button>
 
-            <a class="header_button" href="youth.html" alt="Button to Youth Page">Youth</a>
-            <a class="header_button" href="involved.html" alt="Button to Get Involved Page">Get Involved</a>
-            <a class="header_button" href="contact.html" alt="Button to Contact Us Page">Contact Us</a>
+            <a class="header_button" href="youth.html" alt="Button to Youth Page"><b>Youth</b></a>
+            <a class="header_button" href="involved.html" alt="Button to Get Involved Page"><b>Get Involved</b></a>
+            <a class="header_button" href="contact.html" alt="Button to Contact Us Page"><b>Contact
+                    Us</b></a>
+        </nav>
 
-        </div>
+        <!-- Mobile Header/Nav Menu -->
+        <nav class="mobile_header">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
+                </a>
+            </button>
 
-        <!-- banner -->
-        <div class="sacraments_banner">
-            <img src="images/banner_photos/sacraments_banner.png" alt="No image decided yet. Will choose later">
+            <!-- Dropdown Menu Button -->
+            <button id="menu_toggle">&#9776;</button>
+
+            <!-- Dropdown Menu -->
+            <div id="mobile_menu">
+                <button id="menu_close">&times;</button>
+                <a class="mobile_button" href="index.html"><b>Home</b></a>
+                <a class="mobile_button" href="about.html"><b>About Us</b></a>
+                <a class="mobile_button" id="selectedPage" href="sacraments.html"><b>Sacraments</b></a>
+                <a class="mobile_button" href="bulletin.html"><b>Bulletins</b></a>
+                <a class="mobile_button" href="youth.html"><b>Youth</b></a>
+                <a class="mobile_button" href="involved.html"><b>Get Involved</b></a>
+                <a class="mobile_button" href="contact.html"><b>Contact Us</b></a>
+            </div>
+        </nav>
+
+        <div id="overlay"></div>
+
+
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/banner_images/sacraments_banner.png"
+                alt="Image of the offerings from 'Sacred Heart Catholic Church’s Jubilant 75th Anniversary' - Sacred Heart Parish Cabramatta Youtube Channel">
             <div id="banner_text">
                 <h1 id="banner_title">Sacraments</h1>
             </div>
-            <p id="credit">Photo by <a href="" target="_blank">[insert name]</a></p>
         </div>
 
-        <!-- content -->
+
+
+        <!-- Content -->
         <div class="sacraments_content">
-            <!-- side menu -->
             <div class="side_menu">
-                <button class="menu-button" data-content="baptism">Baptism</button><br>
-                <button class="menu-button" data-content="confirmation">Confirmation</button><br>
-                <button class="menu-button" data-content="eucharist">Eucharist</button><br>
-                <button class="menu-button" data-content="penance">Penance</button><br>
-                <button class="menu-button" data-content="marriage">Marriage</button><br>
-                <button class="menu-button" data-content="anointing">Anointing of the Sick</button><br>
-                <button class="menu-button" data-content="holy-orders">Holy Orders</button><br>
-                <button class="menu-button" data-content="becoming-catholic">Becoming a Catholic</button><br>
+                <button class="menu_button" data_content="baptism">Baptism</button><br>
+                <button class="menu_button" data_content="confirmation">Confirmation</button><br>
+                <button class="menu_button" data_content="eucharist">Eucharist</button><br>
+                <button class="menu_button" data_content="penance">Penance</button><br>
+                <button class="menu_button" data_content="marriage">Marriage</button><br>
+                <button class="menu_button" data_content="anointing">Anointing of the Sick</button><br>
+                <button class="menu_button" data_content="holy-orders">Holy Orders</button><br>
+                <button class="menu_button" data_content="becoming-catholic">Becoming a Catholic</button><br>
             </div>
-            <!-- information for each sacrament -->
-            <div class="sacrament_info">
-                <!-- Baptism Information -->
-                <div id="baptism" class="content-item">
-                    <h2>Baptism</h2>
-                    <p>Through Baptism we are given the privilege of being part of our Catholic community. In Baptism we
-                        are given a share in God’s life Baptism incorporates us into the Body of Christ. Through the
-                        waters of Baptism we have been liberated from the slavery of sin in order to live life to the
-                        full. The outpouring of the Spirit at baptism enables us to bring Christ to the World.
-                    </p>
-                    <br>
-                    <p>THE SYMBOLS OF BAPTISM</p>
-                    <ul>
-                        <li>
-                            <p><b>Baptism with Water</b></p>
-                            <p>The water is a symbol of cleansing-washing away original sin. It is also a sign of
-                                life-the new spiritual life that the baby or child is entering.
-                            </p>
-                        </li>
-                        <li>
-                            <p><b>Anointing with oil:</b></p>
-                            <p>The oil symbolises strengthening of faith in the challenges of life ahead-the sealing
-                                with the Holy Spirit.
-                            </p>
-                        </li>
-                        <li>
-                            <p><b>White Garment</b></p>
-                            <p>A baby or child is usually clothed in white or have a stole or white bib to symbolise
-                                purity and innocence.
-                            </p>
-                        </li>
-                        <li>
-                            <p><b>Candle</b></p>
-                            <p>Symbolises the new life that is given through the Sacrament of Baptism</p>
-                        </li>
-                    </ul>
-                    <br>
-                    <p>To register someone for baptism at our parish, please fill in this form. If you have any
-                        questions, don’t be afraid to contact us through our <a href="contact.html">contact page</a>.
-                    </p>
-                    <br>
-                    <!-- image of baptism -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
-                </div>
-
-                <!-- Confirmation Information -->
-                <div id="confirmation" class="content-item">
-                    <h2>Confirmation</h2>
-                    <p>The Sacrament of Confirmation is the second of the three sacraments of Christian initiation.
-                        Confirmation completes Baptism, by which in the laying on of hands and the anointing with Chrism
-                        Oil, which first happened at Baptism, we are confirmed with the fullness of the Holy Spirit. We
-                        are reminded of our participation in the ministry and mission of Jesus, and strengthened to
-                        follow Jesus more closely.
-                    </p>
-                    <p>Usually the bishop presides over this sacrament.</p>
-                    <br>
-                    <p><b>What happens during the sacrament of Confirmation?</b></p>
-                    <p>The Sacrament of Confirmation consists of the renewal of baptismal promises and the laying on of
-                        hands and anointing with the oil of Chrism. The anointing of the candidate is a sign of
-                        confirming the gift of the Spirit, and calling the candidates to use these gifts to become
-                        involved in the life and mission of the community.
-                    </p>
-                    <br>
-                    <p>THE SYMBOLIC GESTURES OF CONFIRMATION</p>
-                    <ul>
-                        <li>
-                            <p><b>The Laying On of Hands:</b></p>
-                            <p>The bishop places his hands on the head of the candidates and prays for the gifts of the
-                                Holy Spirit. This ritualises the connection to Baptism and the strengthening of the Holy
-                                Spirit in our vocation to follow the way of Jesus.
-                            </p>
-                        </li>
-                        <li>
-                            <p><b>Anointing with oil:</b></p>
-                            <p>The anointing of the candidate at Confirmation recognises that they are sealed with the
-                                Holy Spirit. The bishop anoints the candidate’s forehead with the Oil of Chrism, saying
-                                ‘Be sealed with the gift of the Holy Spirit’.
-                            </p>
-                        </li>
-                        <li>
-                            <p><b>The Sign of Peace:</b></p>
-                            <p>At the end of the rite, the bishop puts his hand on the side of the candidate’s face and
-                                says ‘Peace be with you’ and the candidate replies with ‘And with your spirit’,
-                                symbolising the candidate’s place within the Church community.
-                            </p>
-                        </li>
-                    </ul>
-                    <br>
-                    <p><b>What do I need to do if I would like to have my child confirmed?</b></p>
-                    <p>To start the process to be confirmed you will need to contact your local parish. We have
-                        a <a href="contact.html">contact page</a> to help you contact our parish if you live in or near
-                        Cabramatta. Other than
-                        that, if you would like to confirm your child, please fill in this form.
-                    </p>
-                    <p>Parents are the first teachers of faith to their children and therefore are required to take part
-                        in the parish preparation to enable them to understand the meaning of the sacrament and the
-                        commitment they will make to support their child’s growth in faith and life.
-                    </p>
-                    <br>
-
-                    <!-- image of confirmation -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
-
-                    <br>
-
-                    <!-- FAQ Dropdown -->
-                    <div class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('faq')">FREQUENTLY ASKED QUESTIONS ABOUT
-                            CONFIRMATION</button>
-                        <div class="dropdown-content" id="faqDropdown">
-                            <p>To follow up with these, or any other questions, contact the parish's office through our
-                                <a href="contact.html">contact page</a>. The parish office staff will put you in touch
-                                with either the parish
-                                priest or another suitable person who will assist you in the process of your child’s
-                                Confirmation.
-                            </p>
-                        <p><b>Who can be confirmed?</b></p>
-                            <p>Any baptised person can be admitted for Confirmation preparation.</p>
-                        <p><b>Confirmation Name</b></p>
-                            <p>Choosing a Confirmation name has never been an official part of the sacrament, although
-                                it has been a popular custom in many places.
-                            </p>
-                            <p>Our given names are a very important part of our identity. Parents put a lot of thought
-                                into choosing a child’s name. It is appropriate for a candidate to confirm the name
-                                given at Baptism.
-                            </p>
-                            <p>If a saint’s name is chosen, it should be a name of a saint that inspires the child.
-                                Choosing a Confirmation name helps put us in contact with our greater Christian story.
-                            </p>
-                        <p><b>Who should I choose as a sponsor?</b></p>
-                            <p>Confirmation is a reaffirmation of the promises made at Baptism, therefore the Church
-                                recommends that a child’s godparent take on the role of sponsor for Confirmation.
-                            </p>
-                            <p>Sponsors should be: at least 16 years old, not the child’s parent, a Catholic who has
-                                been confirmed, receives Communion and who lives a life of faith.
-                            </p>
-                        <p><b>What is the responsibility of the sponsor?</b></p>
-                            <p>Since a sponsor has such a significant role to play in the development of the candidate
-                                for Confirmation, it is important that this person be one who is a living example of
-                                faith, one whose actions reflect the actions of Jesus. A Confirmation sponsor offers
-                                support and encouragement during the Confirmation preparation process.
-                            </p>
-                            <p>During the Confirmation ceremony sponsors bring the candidates forward and present them
-                                to the bishop.
-                            </p>
-                        </div>
+            <div class="sacraments_information">
+                <div class="sacrament_info">
+                    <!-- Baptism Information -->
+                    <div id="baptism" class="content_item">
+                        <h2>Baptism</h2>
+                        <p>Through Baptism we are given the privilege of being part of our Catholic community. In
+                            Baptism we
+                            are given a share in God’s life Baptism incorporates us into the Body of Christ. Through the
+                            waters of Baptism we have been liberated from the slavery of sin in order to live life to
+                            the
+                            full. The outpouring of the Spirit at baptism enables us to bring Christ to the World.
+                        </p>
+                        <br>
+                        <p>THE SYMBOLS OF BAPTISM</p>
+                        <ul>
+                            <li>
+                                <p><b>Baptism with Water</b></p>
+                                <p>The water is a symbol of cleansing-washing away original sin. It is also a sign of
+                                    life-the new spiritual life that the baby or child is entering.
+                                </p>
+                            </li>
+                            <li>
+                                <p><b>Anointing with oil:</b></p>
+                                <p>The oil symbolises strengthening of faith in the challenges of life ahead-the sealing
+                                    with the Holy Spirit.
+                                </p>
+                            </li>
+                            <li>
+                                <p><b>White Garment</b></p>
+                                <p>A baby or child is usually clothed in white or have a stole or white bib to symbolise
+                                    purity and innocence.
+                                </p>
+                            </li>
+                            <li>
+                                <p><b>Candle</b></p>
+                                <p>Symbolises the new life that is given through the Sacrament of Baptism</p>
+                            </li>
+                        </ul>
+                        <br>
+                        <p>To register someone for baptism at our parish, please fill in this form. If you have any
+                            questions, don’t be afraid to contact us through our <a href="contact.html">contact
+                                page</a>.
+                        </p>
+                        <br>
+                        <!-- image of baptism -->
+                        <img src="images/sacrament_images/baptism.JPG" alt="owkdkowwo">
                     </div>
 
+                    <!-- Confirmation Information -->
+                    <div id="confirmation" class="content_item">
+                        <h2>Confirmation</h2>
+                        <p>The Sacrament of Confirmation is the second of the three sacraments of Christian initiation.
+                            Confirmation completes Baptism, by which in the laying on of hands and the anointing with
+                            Chrism
+                            Oil, which first happened at Baptism, we are confirmed with the fullness of the Holy Spirit.
+                            We
+                            are reminded of our participation in the ministry and mission of Jesus, and strengthened to
+                            follow Jesus more closely.
+                        </p>
+                        <p>Usually the bishop presides over this sacrament.</p>
+                        <br>
+                        <p><b>What happens during the sacrament of Confirmation?</b></p>
+                        <p>The Sacrament of Confirmation consists of the renewal of baptismal promises and the laying on
+                            of
+                            hands and anointing with the oil of Chrism. The anointing of the candidate is a sign of
+                            confirming the gift of the Spirit, and calling the candidates to use these gifts to become
+                            involved in the life and mission of the community.
+                        </p>
+                        <br>
+                        <p>THE SYMBOLIC GESTURES OF CONFIRMATION</p>
+                        <ul>
+                            <li>
+                                <p><b>The Laying On of Hands:</b></p>
+                                <p>The bishop places his hands on the head of the candidates and prays for the gifts of
+                                    the
+                                    Holy Spirit. This ritualises the connection to Baptism and the strengthening of the
+                                    Holy
+                                    Spirit in our vocation to follow the way of Jesus.
+                                </p>
+                            </li>
+                            <li>
+                                <p><b>Anointing with oil:</b></p>
+                                <p>The anointing of the candidate at Confirmation recognises that they are sealed with
+                                    the
+                                    Holy Spirit. The bishop anoints the candidate’s forehead with the Oil of Chrism,
+                                    saying
+                                    ‘Be sealed with the gift of the Holy Spirit’.
+                                </p>
+                            </li>
+                            <li>
+                                <p><b>The Sign of Peace:</b></p>
+                                <p>At the end of the rite, the bishop puts his hand on the side of the candidate’s face
+                                    and
+                                    says ‘Peace be with you’ and the candidate replies with ‘And with your spirit’,
+                                    symbolising the candidate’s place within the Church community.
+                                </p>
+                            </li>
+                        </ul>
+                        <br>
+                        <p><b>What do I need to do if I would like to have my child confirmed?</b></p>
+                        <p>To start the process to be confirmed you will need to contact your local parish. We have
+                            a <a href="contact.html">contact page</a> to help you contact our parish if you live in or
+                            near
+                            Cabramatta. Other than
+                            that, if you would like to confirm your child, please fill in this form.
+                        </p>
+                        <p>Parents are the first teachers of faith to their children and therefore are required to take
+                            part
+                            in the parish preparation to enable them to understand the meaning of the sacrament and the
+                            commitment they will make to support their child’s growth in faith and life.
+                        </p>
+                        <br>
 
-                </div>
-
-                <!-- Eucharist Page -->
-                <div id="eucharist" class="content-item">
-                    <h2>Eucharist</h2>
-                    <p>Eucharist is the sacrament that completes the process of initiation and is when one can fully
-                        participate in the Eucharist by receiving Holy Communion. It is unique among the sacraments as
-                        it is at the heart of our faith.
-                    </p>
-                    <p>For Catholics, the Eucharist, or Mass, is the most powerful way we encounter the real presence of
-                        Jesus Christ. Sunday after Sunday (some, of course, gather everyday), Catholics gather to
-                        celebrate the Eucharist, the ritual in which, by the power of the Holy Spirit, bread and wine
-                        are transformed into the Body and Blood of Christ.
-                    </p>
-                    <p>We who celebrate are also transformed, becoming Christ’s presence to others, and recognising the
-                        presence of Christ in others.
-                    </p>
-                    <br>
-                    <p><b>What happens during eucharist?</b></p>
-                    <p>The Eucharist (Eucharist is a Greek word that means “thanksgiving”) is the whole ritual that has
-                        come to be known as the Mass. The Eucharist is therefore a holy moment which includes the
-                        consecration of the body and blood of Jesus.
-                    </p>
-                    <br>
-                    <p>The Eucharist includes:</p>
-                    <uL>
-                        <li>
-                            <p>The sharing of the Word from scripture</p>
-                        </li>
-                        <li>
-                            <p>The offering of prayers</p>
-                        </li>
-                        <li>
-                            <p>Doing what Jesus did at the Last supper taking, blessing, breaking and sharing his body
-                                and
-                                blood
-                            </p>
-                        </li>
-                        <li>
-                            <p>Being sent forth to live and proclaim the Good News</p>
-                        </li>
-                    </uL>
-                    <br>
-
-                    <!-- image of baptism -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
-
-                    <br>
-
-                    <!-- FAQ Dropdown -->
-                    <div class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('eucharist')">FREQUENTLY ASKED QUESTIONS ABOUT
-                            EUCHARIST</button>
-                        <div class="dropdown-content" id="eucharistDropdown">
-                            <p>To follow up with these, or any other questions, contact your local parish. The parish
-                                office staff will put you in touch with either the parish priest or another suitable
-                                person who will assist you in the process of preparing your child for Holy Communion.
-                            </p>
-                        <p><b>Who prepares the children for Eucharist?</b></p>
-                            <p>It is the duty of parents and the parish to offer children prayerful and practical help
-                                to celebrate the sacraments with proper devotion and to form them in the rituals of
-                                receiving the sacraments. Parishes work with families to help parents prepare their
-                                children to grow in their friendship with Jesus and their connection to the Church
-                                community.
-                            </p>
-                        <p><b>What happens if my child is coeliac?</b></p>
-                            <p>If your child suffers from allergies speak to the priest or sacramental coordinator.
-                                Gluten free and low gluten hosts are available.
-                            </p>
-                        <p><b>What does my child need to wear?</b></p>
-                            <p>What is appropriate will be influenced by the varying situations, traditions and wishes
-                                of the families involved and guided by parish practice. Candidates are encouraged to
-                                wear what is age appropriate and culturally appropriate for their family.
-                            </p>
-                            <p>To register someone for their first Holy Communion at our parish, please fill in this
-                                form. If you have any questions, don’t be afraid to contact us through our <a
-                                    href="contact.html">contact page</a>.
-                            </p>
-                        </div>
+                        <!-- image of confirmation -->
+                        <img src="images/sacrament_images/confirmation.JPG" alt="owkdkowwo">
                     </div>
-                </div>
 
-                <!-- Penance Page -->
-                <div id="penance" class="content-item">
-                    <h2>Penance</h2>
-                    <p>The Sacrament of Penance is one of two sacraments of healing (the other being the Anointing of
-                        the Sick). Penance is a sacrament of forgiveness and celebrates God’s love and mercy towards us.
-                        It is about acknowledging and naming those times when we know we have done wrong, and then
-                        making peace and restoring the relationships with those who have been affected by our poor
-                        choices. The Sacrament of Penance is celebrated through the Rites of Reconciliation.
-                    </p>
-                    <br>
-                <p><b>What happens during Penance</b></p>
-                    <p>Penance involves the individual acknowledging their sins and receiving the forgiveness of God
-                        through the ministry of the priest.
-                    </p>
-                    <p>Through this process, a person is reconciled with the Church, renews his or her Baptism, and
-                        continues to live as a disciple of Jesus.
-                    </p>
-                    <br>
+                    <!-- Eucharist Page -->
+                    <div id="eucharist" class="content_item">
+                        <h2>Eucharist</h2>
+                        <p>Eucharist is the sacrament that completes the process of initiation and is when one can fully
+                            participate in the Eucharist by receiving Holy Communion. It is unique among the sacraments
+                            as
+                            it is at the heart of our faith.
+                        </p>
+                        <p>For Catholics, the Eucharist, or Mass, is the most powerful way we encounter the real
+                            presence of
+                            Jesus Christ. Sunday after Sunday (some, of course, gather everyday), Catholics gather to
+                            celebrate the Eucharist, the ritual in which, by the power of the Holy Spirit, bread and
+                            wine
+                            are transformed into the Body and Blood of Christ.
+                        </p>
+                        <p>We who celebrate are also transformed, becoming Christ’s presence to others, and recognising
+                            the
+                            presence of Christ in others.
+                        </p>
+                        <br>
+                        <p><b>What happens during eucharist?</b></p>
+                        <p>The Eucharist (Eucharist is a Greek word that means “thanksgiving”) is the whole ritual that
+                            has
+                            come to be known as the Mass. The Eucharist is therefore a holy moment which includes the
+                            consecration of the body and blood of Jesus.
+                        </p>
+                        <br>
+                        <p>The Eucharist includes:</p>
+                        <uL>
+                            <li>
+                                <p>The sharing of the Word from scripture</p>
+                            </li>
+                            <li>
+                                <p>The offering of prayers</p>
+                            </li>
+                            <li>
+                                <p>Doing what Jesus did at the Last supper taking, blessing, breaking and sharing his
+                                    body
+                                    and
+                                    blood
+                                </p>
+                            </li>
+                            <li>
+                                <p>Being sent forth to live and proclaim the Good News</p>
+                            </li>
+                        </uL>
+                        <br>
 
-                    <!-- image of penance -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
-
-                    <br>
-
-                    <!-- FAQ Dropdown -->
-                    <div class="dropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('penance')">FREQUENTLY ASKED QUESTIONS ABOUT
-                            PENANCE</button>
-                        <div class="dropdown-content" id="penanceDropdown">
-                            <p>To follow up with these, or any other questions, contact your local parish. The parish
-                                office staff will put you in touch with either the parish priest or another suitable
-                                person who will assist you in the process of your child’s Reconciliation.
-                            </p>
-                        <p><b>Why so many different names for the same sacrament?</b></p>
-                            <p>The names emphasise different aspects of the sacrament.</p>
-                            <p>Penance refers to our remorse, sorrow and resolution to amend our life with God’s help.
-                                Confession refers to the act by which we tell our sins to the priest.
-                            </p>
-                            <p>Reconciliation refers to the goal of the celebration which is that sinners are reconciled
-                                to God and the Church. The ritual is called the Sacrament of Penance, but is appropriate
-                                to refer to it with any of these titles.
-                            </p>
-                        <p><b>What are the different ways that Reconciliation can occur?</b></p>
-                            <p>There are three different forms that the Sacrament of Penance can take:</p>
-                            <uL>
-                                <li>
-                                    <p>First form or Rite of Reconciliation is when we individually confess our sins to
-                                        the priest.</p>
-                                </li>
-                                <li>
-                                    <p>Second form or Rite of Reconciliation is a celebration that occurs within the
-                                        Church with the whole community and involves individual confession and
-                                        absolution.</p>
-                                </li>
-                                <li>
-                                    <p>Third form or Rite of Reconciliation is also centred on the gathering of the
-                                        community but is designed for situations where there is a grave necessity.
-                                    </p>
-                                </li>
-                            </uL>
-                        <p><b>Can a priest tell someone else about what they have heard in Confession?</b></p>
-                            <p>When a person confesses their sins to a priest in the Sacrament of Penance, a very sacred
-                                trust is formed. The priest must maintain absolute secrecy about anything that a person
-                                confesses. This secrecy is called “the seal of confession”. Under no circumstances is
-                                the priest allowed to break this sacred seal.
-                            </p>
-                        </div>
+                        <!-- image of eucharist -->
+                        <img src="images/sacrament_images/communion.JPG" alt="owkdkowwo">
                     </div>
-                </div>
 
-                <!-- Marriage Page -->
-                <div id="marriage" class="content-item">
-                    <h2>Marriage</h2>
-                    <p>"Together may you follow the way of love as Christ loved you." Ephesians 5:2</p>
-                    <p>We look forward to preparing you for one of the most wonderful experiences of human life:
-                        "Celebrating your love in marriage and God's presence in your lives". We want you to know that
-                        your wedding will be part of a long tradition of weddings celebrated here at Sacred Heart
-                        Parish.
-                    </p>
-                    <p>At least six months, before your wedding date, please contact the parish office through our
-                        <a href="contact.html">contact page</a> to begin your marriage preparations. Congratulations!
-                    </p>
-                    <br>
+                    <!-- Penance Page -->
+                    <div id="penance" class="content_item">
+                        <h2>Penance</h2>
+                        <p>The Sacrament of Penance is one of two sacraments of healing (the other being the Anointing
+                            of
+                            the Sick). Penance is a sacrament of forgiveness and celebrates God’s love and mercy towards
+                            us.
+                            It is about acknowledging and naming those times when we know we have done wrong, and then
+                            making peace and restoring the relationships with those who have been affected by our poor
+                            choices. The Sacrament of Penance is celebrated through the Rites of Reconciliation.
+                        </p>
+                        <br>
+                        <p><b>What happens during Penance</b></p>
+                        <p>Penance involves the individual acknowledging their sins and receiving the forgiveness of God
+                            through the ministry of the priest.
+                        </p>
+                        <p>Through this process, a person is reconciled with the Church, renews his or her Baptism, and
+                            continues to live as a disciple of Jesus.
+                        </p>
+                        <br>
 
-                    <!-- image of marriage -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
+                        <!-- image of penance -->
+                        <img src="images/sacrament_images/zfiller.png" alt="owkdkowwo">
+                    </div>
 
-                </div>
+                    <!-- Marriage Page -->
+                    <div id="marriage" class="content_item">
+                        <h2>Marriage</h2>
+                        <p>"Together may you follow the way of love as Christ loved you." Ephesians 5:2</p>
+                        <p>We look forward to preparing you for one of the most wonderful experiences of human life:
+                            "Celebrating your love in marriage and God's presence in your lives". We want you to know
+                            that
+                            your wedding will be part of a long tradition of weddings celebrated here at Sacred Heart
+                            Parish.
+                        </p>
+                        <p>At least six months, before your wedding date, please contact the parish office through our
+                            <a href="contact.html">contact page</a> to begin your marriage preparations.
+                            Congratulations!
+                        </p>
+                        <br>
 
-                <!-- Anointing of the Sick Page -->
-                <div id="anointing" class="content-item">
-                    <h2>Anointing of the Sick</h2>
-                    <p>The Anointing of the Sick is administered to bring spiritual and even physical strength during an
-                        illness, especially near the time of death. It is most likely one of the last sacraments one
-                        will receive. A sacrament is an outward sign established by Jesus Christ to confer inward grace.
-                        In more basic terms, it is a rite that is performed to convey God’s grace to the recipient,
-                        through the power of the Holy Spirit.
-                    </p>
-                    <br>
+                        <!-- image of marriage -->
+                        <img src="images/sacrament_images/marriage.jpg"
+                            alt="'gold diamond ring on white printer paper' by Anne Might (https://unsplash.com/@annamighttakepics) on Unsplash (https://unsplash.com/photos/gold-diamond-ring-on-white-printer-paper-ebcla-QGEU8)">
+                    </div>
 
-                    <!-- image of anointing of the sick -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
-                </div>
+                    <!-- Anointing of the Sick Page -->
+                    <div id="anointing" class="content_item">
+                        <h2>Anointing of the Sick</h2>
+                        <p>The Anointing of the Sick is administered to bring spiritual and even physical strength
+                            during an
+                            illness, especially near the time of death. It is most likely one of the last sacraments one
+                            will receive. A sacrament is an outward sign established by Jesus Christ to confer inward
+                            grace.
+                            In more basic terms, it is a rite that is performed to convey God’s grace to the recipient,
+                            through the power of the Holy Spirit.
+                        </p>
+                        <br>
 
-                <!-- Holy Orders Page -->
-                <div id="holy-orders" class="content-item">
-                    <h2>Holy Orders</h2>
-                    <p>The Sacrament of Holy Orders creates a priest.</p>
-                    <p>There’s a little more to it than that, of course. As the Catechism’s section on Holy Orders says:
-                        this “is the sacrament through which the mission entrusted by Christ to his apostles continues
-                        to be exercised in the Church until the end of time: thus it is the sacrament of apostolic
-                        ministry. It includes three degrees” - the orders of bishop, priest, and deacon. (Catechism,
-                        1536)
-                    </p>
-                    <br>
+                        <!-- image of anointing of the sick -->
+                        <img src="images/sacrament_images/zfiller.png" alt="owkdkowwo">
+                    </div>
 
-                    <!-- image of holy orders -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
-                </div>
+                    <!-- Holy Orders Page -->
+                    <div id="holy-orders" class="content_item">
+                        <h2>Holy Orders</h2>
+                        <p>The Sacrament of Holy Orders creates a priest.</p>
+                        <p>There’s a little more to it than that, of course. As the Catechism’s section on Holy Orders
+                            says:
+                            this “is the sacrament through which the mission entrusted by Christ to his apostles
+                            continues
+                            to be exercised in the Church until the end of time: thus it is the sacrament of apostolic
+                            ministry. It includes three degrees” - the orders of bishop, priest, and deacon. (Catechism,
+                            1536)
+                        </p>
+                        <br>
 
-                <!-- Becoming A Catholic Page -->
-                <div id="becoming-catholic" class="content-item">
-                    <h2>Becoming A Catholic</h2>
-                    <p>The Catholic Church has a special way of initiating adults into the Catholic faith. It is
-                        called the Rite of Christian Initiation of Adults (RCIA). It is a period of Christian formation
-                        offered to those seeking to become Catholic. The RCIA may also be referred to as the
-                        Catechumenate, highlighting its roots in the Christian formation of the early Church. The Rite
-                        encompasses all aspects of the Christian life and includes an adaptation for children.
-                    </p>
-                    <p>The RCIA takes place within a parish community so you are able to share in the life of the Church
-                        expressed in a local faith community. It offers a way to grow in knowledge of Christ and the
-                        Catholic faith in company with others on a similar journey.
-                    </p>
-                    <br>
+                        <!-- image of holy orders -->
+                        <img src="images/sacrament_images/holyorders.jpg" alt="Fr's chair on the altar">
+                    </div>
 
-                    <!-- image of becoming a catholic -->
-                    <img src="images/banner_photos/noimageyet.png" alt="owkdkowwo">
-                    <p id="sacrament_photo_credit">Photo by [INSERT NAME]</p>
+                    <!-- Becoming A Catholic Page -->
+                    <div id="becoming-catholic" class="content_item">
+                        <h2>Becoming A Catholic</h2>
+                        <p>The Catholic Church has a special way of initiating adults into the Catholic faith. It is
+                            called the Rite of Christian Initiation of Adults (RCIA). It is a period of Christian
+                            formation
+                            offered to those seeking to become Catholic. The RCIA may also be referred to as the
+                            Catechumenate, highlighting its roots in the Christian formation of the early Church. The
+                            Rite
+                            encompasses all aspects of the Christian life and includes an adaptation for children.
+                        </p>
+                        <p>The RCIA takes place within a parish community so you are able to share in the life of the
+                            Church
+                            expressed in a local faith community. It offers a way to grow in knowledge of Christ and the
+                            Catholic faith in company with others on a similar journey.
+                        </p>
+                        <br>
+
+                        <!-- gallery of becoming a catholic -->
+                         <!-- slideshow code was from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+                        <div class="slideshow-container">
+                            <!-- Full-width images with number and caption text -->
+                            <div class="mySlides fade">
+                              <img src="images/sacrament_images/baptism.JPG" style="width:100%">
+                            </div>
+                          
+                            <div class="mySlides fade">
+                              <img src="images/sacrament_images/RCIA_confirmation.JPG" style="width:100%">
+                            </div>
+                          
+                            <div class="mySlides fade">
+                              <img src="images/sacrament_images/communion.JPG" style="width:100%">
+                            </div>
+                          
+                            <!-- Next and previous buttons -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                          </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- footer -->
+
+
+        <!-- Footer -->
         <div class="footer">
-            <!-- agencies -->
             <div class="agencies">
                 <h3>Agencies</h3>
+                <div class="list">
+                    <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png"
+                            id="footer_icon" alt="Catholic Weekly Logo">The
+                        Catholic Weekly</a>
+                    <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png"
+                            id="footer_icon" alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
+                    <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
+                            src="images/footer_icons/sg_logo.png" id="footer_icon"
+                            alt="Safegarding Logo">Safeguarding</a>
 
-                <a href="https://www.sydneycatholic.org/sydney-centre-for-evangelisation/#the-catholic-weekly"
-                    target="_blank" class="agencies_link">
-                    <img src="images/logos/cw_logo.png" alt="Email Logo">
-                    The Catholic Weekly
-                </a>
-                <a href="https://www.catholiccare.org/" target="_blank" class="agencies_link">
-                    <img src="images/logos/ccs_logo.png" alt="Email Logo">
-                    CatholicCare Sydney
-                </a>
-                <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"
-                    class="agencies_link">
-                    <img src="images/logos/safeguarding_logo.png" alt="Location Logo">
-                    Catholic Archdiocese of Sydney - SafeGuarding
-                </a>
-
-                <!-- credit for design and development -->
-                <p id="credit">Website designed by <u>Peter Vu</u> and developed by <u>Cecilia Le</u></p>
+                </div>
             </div>
-
-            <!-- contact information -->
-            <div class="cont_info">
+            <div class="quick_contact">
                 <h3>Contact Us</h3>
+                <div class="list">
 
-                <a href="mailto:office@sacredheartcabramatta.org.au" class="contact_link">
-                    <img src="images/logos/email_logo.png" alt="Email Logo">
-                    office@sacredheartcabramatta.org.au
-                </a>
-                <a class="contact_link">
-                    <img src="images/logos/phone_logo.png" alt="Phone Logo">
-                    <span>(02) 9724 2151</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church+Cabramatta/@-33.8907666,150.9347195,16z/data=!3m1!4b1!4m6!3m5!1s0x6b129611fcc6d89f:0x3cc1ed8d11542b7!8m2!3d-33.8907666!4d150.9372944!16s%2Fg%2F1pt__wtm6?entry=ttu"
-                    target="_blank" class="contact_link">
-                    <img src="images/logos/location_logo.png" alt="Location Logo">
-                    13 Park Road, Cabramatta NSW 2166
-                </a>
-
-                <!-- copyright statement -->
-                <p id="credit">© 2024. Sacred Heart Parish Cabramatta</p>
-
+                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img
+                            src="images/footer_icons/email_logo.png" id="footer_icon"
+                            alt="Email icon">office@sacredheartcabramatta.org.au</a>
+                    <a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
+                        2151</a>
+                    <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111"
+                        target="_blank"><img src="images/footer_icons/location_logo.png" id="footer_icon"
+                            alt="Location icon">13 Park
+                        Road,
+                        Cabramatta NSW 2166</a>
+                </div>
             </div>
 
-            <!-- socials -->
-            <div class="socials">
-                <h3>Social Media</h3>
+            <div class="media">
+                <h3>Socials</h3>
+                <div class="list">
 
-                <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank" class="social_link">
-                    <img src="images/logos/youtube_logo.png" alt="YouTube Logo">
-                    YouTube
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/facebook_logo.png" alt="Facebook Logo">
-                    Facebook
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/instagram_logo.png" alt="Instagram Logo">
-                    Instagram
-                </a>
-
-                <!-- credit for icons -->
-                <p id="credit">Icons provided by Vecteezy.com.</p>
+                    <a href="https://www.facebook.com/cabraparish/" target="_blank"><img
+                            src="images/footer_icons/facebook_logo.png" id="footer_icon"
+                            alt="Facebook Logo">Facebook</a>
+                    <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
+                            src="images/footer_icons/youtube_logo.png" id="footer_icon" alt="Youtube Logo">Youtube</a>
+                    <a href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank"><img src="images/footer_icons/instagram_logo.png" id="footer_icon"
+                            alt="Instagram Logo">Instagram</a>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="scripts.js"></script>
-
+    <script src="script.js"></script>
 
 </body>
 

@@ -4,308 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/sacred_heart_logo.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>About Us</title>
-    <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="about_container">
-        <!-- header -->
-        <div class="header">
-            <a class="header_button" id="AboutUsButton" href="about.html" alt="Button to About Page">About Us</a>
-            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page">Sacraments</a>
-            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page">Bulletins</a>
+        <!-- Desktop Header/Nav Menu -->
+        <nav class="header">
+            <a class="header_button" id="selectedPage" href="about.html" alt="Button to About Page"><b>About Us</b></a>
+            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page"><b>Sacraments</b></a>
+            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page"><b>Bulletins</b></a>
 
             <!--Logo Home Button-->
-            <button type="button" id="logo-button">
-                <a href="index.html" class="home-link">
-                    <img src="images/logos/logo.png" alt="Church Logo">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
                 </a>
             </button>
 
-            <a class="header_button" href="youth.html" alt="Button to Youth Page">Youth</a>
-            <a class="header_button" href="involved.html" alt="Button to Get Involved Page">Get Involved</a>
-            <a class="header_button" href="contact.html" alt="Button to Contact Us Page">Contact Us</a>
+            <a class="header_button" href="youth.html" alt="Button to Youth Page"><b>Youth</b></a>
+            <a class="header_button" href="involved.html" alt="Button to Get Involved Page"><b>Get Involved</b></a>
+            <a class="header_button" href="contact.html" alt="Button to Contact Us Page"><b>Contact
+                    Us</b></a>
+        </nav>
 
-        </div>
+        <!-- Mobile Header/Nav Menu -->
+        <nav class="mobile_header">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
+                </a>
+            </button>
 
-        <!-- banner -->
-        <div class="about_banner">
-            <img src="images/banner_photos/about_banner.jpg"
-                alt="Image of front of church used as a banner. Photograph taken by Giovanni Portelli Photography">
+            <!-- Dropdown Menu Button -->
+            <button id="menu_toggle">&#9776;</button>
+
+            <!-- Dropdown Menu -->
+            <div id="mobile_menu">
+                <button id="menu_close">&times;</button>
+                <a class="mobile_button" href="index.html"><b>Home</b></a>
+                <a class="mobile_button" id="selectedPage" href="about.html"><b>About Us</b></a>
+                <a class="mobile_button" href="sacraments.html"><b>Sacraments</b></a>
+                <a class="mobile_button" href="bulletin.html"><b>Bulletins</b></a>
+                <a class="mobile_button" href="youth.html"><b>Youth</b></a>
+                <a class="mobile_button" href="involved.html"><b>Get Involved</b></a>
+                <a class="mobile_button" href="contact.html"><b>Contact Us</b></a>
+            </div>
+        </nav>
+
+        <div id="overlay"></div>
+
+
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/banner_images/about_banner.jpg"
+                alt="Image of the front of the church. Photo taken by Giovanni Portelli - https://www.giovanniportelli.com.au/">
             <div id="banner_text">
-                <h1 id="banner_title">About Us</h1>
+                <h1 id="banner_title">About the Parish</h1>
             </div>
-            <p id="credit">Photo by <a href="https://www.giovanniportelli.com.au/" target="_blank">Giovanni Portelli
-                    Photography</a></p>
-
         </div>
 
-        <!-- content -->
+
+
+        <!-- Content -->
         <div class="about_content">
-            <h2>History of Our Parish</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.
-                Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. Bork Quasi ego id
-                curem, quid ille aiat aut neget. Totum autem id externum est, et quod externum, id in casu est. Ego,
-                quam ille praeponendam et magis eligendam, beatiorem hanc appello nec ullo minimo momento plus ei vitae
-                tribuo quam Stoici. An ea, quae per vinitorem antea consequebatur, per se ipsa curabit? Quamquam ex
-                omnibus philosophis Stoici plurima novaverunt, Zenoque, eorum princeps, non tam rerum inventor fuit quam
-                verborum novorum. Nescio quo modo praetervolavit oratio. Tertium autem omnibus aut maximis rebus iis,
-                quae secundum naturam sint, fruentem vivere. Quia dolori non voluptas contraria est, sed doloris
-                privatio. Bork Ista similia non sunt, Cato, in quibus quamvis multum processeris tamen illud in eadem
-                causa est, a quo abesse velis, donec evaseris; Si est nihil nisi corpus, summa erunt illa: valitudo,
-                vacuitas doloris, pulchritudo, cetera.
-                Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim. Si id dicis, vicimus.
-                Utrum igitur tibi litteram videor an totas paginas commovere? Eam stabilem appellas. Suo genere
-                perveniant ad extremum; Quod quoniam in quo sit magna dissensio est, Carneadea nobis adhibenda divisio
-                est, qua noster Antiochus libenter uti solet. Ratio quidem vestra sic cogit. Nam Metrodorum non puto
-                ipsum professum, sed, cum appellaretur ab Epicuro, repudiare tantum beneficium noluisse; Ut pulsi
-                recurrant? Addo etiam illud, multa iam mihi dare signa puerum et pudoris et ingenii, sed aetatem vides.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etenim si delectamur, cum scribimus, quis est
-                tam invidus, qui ab eo nos abducat? Hoc autem tempore, etsi multa in omni parte Athenarum sunt in ipsis
-                locis indicia summorum virorum, tamen ego illa moveor exhedra. Etenim semper illud extra est, quod arte
-                comprehenditur. Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in
-                deo nominaverunt. Duo Reges: constructio interrete. Cui Tubuli nomen odio non est? Nunc de hominis summo
-                bono quaeritur; Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes.</p>
-        </div>
-
-        <!-- footer -->
-        <div class="footer">
-            <!-- agencies -->
-            <div class="agencies">
-                <h3>Agencies</h3>
-
-                <a href="https://www.sydneycatholic.org/sydney-centre-for-evangelisation/#the-catholic-weekly"
-                    target="_blank" class="agencies_link">
-                    <img src="images/logos/cw_logo.png" alt="Email Logo">
-                    The Catholic Weekly
-                </a>
-                <a href="https://www.catholiccare.org/" target="_blank" class="agencies_link">
-                    <img src="images/logos/ccs_logo.png" alt="Email Logo">
-                    CatholicCare Sydney
-                </a>
-                <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank" class="agencies_link">
-                    <img src="images/logos/safeguarding_logo.png" alt="Location Logo">
-                    Catholic Archdiocese of Sydney - SafeGuarding
-                </a>
-
-                <!-- credit for design and development -->
-                <p id="credit">Website designed by <u>Peter Vu</u> and developed by <u>Cecilia Le</u></p>
+            <div class="about_us">
+                <h2>About Us</h2>
+                <p>The name “Cabramatta” is Aboriginal itself, “Cabra” meaning a white grub and “Matta” meaning place.<br>
+                    <br>
+                    Sacred Heart Cabramatta has always been a multicultural parish from the influx of migrants and
+                    refugees in 1946 all the way to the 1990s. The diverse backgrounds of past and present parishioners
+                    at Sacred Heart Cabramatta has always brought with it the Christian values of love, respect and
+                    tolerance. Together we have formed a true Parish Family.</p>
             </div>
-
-            <!-- contact information -->
-            <div class="cont_info">
-                <h3>Contact Us</h3>
-
-                <a href="mailto:office@sacredheartcabramatta.org.au" class="contact_link">
-                    <img src="images/logos/email_logo.png" alt="Email Logo">
-                    office@sacredheartcabramatta.org.au
-                </a>
-                <a class="contact_link">
-                    <img src="images/logos/phone_logo.png" alt="Phone Logo">
-                    <span>(02) 9724 2151</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church+Cabramatta/@-33.8907666,150.9347195,16z/data=!3m1!4b1!4m6!3m5!1s0x6b129611fcc6d89f:0x3cc1ed8d11542b7!8m2!3d-33.8907666!4d150.9372944!16s%2Fg%2F1pt__wtm6?entry=ttu"
-                    target="_blank" class="contact_link">
-                    <img src="images/logos/location_logo.png" alt="Location Logo">
-                    13 Park Road, Cabramatta NSW 2166
-                </a>
-
-                <!-- copyright statement -->
-                <p id="credit">© 2024. Sacred Heart Parish Cabramatta</p>
-
+            <div class="priests">
+                <h2>Meet Our Priests</h2>
+                <div class="parish_priest">
+                    <img src="images/about_priest_images/fr_remy_photo.png" id="portraits">
+                    <p><b>Fr Remy Son-Lam Bui</b></p>
+                    <p>Parish Priest</p>
+                </div>
+                <div class="assistant_priest">
+                    <img src="images/about_priest_images/fr_john_photo.png" id="portraits">
+                    <p><b>Fr John Pham</b></p>
+                    <p>Assistant Priest</p>
+                </div>
             </div>
+            <div class="history">
+                <h2>Our Parish History</h2>
 
-            <!-- socials -->
-            <div class="socials">
-                <h3>Social Media</h3>
-
-                <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank" class="social_link">
-                    <img src="images/logos/youtube_logo.png" alt="YouTube Logo">
-                    YouTube
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/facebook_logo.png" alt="Facebook Logo">
-                    Facebook
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/instagram_logo.png" alt="Instagram Logo">
-                    Instagram
-                </a>
-
-                <!-- credit for icons -->
-                <p id="credit">Icons provided by Vecteezy.com.</p>
             </div>
         </div>
     </div>
+
+
+
+     <!-- Footer -->
+     <div class="footer">
+        <div class="agencies">
+            <h3>Agencies</h3>
+            <div class="list">
+                <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png" id="footer_icon"
+                        alt="Catholic Weekly Logo">The Catholic Weekly</a>
+                <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png" id="footer_icon"
+                        alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
+                <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
+                        src="images/footer_icons/sg_logo.png" id="footer_icon"
+                        alt="Safegarding Logo">Safeguarding</a>
+
+            </div>
+        </div>
+        <div class="quick_contact">
+            <h3>Contact Us</h3>
+            <div class="list">
+
+                <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img src="images/footer_icons/email_logo.png"
+                        id="footer_icon" alt="Email icon">office@sacredheartcabramatta.org.au</a>
+                <a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
+                    2151</a>
+                <a
+                    href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111" target="_blank"><img
+                        src="images/footer_icons/location_logo.png" id="footer_icon" alt="Location icon">13 Park
+                    Road,
+                    Cabramatta NSW 2166</a>
+            </div>
+        </div>
+
+        <div class="media">
+            <h3>Socials</h3>
+            <div class="list">
+
+                <a href="https://www.facebook.com/cabraparish/" target="_blank"><img src="images/footer_icons/facebook_logo.png"
+                        id="footer_icon" alt="Facebook Logo">Facebook</a>
+                <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
+                        src="images/footer_icons/youtube_logo.png" id="footer_icon" alt="Youtube Logo">Youtube</a>
+                <a
+                    href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img
+                        src="images/footer_icons/instagram_logo.png" id="footer_icon"
+                        alt="Instagram Logo">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+
 </body>
 
 </html>

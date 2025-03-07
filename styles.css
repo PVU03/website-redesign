@@ -1,112 +1,54 @@
 body {
-  background-color: #233F89;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* media query for desktop */
-/* media query for desktop */
-/* media query for desktop */
-/* media query for desktop */
-@media only screen and (min-width: 430px) {
+h1 {
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 800;
+}
 
-  /* font styles */
-  #banner_title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    text-align: center;
-    font-size: 64px;
-    z-index: 1;
-  }
 
-  .home_banner #credit,
-  .about_banner #credit,
-  .sacraments_banner #credit,
-  .bulletin_banner #credit,
-  .youth_banner #credit,
-  .contact_banner #credit,
-  .involved_banner #credit {
-    position: absolute;
-    bottom: 10px;
-    left: 120px;
-    font-size: 14px;
-    z-index: 1;
+
+/* Desktops that are at least 1280px wide */
+@media only screen and (min-width: 1280px) {
+
+  h1 {
+    font-size: 96px;
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 24px;
   }
 
   h3 {
-    font-size: 32px;
-  }
-
-  h4 {
+    margin-top: 0;
+    margin-bottom: 24px;
     font-size: 24px;
   }
 
   p {
-    font-size: 20px;
+    font-size: 16px;
   }
 
-  /* Header Button Fonts Per Page */
-
-  #AboutUsButton,
-  #SacramentsButton,
-  #BulletinsButton,
-  #YouthButton,
-  #GetInvolvedButton,
-  #ContactUsButton {
-    color: #812036;
-  }
-
-  /* Facebook Popup */
-  .popup {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #4C7DBD;
-    border-bottom: 1px solid #4C7DBD;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1px;
-    text-align: center;
-    z-index: 1000;
-    color: white;
-    transition: top 0.5s ease-out;
-  }
-
-  .popup-close {
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-  }
-
-  .popup a {
-    color: white;
-    text-decoration: underline;
-  }
-
-  .popup.hide {
-    top: -100px;
+  #indent {
+    padding-left: 32px;
   }
 
 
-  /* Header for All Pages */
-  /* Header for All Pages */
-  /* Header for All Pages */
+  /* UNIVERSAL HEADER */
+  /* UNIVERSAL HEADER */
   .header {
     grid-area: header;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+    padding: 0px 16.66vw 0px 16.66vw;
+    font-family: 'Playfair Display SC', serif;
   }
 
   .header button {
@@ -114,8 +56,13 @@ body {
     background: none;
     padding: 10px;
     margin: 0 10px;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
   }
 
   .header_button {
@@ -126,20 +73,56 @@ body {
     padding: 0;
     margin: 0;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    font-family: 'Playfair Display SC', serif;
   }
 
-  /* Banner for All Pages */
-  /* Banner for All Pages */
-  /* Banner for All Pages */
+  /* Changes header button colour to show selected page */
+  #selectedPage {
+    color: #812036;
+  }
 
-  .home_banner::before,
-  .about_banner::before,
-  .sacraments_banner::before,
-  .bulletin_banner::before,
-  .youth_banner::before,
-  .involved_banner::before,
-  .contact_banner::before {
+  /* Hides the mobile version of the header */
+  .mobile_header {
+    display: none;
+    position: relative;
+    background-color: white;
+    padding: 10px 16px;
+  }
+
+  /* logo */
+  #logo_button img {
+    width: 160px;
+    height: 160px;
+    background: #FFFFFF;
+  }
+
+  /* UNIVERSAL BANNER */
+  /* UNIVERSAL BANNER */
+  .banner {
+    grid-area: banner;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+  }
+
+  .banner img {
+    min-width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .banner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -150,530 +133,543 @@ body {
     z-index: 1;
   }
 
-  .home_banner #banner_title,
-  .about_banner #banner_title,
-  .sacraments_banner #banner_title,
-  .bulletin_banner #banner_title,
-  .youth_banner #banner_title,
-  .involved_banner #banner_title,
-  .contact_banner #banner_title {
+  #banner_text {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
     color: #5e1625;
+    padding: 0px 16.66vw 0px 16.66vw;
   }
 
-  /* Footer for All Pages */
-  /* Footer for All Pages */
-  /* Footer for All Pages */
+  /* UNIVERSAL FOOTER */
+  /* UNIVERSAL FOOTER */
   .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "agencies cont_info socials"
-      "agencies cont_info socials"
-      "agencies cont_info socials";
+      "agencies quick_contact media";
     grid-area: footer;
-
-    background-color: #233F89;
-
+    background-color: #223F89;
+    padding: 0px 16.66vw 32px 16.66vw;
     text-align: center;
   }
 
-  .footer div {
-    flex: 1;
+  .footer h3 {
+    margin-top: 32px;
+    margin-bottom: 24px;
     text-align: center;
     color: white;
+
   }
 
-  .footer p {
+  .footer a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
     font-size: 16px;
-    line-height: 1.5;
-  }
-
-  /* agencies */
-  .agencies {
-    grid-area: agencies;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .agencies_link {
-    display: flex;
-    align-items: center;
-    width: 375px;
-    margin: 10px 0;
-    text-decoration: none;
+    padding-bottom: 20px;
     color: white;
+    text-align: center;
   }
 
-  /* contact us */
-  .cont_info {
-    grid-area: cont_info;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact_link {
-    display: flex;
-    align-items: center;
-    width: 305px;
-    margin: 10px 0;
-    text-decoration: none;
-    color: white;
-  }
-
-  /* socials */
-  .socials {
-    grid-area: socials;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .social_link {
-    display: flex;
-    align-items: center;
-    width: 124px;
-    margin: 10px 0;
-    text-decoration: none;
-    color: white;
-  }
-
-  /* icon/logo image settings */
-  .agencies_link img,
-  .contact_link img,
-  .social_link img {
+  #footer_icon {
     width: 48px;
     height: 48px;
-    margin-right: 10px;
+    padding-left: 10px;
   }
 
-  /* acknowledgement sizes */
-  #credit {
-    font-size: 12px;
+  .agencies {
+    grid-area: agencies;
   }
 
-  /* Home Page */
-  /* Home Page */
+  .quick_contact {
+    grid-area: quick_contact;
+  }
+
+  .media {
+    grid-area: media;
+  }
+
+  .agencies,
+  .quick_contact,
+  .media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+  /* HOME PAGE */
+  /* HOME PAGE */
   .home_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 575px 1fr 344px;
-    gap: 0px 0px;
+    grid-template-rows: 224px 540px 1fr 300px;
+    grid-auto-flow: row;
     grid-template-areas:
       "header"
-      "home_banner"
+      "banner"
       "home_content"
       "footer";
-  }
-
-  /* logo */
-  #logo-button img {
-    width: 160px;
-    height: 160px;
-    background: #FFFFFF;
-  }
-
-  /* banner */
-  .home_banner {
-    grid-area: home_banner;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  .home_banner img {
-    width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
-  }
-
-  /* content */
-  .home_content {
-    display: grid;
-    padding: 0 120px 40px 120px;
-    grid-template-columns: 33% 33% 34%;
-    grid-template-rows: 0.5fr 500px 800px 200px;
-    gap: 0px 0px;
-    grid-template-areas:
-      "home_video_h2 home_video_h2 timetable"
-      "home_video home_video timetable"
-      "home_message home_message timetable"
-      "home_photo_gallery home_photo_gallery timetable";
-    grid-area: home_content;
-    background-color: white;
-  }
-
-  /* video */
-  .home_video_h2 {
-    grid-area: home_video_h2;
-  }
-
-  .home_video {
-    grid-area: home_video;
-    position: relative;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .video-wrapper {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1153px;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-  }
-
-  .video-wrapper iframe {
+  .home_container::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
-    max-height: 500px;
-    max-width: 890px;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
   }
 
-  /* message */
-  .home_message {
-    grid-area: home_message;
-    padding: 0 0 40px 0;
-    background-color: white;
+  .home_container>* {
+    position: relative;
+    z-index: 1;
   }
 
-  .home_message #priest_words {
-    font-size: 24px;
-  }
-
-  /* photo gallery */
-  .home_photo_gallery {
-    grid-area: home_photo_gallery;
-    padding: 0 120px 40px;
-    background-color: white;
-  }
-
-  /* timetable */
-  .timetable {
+  .home_content {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1f 1f 1f 1f 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 200px auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "timetable_english"
-      "timetable_viet"
-      "timetable_polish"
-      "timetable_rec"
-      "timetable_office";
-    grid-area: timetable;
-    padding: 0 120px 40px 120px;
+      "latest_video mass_times"
+      "parish_news mass_times"
+      "archdiocese_news mass_times"
+      "filler mass_times";
+    grid-area: home_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .latest_video {
+    grid-area: latest_video;
     background-color: white;
+    padding: 48px 24px;
+  }
+
+  .video_container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video_container iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mass_times {
+    grid-area: mass_times;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .mass_times h3 {
+    padding-left: 16px;
+  }
+
+  .mass_times p {
+    padding-left: 32px;
+  }
+
+  .parish_news {
+    grid-area: parish_news;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .parish_news li {
+    font-size: 16px;
+  }
+
+  .parish_news ul {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #event {
+    padding-left: 32px;
+    padding-bottom: 12px
+  }
+
+  .archdiocese_news {
+    grid-area: archdiocese_news;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .filler {
+    grid-area: filler;
+    background-color: white;
+    padding: 0px 24px 48px;
   }
 
 
-  .timetable_english {
-    grid-area: timetable_english;
-  }
 
-  .timetable_viet {
-    grid-area: timetable_viet;
-  }
-
-  .timetable_polish {
-    grid-area: timetable_polish;
-  }
-
-  .timetable_rec {
-    grid-area: timetable_rec;
-  }
-
-  .timetable_office {
-    grid-area: timetable_office;
-  }
-
-  /* About Us Page */
-  /* About Us Page */
+  /* ABOUT US PAGE */
+  /* ABOUT US PAGE */
   .about_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 575px 1fr 344px;
+    grid-template-rows: 224px 540px 1fr 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "header"
-      "about_banner"
+      "banner"
       "about_content"
       "footer";
+    position: relative;
+    background: url('images/banner_images/about_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  /* About Page Banner */
-  .about_banner {
-    grid-area: about_banner;
+  .about_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .about_container>* {
     position: relative;
+    z-index: 1;
+  }
+
+
+  .about_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about_us"
+      "priests"
+      "history";
+    grid-area: about_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .about_us {
+    grid-area: about_us;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .priests {
+    grid-area: priests;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "heading heading"
+      "parish_priest assistant_priest";
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .priests p {
+    margin: 0;
+    padding: 12px 0 0;
+  }
+
+  .parish_priest {
+    grid-area: parish_priest;
+    padding: 0 24px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+  }
+
+  .assistant_priest {
+    grid-area: assistant_priest;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #portraits {
+    width: 60%;
+    height: 100%;
+  }
+
+  .history {
+    grid-area: history;
     background-color: white;
-
+    padding: 0px 24px 48px;
   }
 
-  .about_banner img {
-    width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
-  }
 
-  /* About Page Content */
-  .about_content {
-    grid-area: about_content;
-    padding: 0 120px 40px 120px;
-    background-color: white;
-  }
 
-  /* Sacraments Page */
-  /* Sacraments Page */
-
+  /* SACRAMENTS PAGE */
+  /* SACRAMENTS PAGE */
   .sacraments_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 575px 1fr 344px;
+    grid-template-rows: 224px 540px 1fr 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "header"
-      "sacraments_banner"
+      "banner"
       "sacraments_content"
       "footer";
-  }
-
-  /* Sacraments Page Banner */
-  .sacraments_banner {
-    grid-area: sacraments_banner;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    background: url('images/banner_images/sacraments_banner.png') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  .sacraments_banner img {
+  .sacraments_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
   }
 
-  /* Sacraments Page Content */
+  .sacraments_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
   .sacraments_content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "side_menu sacrament_info";
+      "side_menu sacraments_information";
     grid-area: sacraments_content;
-    display: flex;
-    background-color: white;
-
+    padding: 48px 16.67vw 48px 16.67vw;
   }
 
-  /* Sacraments Page Content - Side Menu */
   .side_menu {
-    grid-area: sacraments_menu;
-    width: 400px;
-    padding: 40px 0px 120px 60px;
+    grid-area: side_menu;
+    background-color: white;
+    padding: 48px 24px;
   }
 
-  .menu-button {
+  .menu_button {
     display: block;
-    width: 400px;
-    padding: 10px;
-    margin-bottom: 5px;
+    width: 100%;
     border: none;
     background-color: transparent;
     color: black;
     text-align: left;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 24px;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
   }
 
-  .menu-button:hover,
-  .menu-button.active {
+  .menu_button:hover,
+  .menu_button.active {
     text-decoration: underline;
+
   }
 
-  /* Sacraments Page Content - Information */
-  .sacrament_info {
-    grid-area: sacrament_info;
-    flex-grow: 1;
-    padding: 0 120px 120px 0px;
+  .sacraments_information {
+    grid-area: sacraments_information;
+    padding: 48px 24px;
+    background-color: white;
   }
 
-  .content-item {
+  .content_item {
     display: none;
   }
 
-  .content-item.active {
+  .content_item.active {
     display: block;
   }
 
-  .content-item img {
-    width: 100%;
-    max-width: 540px;
+  .content_item img {
+    width: 50%;
     height: auto;
     display: block;
     margin: 0 auto;
   }
 
-  .content-item #sacrament_photo_credit {
-    text-align: center;
+  /* styling for slideshow */
+  * {
+    box-sizing: border-box
   }
 
-  /* Sacraments Page FAQ Dropdown */
-  .dropdown {
+  /* Slideshow container */
+  .slideshow-container {
+    width: 50%;
     position: relative;
-    display: inline-block;
-    width: 100%;
+    margin: auto;
   }
 
-  .dropbtn {
-    background-color: #D9D9D9;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .dropdown-content {
+  /* Hide the images by default */
+  .mySlides {
     display: none;
-    background-color: #D9D9D9;
-    width: 100%;
-    z-index: 1;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
     padding: 16px;
-    box-sizing: border-box;
-    position: relative;
-    margin-top: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
 
-  .show {
-    display: block;
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 3s;
   }
 
-  .dropbtn.active {
-    background-color: #D9D9D9;
+  @keyframes fade {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
   }
 
-  /* Bulletin Page */
-  /* Bulletin Page */
-
+  /* BULLETINS PAGE */
+  /* BULLETINS PAGE */
   .bulletin_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 575px 1fr 344px;
+    grid-template-rows: 224px 540px 1fr 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "header"
-      "bulletin_banner"
+      "banner"
       "bulletin_content"
       "footer";
-    background-color: white;
-  }
-
-  /* Bulletin Page Banner */
-  .bulletin_banner {
-    grid-area: bulletin_banner;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url('images/banner_images/bulletin_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  .bulletin_banner img {
+  .bulletin_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
   }
 
-  /* Bulletin Content */
+  .bulletin_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
   .bulletin_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 700px 1fr 600px;
+    grid-template-rows: auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "current_bulletin"
-      "past_bulletin_h2"
-      "past_bulletin_carousel";
+      "past_bulletin";
     grid-area: bulletin_content;
-    padding: 0 120px 40px 120px;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .current_bulletin {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heading"
+      "bulletin_card";
+    grid-area: current_bulletin;
     background-color: white;
   }
 
-  /* Current Bulletin */
-  .current_bulletin {
-    grid-area: current_bulletin;
+  .past_bulletin {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heading"
+      "bulletins";
+    grid-area: past_bulletin;
+    background-color: white;
+
   }
 
-  .current_bulletin {
-    grid-area: current_bulletin;
+  /* Bulletin Headings */
+  .heading {
+    grid-area: heading;
+    background-color: white;
+    padding: 48px 24px 0px;
+
+  }
+
+  /* Current Bulletin Cards */
+  .bulletin_card {
+    grid-area: bulletin_card;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  /* Past Bulletin Header */
-  .past_bulletin_h2 {
-    grid-area: past_bulletin_h2;
-  }
-
-  /* Past Bulletin Carousel */
-  .past_bulletin_carousel {
-    grid-area: past_bulletin_carousel;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-  }
-
-  .bulletin_scroller {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 400px;
-    column-gap: 24px;
-  }
-
-  .past_bulletin {
-    text-align: center;
-    border-radius: 8px;
-    overflow: hidden;
-
-  }
-
-  /* Bulletin Button Styling */
-  .bulletin-button {
+  #bulletin_button {
     display: flex;
     background-color: #f0f0f0;
     flex-direction: column;
@@ -688,78 +684,98 @@ body {
     font-size: 20px;
   }
 
-  .bulletin-button:hover {
+  #bulletin_button:hover {
     background-color: #d9d9d9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
   }
 
-  .bulletin-button img {
+  #bulletin_button img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
     border-radius: 5px;
   }
 
-  /* Youth Page */
-  /* Youth Page */
+  /* Past Bulletins */
+  .bulletins {
+    grid-area: bulletins;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .bulletins li {
+    font-size: 24px;
+    padding: 0 6vw 10px 6vw;
+  }
+
+  .bulletins a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+  /* YOUTH PAGE */
+  /* YOUTH PAGE */
 
   .youth_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 575px 1fr 344px;
+    grid-template-rows: 224px 540px 1fr 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "header"
-      "youth_banner"
+      "banner"
       "youth_content"
       "footer";
-  }
-
-  /* Youth Page Banner */
-  .youth_banner {
-    grid-area: youth_banner;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    background: url('images/banner_images/youth_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  .youth_banner img {
+  .youth_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
   }
 
-  /* Youth Page Content */
+  .youth_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
   .youth_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.2fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "youth_intro"
       "youth_events"
-      "youth_recap"
-      "youth_gallery";
+      "gallery"
+      "sydney_catholic_youth";
     grid-area: youth_content;
-    background-color: white;
-    padding: 0 120px 40px 120px;
-
+    padding: 48px 16.67vw 48px 16.67vw;
   }
 
   .youth_intro {
     grid-area: youth_intro;
-    padding: 0 0 40px 0;
+    background-color: white;
+    padding: 48px 24px;
   }
 
   .youth_events {
     grid-area: youth_events;
-    padding: 0 0 40px 0;
+    background-color: white;
+    padding: 0px 24px 48px;
   }
 
   /* CSS for Event Cards */
@@ -805,326 +821,573 @@ body {
     padding: 24px;
   }
 
-  .event_description h3 {
+  .event_description p {
     margin-top: 0;
+    font-size: 24px;
   }
 
-  /* Youth Recap Video */
-  .youth_recap {
-    grid-area: youth_recap;
-    padding: 0 0 40px 0;
+  .gallery {
+    grid-area: gallery;
   }
 
-  #recap_video_table {
-    width: 62%;
-    margin-left: auto;
-    margin-right: auto;
+  .sydney_catholic_youth {
+    grid-area: sydney_catholic_youth;
+    background-color: white;
+    padding: 0px 24px 48px;
   }
 
-  .youth_gallery {
-    grid-area: youth_gallery;
-    padding: 0 0 40px 0;
-  }
 
-  /* Get Involved Page */
-  /* Get Involved Page */
+
+  /* GET INVOLVED PAGE */
+  /* GET INVOLVED PAGE */
   .involved_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 575px 1fr 344px;
-    grid-auto-columns: 1fr;
+    grid-template-rows: 224px 540px 1000 388px;
     gap: 0px 0px;
-    grid-auto-flow: row;
     grid-template-areas:
       "header"
-      "involved_banner"
+      "banner"
       "involved_content"
       "footer";
-  }
-
-  /* Get Involved Banner */
-  .involved_banner {
-    grid-area: involved_banner;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  .involved_banner img {
+  .involved_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .involved_container>* {
+    position: relative;
+    z-index: 1;
   }
 
   .involved_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "intro intro"
+      "altar_servers_card choir_card"
+      "readers_card sick_dying_card"
+      "emhc_card emhc_card";
     grid-area: involved_content;
-    padding: 0 120px 40px 120px;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .intro {
+    grid-area: intro;
+    background-color: white;
+    padding: 48px 24px 0;
+  }
+
+  .intro h2 {
+    padding-top: 48px;
+  }
+
+  .intro p {
+    margin-bottom: 0;
+  }
+
+  .altar_servers_card {
+    grid-area: altar_servers_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px 48px;
     background-color: white;
   }
 
-  #button_section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-  }
-
-  .group_title {
-    margin-bottom: 20px;
-  }
-
-  .button_group {
+  .choir_card {
+    grid-area: choir_card;
     display: flex;
     justify-content: center;
-    gap: 128px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 0 10px;
-  }
-
-  .content_button {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-    text-align: center;
-    max-width: calc(33.33% - 20px);
-    /* Adjust max-width to ensure buttons fit within the container */
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 10px;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    padding: 0 48px 48px 24px;
+    background-color: white;
   }
 
-  .content_button:hover {
+  .readers_card {
+    grid-area: readers_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px 48px;
+    background-color: white;
+  }
+
+  .sick_dying_card {
+    grid-area: sick_dying_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px 48px 24px;
+    background-color: white;
+  }
+
+  .emhc_card {
+    grid-area: emhc_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px;
+    background-color: white;
+  }
+
+  /* Involved Cards */
+
+  .involved_cards {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+
+  .involved_card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .involved_cards:hover {
     background-color: #d9d9d9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
   }
 
-  .content_button img {
-    width: 360px;
-    height: 509px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .content_button label {
-    margin-top: -75px;
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #4C7DBD 100%);
+  .involved_cards img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .involved_description {
+    padding: 24px;
     text-align: center;
-    padding: 10px 0;
-    border-radius: 0 0 10px 10px;
   }
 
-  .content_section {
-    display: none;
-    padding: 20px;
+  .involved_description p {
+    margin-top: 0;
+    font-size: 24px;
   }
 
-  .back_button {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4C7DBD;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 20px;
-  }
-
-  .back_button:hover {
-    background-color: #0056b3;
+  .emhc_card .involved_cards {
+    width: 50%;
   }
 
 
-  /* Contact Us Page */
-  /* Contact Us Page */
-  .contact_container {
+
+  /* MINISTRY PAGES */
+  /* MINISTRY PAGES */
+  .ministry_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 192px 575px 1fr 344px;
+    grid-template-rows: 224px 540px 1000 388px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "header"
-      "contact_banner"
-      "contact_content"
+      "banner"
+      "ministry_content"
       "footer";
-  }
-
-  .contact_banner {
-    grid-area: contact_banner;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    background: url('images/banner_images/contact_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
   }
 
-  .contact_banner img {
+  .ministry_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 480px;
-    object-fit: cover;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
   }
 
+  .ministry_container>* {
+    position: relative;
+    z-index: 1;
+  }
 
-  .contact_content {
+  .ministry_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 800px 0.7fr 1fr;
+    grid-template-rows: auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "contact_map"
-      "contact_message"
-      "contact_connections";
-    grid-area: contact_content;
-    padding: 0 120px 0 120px;
-    background-color: white;
+      "back_button"
+      "information";
+    grid-area: ministry_content;
+    padding: 48px 16.67vw 48px 16.67vw;
   }
 
-  /* Contact Page Map */
+  .back_button {
+    grid-area: back_button;
+    background-color: white;
+    padding: 48px 24px 0px;
+  }
+
+  .back_button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3870C7;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .back_button a:hover {
+    background-color: #223F89;
+  }
+
+  .information {
+    grid-area: information;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+
+
+  /* CONTACT US PAGE */
+  /* CONTACT US PAGE */
+  .contact_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1000 388px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "contact_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/contact_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .contact_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .contact_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact_content {
+    grid-area: contact_content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contact_map contact_map"
+      "contact_list contact_message";
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  /* Contact Us Page Map */
   .contact_map {
     grid-area: contact_map;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0px 40px 0px;
+    padding: 48px 24px;
+    background-color: white;
   }
 
   .contact_map iframe {
-    width: 100%;
+    min-width: 100%;
     height: 750px;
     border: 0;
     margin: auto;
     display: block;
   }
 
-  /* Contact Page Message */
+  /* Contact Us Page List */
+  .contact_list {
+    grid-area: contact_list;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .contact_list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    padding-bottom: 12px;
+  }
+
+  #contact_icon {
+    width: 48px;
+    height: 48px;
+    padding-left: 24px;
+  }
+
+  /* Contact Us Message */
   .contact_message {
-    grid-area: contact_message;
-    padding: 40px 0px 40px 0px;
-  }
-
-  /* Contact Page Message Form Styling */
-  .contact_message form {
     width: 100%;
-    margin: 0 auto;
-  }
-
-  .contact_message label {
-    display: block;
-    margin-bottom: 8px;
-    color: black;
-    font-size: 24px;
-  }
-
-  .contact_message input[type="text"],
-  .contact_message input[type="email"],
-  .contact_message textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: none;
-    border-radius: 8px;
     box-sizing: border-box;
-    background-color: #d9d9d9;
-    color: black;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .contact_message input,
+  .contact_message textarea {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
   }
 
   .contact_message textarea {
-    min-height: 150px;
+    height: 160px;
+    resize: none;
+    margin-bottom: 24px;
   }
 
+  /* Submit Button */
   .contact_message input[type="submit"] {
-    background-color: #812036;
+    background-color: #4C7DBD;
+    width: 120px;
     color: #ffffff;
     border: none;
     padding: 12px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
+    margin: 0;
   }
-
-  .contact_message input[type="submit"]:hover {
-    background-color: #5e1625;
-  }
-
-  /* Contact Page Connections */
-  .contact_connections {
-    grid-area: contact_connections;
-    padding: 0 0px 40px 0px;
-  }
-
 }
 
-/* media query for mobile */
-@media only screen and (max-width: 430px) {
 
-  /* font styles */
-  #banner_title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    text-align: center;
-    font-size: 64px;
-    z-index: 1;
-  }
 
-  .home_banner #credit,
-  .about_banner #credit,
-  .sacraments_banner #credit,
-  .bulletin_banner #credit,
-  .youth_banner #credit,
-  .contact_banner #credit,
-  .involved_banner #credit {
-    position: absolute;
-    bottom: 10px;
-    left: 120px;
-    font-size: 14px;
-    z-index: 1;
+
+
+
+
+
+
+
+/* Mobile screens max width 1279px */
+@media only screen and (max-width: 1279px) {
+  h1 {
+    font-size: 40px;
   }
 
   h2 {
     font-size: 24px;
+    margin: 0;
+    margin-bottom: 12px;
   }
 
   h3 {
-    font-size: 20px;
-  }
-
-  h4 {
     font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 12px;
   }
 
   p {
     font-size: 12px;
   }
 
-  /* Banner for All Pages */
-  /* Banner for All Pages */
-  /* Banner for All Pages */
+  #indent {
+    padding-left: 16px;
+  }
 
-  .home_banner::before,
-  .about_banner::before,
-  .sacraments_banner::before,
-  .bulletin_banner::before,
-  .youth_banner::before,
-  .involved_banner::before,
-  .contact_banner::before {
+  /* UNIVERSAL MOBILE HEADER */
+  /* UNIVERSAL MOBILE HEADER */
+  .mobile_header {
+    display: none;
+    background-color: white;
+    padding: 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display SC', serif;
+  }
+
+  /* Menu Button */
+  #menu_toggle {
+    font-size: 64px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    right: 16px;
+  }
+
+  /* Mobile Menu */
+  #mobile_menu {
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 66.6vw;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    transition: right 0.7s ease-in-out;
+    z-index: 1000;
+  }
+
+  #mobile_menu.active {
+    right: 0;
+  }
+
+  #menu_close {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    font-size: 64px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+  }
+
+  #mobile_menu a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  #mobile_menu a::after {
+    content: "";
+    width: 66.6%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #mobile_menu a:last-child::after {
+    display: none;
+  }
+
+  /* Hides the desktop version of the header */
+  .header {
+    display: none;
+    position: relative;
+    background-color: white;
+    padding: 10px 16px;
+  }
+
+  /* Changes side menu button colour to show selected page */
+  #mobile_menu #selectedPage {
+    color: #812036;
+  }
+
+  /* logo */
+  #logo_button img {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    background: white;
+  }
+
+  #logo_button {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+  }
+
+  #logo_button img {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    display: block;
+  }
+
+  /* Darkens page when menu opens */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.7s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  #mobile_menu.active~#overlay {
+    background: rgba(0, 0, 0, 1);
+    pointer-events: all;
+  }
+
+  /* UNIVERSAL BANNER */
+  /* UNIVERSAL BANNER */
+  .banner {
+    grid-area: banner;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+  }
+
+  .banner img {
+    min-width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .banner::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1135,100 +1398,164 @@ body {
     z-index: 1;
   }
 
+  #banner_text {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    color: #5e1625;
+    padding: 0px 16.66vw 0px 16.66vw;
+  }
 
-  /* Home Page */
-  .container {
+  /* UNIVERSAL FOOTER */
+  /* UNIVERSAL FOOTER */
+  .footer {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
+      "agencies"
+      "quick_contact"
+      "media";
+    grid-area: footer;
+    background-color: #223F89;
+    padding: 0px 16.66vw 32px 16.66vw;
+    text-align: center;
+  }
+
+  .footer h3 {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+
+  }
+
+  .footer a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  #footer_icon {
+    width: 24px;
+    height: 24px;
+    padding-left: 10px;
+  }
+
+  .agencies {
+    grid-area: agencies;
+  }
+
+  .quick_contact {
+    grid-area: quick_contact;
+  }
+
+  .media {
+    grid-area: media;
+  }
+
+  .agencies,
+  .quick_contact,
+  .media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+  /* HOME PAGE */
+  /* HOME PAGE */
+  .home_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    grid-auto-flow: row;
+    grid-template-areas:
       "header"
-      "home_banner"
+      "banner"
       "home_content"
       "footer";
-  }
-
-  .header {
-    grid-area: header;
-  }
-
-  .footer {
-    grid-area: footer;
-  }
-
-  .home_banner {
-    grid-area: home_banner;
   }
 
   .home_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 234px 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "home_video_h2"
-      "home_video"
-      "home_message"
-      "timetable"
-      "home_photo_gallery";
+      "latest_video"
+      "mass_times"
+      "parish_news"
+      "archdiocese_news";
     grid-area: home_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f6f6f6;
   }
 
-  .home_video_h2 {
-    grid-area: home_video_h2;
+  .latest_video {
+    grid-area: latest_video;
+    background-color: white;
+    padding: 48px 24px 0px;
+    text-align: center;
   }
 
-  .home_video {
-    grid-area: home_video;
+  .video_container {
+    position: relative;
+    width: 900%;
+    max-width: 90%;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
   }
 
-  .home_message {
-    grid-area: home_message;
+  .video_container iframe {
+    width: 100%;
+    height: 100%;
+    align-items: center;
   }
 
-  .timetable {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "timetable_english timetable_viet"
-      "timetable_polish ."
-      "timetable_rec timetable_office";
-    grid-area: home_timetable;
+  .mass_times {
+    grid-area: mass_times;
+    background-color: white;
+    padding: 48px 24px 0px;
+    text-align: center;
   }
 
-  .timetable_english {
-    grid-area: timetable_english;
-    background-color: red;
+  .parish_news {
+    grid-area: parish_news;
+    background-color: white;
+    padding: 24px 24px 0px;
+    text-align: center;
   }
 
-  .timetable_viet {
-    grid-area: timetable_viet;
-    background-color: orange;
+  .parish_news li {
+    font-size: 12px;
   }
 
-  .timetable_polish {
-    grid-area: timetable_polish;
-    background-color: yellow;
+  .parish_news ul {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
   }
 
-  .timetable_rec {
-    grid-area: timetable_rec;
-    background-color: green;
+  #event {
+    padding-left: 48px;
+    padding-bottom: 12px
   }
 
-  .timetable_office {
-    grid-area: timetable_office;
-    background-color: blue;
+  .archdiocese_news {
+    grid-area: archdiocese_news;
+    background-color: white;
+    padding: 24px 24px 48px;
+    text-align: center;
   }
-
-  .home_photo_gallery {
-    grid-area: home_photo_gallery;
-  }
-
 }

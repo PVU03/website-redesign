@@ -4,186 +4,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/sacred_heart_logo.png">
     <link rel="stylesheet" href="styles.css">
-    <title>Youth</title>
-    <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Sacred Heart Youth</title>
 </head>
 
 <body>
     <div class="youth_container">
-        <!-- header -->
-        <div class="header">
-            <a class="header_button" href="about.html" alt="Button to About Page">About Us</a>
-            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page">Sacraments</a>
-            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page">Bulletins</a>
+        <!-- Desktop Header/Nav Menu -->
+        <nav class="header">
+            <a class="header_button" href="about.html" alt="Button to About Page"><b>About Us</b></a>
+            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page"><b>Sacraments</b></a>
+            <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page"><b>Bulletins</b></a>
 
             <!--Logo Home Button-->
-            <button type="button" id="logo-button">
-                <a href="index.html" class="home-link">
-                    <img src="images/logos/logo.png" alt="Church Logo">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
                 </a>
             </button>
 
-            <a class="header_button" id="YouthButton" href="youth.html" alt="Button to Youth Page">Youth</a>
-            <a class="header_button" href="involved.html" alt="Button to Get Involved Page">Get Involved</a>
-            <a class="header_button" href="contact.html" alt="Button to Contact Us Page">Contact Us</a>
+            <a class="header_button" id="selectedPage" href="youth.html" alt="Button to Youth Page"><b>Youth</b></a>
+            <a class="header_button" href="involved.html" alt="Button to Get Involved Page"><b>Get Involved</b></a>
+            <a class="header_button" href="contact.html" alt="Button to Contact Us Page"><b>Contact
+                    Us</b></a>
+        </nav>
 
-        </div>
+        <!-- Mobile Header/Nav Menu -->
+        <nav class="mobile_header">
+            <button type="button" id="logo_button">
+                <a href="index.html" class="home_link">
+                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
+                </a>
+            </button>
 
-        <!-- banner -->
-        <div class="youth_banner">
-            <img src="images/banner_photos/noimageyet.png" alt="No image decided yet. Will choose later">
+            <!-- Dropdown Menu Button -->
+            <button id="menu_toggle">&#9776;</button>
+
+            <!-- Dropdown Menu -->
+            <div id="mobile_menu">
+                <button id="menu_close">&times;</button>
+                <a class="mobile_button" href="index.html"><b>Home</b></a>
+                <a class="mobile_button" href="about.html"><b>About Us</b></a>
+                <a class="mobile_button" href="sacraments.html"><b>Sacraments</b></a>
+                <a class="mobile_button" href="bulletin.html"><b>Bulletins</b></a>
+                <a class="mobile_button" id="selectedPage" href="youth.html"><b>Youth</b></a>
+                <a class="mobile_button" href="involved.html"><b>Get Involved</b></a>
+                <a class="mobile_button" href="contact.html"><b>Contact Us</b></a>
+            </div>
+        </nav>
+
+        <div id="overlay"></div>
+
+
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/banner_images/youth_banner.JPG" alt="Image of the front of the church">
             <div id="banner_text">
                 <h1 id="banner_title">Sacred Heart Youth</h1>
             </div>
-            <p id="credit">Photo by <a href="" target="_blank">[insert name]</a></p>
         </div>
 
 
+
+        <!-- Content -->
         <div class="youth_content">
-            <!-- intro -->
             <div class="youth_intro">
-                <h2>Welcome to our Youth Page</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cetera illa adhibebat, quibus demptis negat
-                    se Epicurus intellegere quid sit bonum.
-                    Est, ut dicis, inquit; Sed tamen intellego quid velit. Ergo infelix una molestia, fellx rursus, cum
-                    is ipse anulus in praecordiis piscis inventus est? A mene tu? Dolere malum est: in crucem qui
-                    agitur, beatus esse non potest. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Id
-                    mihi magnum videtur. Nec lapathi suavitatem acupenseri Galloni Laelius anteponebat, sed suavitatem
-                    ipsam neglegebat;
-                    Quae quo sunt excelsiores, eo dant clariora indicia naturae. Quis est, qui non oderit libidinosam,
-                    protervam adolescentiam? Quam nemo umquam voluptatem appellavit, appellat; Duo Reges: constructio
-                    interrete. Verum esto; At ille pellit, qui permulcet sensum voluptate. Haec quo modo conveniant, non
-                    sane intellego. Quamquam in hac divisione rem ipsam prorsus probo, elegantiam desidero. In primo
-                    enim ortu inest teneritas ac mollitia quaedam, ut nec res videre optimas nec agere possint.
-
-                    (intro to what the youth is about. TY THOMAS)</p>
+                <p> At Sacred Heart, we offer a youth community for the younger members of our community to get to know
+                    and make friends with people around their age range. We offer fun days in and outside the school
+                    grounds to allow our young people to both have fun and be more in the presence of God. </p>
             </div>
-
-            <!-- events -->
+            
             <div class="youth_events">
                 <h2>Future Events</h2>
                 <div class="event_cards">
-                    <!-- Event Card 1 -->
-                    <a href="https://www.facebook.com/photo/?fbid=752724560387154&set=gm.1614042349385887&idorvanity=1607263470063775" class="event_card" target="_blank">
-                        <img src="images/event_images/SevenDeadlySins.png" alt="Event 1">
+                    <!-- Delete empty event cards -->
+                    <!-- format for new events -->
+                    <!-- 
+                    <a href=""
+                        class="event_card" target="_blank">
+                        <img src="" alt="Event">
                         <div class="event_description">
-                            <h3>Youth Talk - Seven Deadly Sins</h3>
+                            <p></p>
                         </div>
-                    </a>
+                    </a> -->
 
-                    <!-- Event Card 2 -->
-                    <a href="https://www.facebook.com/photo/?fbid=741171251542485&set=a.402486168744330" class="event_card" target="_blank">
-                        <img src="images/event_images/75thAnniversary.png" alt="Event 2">
+                    <a href="https://www.instagram.com/sacredheartcabraparish/p/DGWoub5TPis/"
+                        class="event_card" target="_blank">
+                        <img src="images/event_banners/HolyHour.png" alt="Event 3">
                         <div class="event_description">
-                            <h3>Sacred Heart Cabramatta's 75th Anniversary</h3>
+                            <p>Holy Hour - Every 2nd and 4th Fridays</p>
                         </div>
                     </a>
-
-                    <!-- Event Card 3 -->
-                    <a href="https://www.facebook.com/photo/?fbid=741166184876325&set=a.402486168744330" class="event_card" target="_blank">
-                        <img src="images/event_images/Anzac2024.png" alt="Event 3">
-                        <div class="event_description">
-                            <h3>2024 Anzac Mass</h3>
-                        </div>
-                    </a>
+                    
                 </div>
             </div>
 
+            <div class="gallery">
+                <!-- <h2><b>Check Out Our Gallery</b></h2> -->
 
-            <!-- recap video -->
-            <div class="youth_recap">
-                <h2>Our Latest Recap Video</h2>
-                <table id="recap_video_table">
-                    <tr>
-                        <td style="height: 263px">
-
-                            <iframe width="100%" src="https://www.youtube.com/embed/hMWfphr2ffk?si=MSzGdGgRIDwyr59p"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen style="height: 304%">
-                            </iframe>
-                        </td>
-                    </tr>
-                </table>
             </div>
-
-            <!-- gallery -->
-            <div class="youth_gallery">
-                <h2>Gallery</h2>
+            <div class="sydney_catholic_youth">
+                <h2><b>Sydney Catholic Youth</b></h2>
+                <p id="indent"> Check out the Archdiocese’s Sydney Catholic Youth page to learn more about the youth within the
+                    Sydney Archdiocese <a href="https://sydneycatholicyouth.org/">here.</a></p>
             </div>
         </div>
 
-        <!-- footer -->
-        <div class="footer">
-            <!-- agencies -->
+
+
+         <!-- Footer -->
+         <div class="footer">
             <div class="agencies">
                 <h3>Agencies</h3>
+                <div class="list">
+                    <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png" id="footer_icon"
+                            alt="Catholic Weekly Logo">The Catholic Weekly</a>
+                    <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png" id="footer_icon"
+                            alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
+                    <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
+                            src="images/footer_icons/sg_logo.png" id="footer_icon"
+                            alt="Safegarding Logo">Safeguarding</a>
 
-                <a href="https://www.sydneycatholic.org/sydney-centre-for-evangelisation/#the-catholic-weekly"
-                    target="_blank" class="agencies_link">
-                    <img src="images/logos/cw_logo.png" alt="Email Logo">
-                    The Catholic Weekly
-                </a>
-                <a href="https://www.catholiccare.org/" target="_blank" class="agencies_link">
-                    <img src="images/logos/ccs_logo.png" alt="Email Logo">
-                    CatholicCare Sydney
-                </a>
-                <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"
-                    class="agencies_link">
-                    <img src="images/logos/safeguarding_logo.png" alt="Location Logo">
-                    Catholic Archdiocese of Sydney - SafeGuarding
-                </a>
-
-                <!-- credit for design and development -->
-                <p id="credit">Website designed by <u>Peter Vu</u> and developed by <u>Cecilia Le</u></p>
+                </div>
             </div>
-
-            <!-- contact information -->
-            <div class="cont_info">
+            <div class="quick_contact">
                 <h3>Contact Us</h3>
+                <div class="list">
 
-                <a href="mailto:office@sacredheartcabramatta.org.au" class="contact_link">
-                    <img src="images/logos/email_logo.png" alt="Email Logo">
-                    office@sacredheartcabramatta.org.au
-                </a>
-                <a class="contact_link">
-                    <img src="images/logos/phone_logo.png" alt="Phone Logo">
-                    <span>(02) 9724 2151</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church+Cabramatta/@-33.8907666,150.9347195,16z/data=!3m1!4b1!4m6!3m5!1s0x6b129611fcc6d89f:0x3cc1ed8d11542b7!8m2!3d-33.8907666!4d150.9372944!16s%2Fg%2F1pt__wtm6?entry=ttu"
-                    target="_blank" class="contact_link">
-                    <img src="images/logos/location_logo.png" alt="Location Logo">
-                    13 Park Road, Cabramatta NSW 2166
-                </a>
-
-                <!-- copyright statement -->
-                <p id="credit">© 2024. Sacred Heart Parish Cabramatta</p>
-
+                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img src="images/footer_icons/email_logo.png"
+                            id="footer_icon" alt="Email icon">office@sacredheartcabramatta.org.au</a>
+                    <a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
+                        2151</a>
+                    <a
+                        href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111" target="_blank"><img
+                            src="images/footer_icons/location_logo.png" id="footer_icon" alt="Location icon">13 Park
+                        Road,
+                        Cabramatta NSW 2166</a>
+                </div>
             </div>
 
-            <!-- socials -->
-            <div class="socials">
-                <h3>Social Media</h3>
+            <div class="media">
+                <h3>Socials</h3>
+                <div class="list">
 
-                <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank" class="social_link">
-                    <img src="images/logos/youtube_logo.png" alt="YouTube Logo">
-                    YouTube
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/facebook_logo.png" alt="Facebook Logo">
-                    Facebook
-                </a>
-                <a href="https://www.facebook.com/cabraparish/" target="_blank" class="social_link">
-                    <img src="images/logos/instagram_logo.png" alt="Instagram Logo">
-                    Instagram
-                </a>
-
-                <!-- credit for icons -->
-                <p id="credit">Icons provided by Vecteezy.com.</p>
+                    <a href="https://www.facebook.com/cabraparish/" target="_blank"><img src="images/footer_icons/facebook_logo.png"
+                            id="footer_icon" alt="Facebook Logo">Facebook</a>
+                    <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
+                            src="images/footer_icons/youtube_logo.png" id="footer_icon" alt="Youtube Logo">Youtube</a>
+                    <a
+                        href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img
+                            src="images/footer_icons/instagram_logo.png" id="footer_icon"
+                            alt="Instagram Logo">Instagram</a>
+                </div>
             </div>
         </div>
+
+
+        
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 
