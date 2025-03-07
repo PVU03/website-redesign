@@ -1220,10 +1220,6 @@ h1 {
     font-size: 12px;
   }
 
-  #indent {
-    padding-left: 16px;
-  }
-
   /* UNIVERSAL MOBILE HEADER */
   /* UNIVERSAL MOBILE HEADER */
   .mobile_header {
@@ -1541,8 +1537,8 @@ h1 {
   }
 
   #event {
-    padding-left: 48px;
-    padding-bottom: 12px
+    padding-bottom: 12px;
+    list-style-type: none;
   }
 
   .archdiocese_news {
