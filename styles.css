@@ -112,7 +112,6 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: white;
-
   }
 
   .banner img {
@@ -1767,6 +1766,200 @@ h1 {
     grid-area: sydney_catholic_youth;
     background-color: white;
     padding: 0px 24px 48px;
+  }
+
+
+
+  /* GET INVOLVED PAGE */
+  /* GET INVOLVED PAGE */
+  .involved_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "banner"
+      "involved_content"
+      "footer";
+  }
+
+  .involved_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "intro"
+      "altar_servers_card"
+      "choir_card"
+      "readers_card"
+      "sick_dying_card"
+      "emhc_card";
+    grid-area: involved_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f6f6f6;
+  }
+
+  .intro {
+    grid-area: intro;
+    background-color: white;
+    padding: 48px 24px 0;
+  }
+
+  .intro h2 {
+    padding-top: 48px;
+    text-align: center;
+  }
+
+  .intro p {
+    margin-bottom: 0;
+  }
+
+  .altar_servers_card {
+    grid-area: altar_servers_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px;
+    background-color: white;
+  }
+
+  .choir_card {
+    grid-area: choir_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px;
+    background-color: white;
+  }
+
+  .readers_card {
+    grid-area: readers_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px;
+    background-color: white;
+  }
+
+  .sick_dying_card {
+    grid-area: sick_dying_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px;
+    background-color: white;
+  }
+
+  .emhc_card {
+    grid-area: emhc_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px;
+    background-color: white;
+  }
+
+  /* Involved Cards */
+
+  .involved_cards {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+
+  .involved_card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .involved_cards:hover {
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .involved_cards img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .involved_description {
+    padding: 24px;
+    text-align: center;
+  }
+
+  .involved_description p {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+
+
+  /* MINISTRY PAGES */
+  /* MINISTRY PAGES */
+  .ministry_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "ministry_content"
+      "footer";
+  }
+
+  .ministry_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "back_button"
+      "information";
+    grid-area: ministry_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
+  }
+
+  .back_button {
+    grid-area: back_button;
+    background-color: white;
+    padding: 48px 24px 0px;
+  }
+
+  .back_button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3870C7;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+  }
+
+  .back_button a:hover {
+    background-color: #223F89;
+  }
+
+  .information {
+    grid-area: information;
+    background-color: white;
+    padding: 24px 24px 48px;
   }
 
 
