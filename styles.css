@@ -778,12 +778,6 @@ h1 {
     padding: 0px 24px 48px;
   }
 
-  /* CSS for Event Cards */
-  .event_cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
 
   /* Youth Events */
   .event_cards {
@@ -1562,7 +1556,103 @@ h1 {
 
 
 
-  
+  /* YOUTH PAGE */
+  /* YOUTH PAGE */
+
+  .youth_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "youth_content"
+      "footer";
+  }
+
+  .youth_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "youth_intro"
+      "youth_events"
+      "gallery"
+      "sydney_catholic_youth";
+    grid-area: youth_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f6f6f6;
+  }
+
+  .youth_intro {
+    grid-area: youth_intro;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .youth_events {
+    grid-area: youth_events;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  /* Youth Events */
+  .event_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .event_card {
+    width: 90%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+
+  .event_card:hover {
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .event_card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .event_description {
+    padding: 12px;
+  }
+
+  .event_description p {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .gallery {
+    grid-area: gallery;
+  }
+
+  .sydney_catholic_youth {
+    grid-area: sydney_catholic_youth;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+
+
   /* CONTACT US PAGE */
   /* CONTACT US PAGE */
   .contact_container {
