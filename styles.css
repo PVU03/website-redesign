@@ -1250,7 +1250,7 @@ h1 {
     border: none;
     background: none;
     cursor: pointer;
-    color:black;
+    color: black;
   }
 
   /* Mobile Menu */
@@ -1281,7 +1281,8 @@ h1 {
     border: none;
     cursor: pointer;
     margin-top: 12px;
-    color:black;
+    color: black;
+    right: 24px;
   }
 
   #mobile_menu a {
@@ -1557,5 +1558,115 @@ h1 {
     background-color: white;
     padding: 24px 24px 48px;
     text-align: center;
+  }
+
+
+
+  
+  /* CONTACT US PAGE */
+  /* CONTACT US PAGE */
+  .contact_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "contact_content"
+      "footer";
+  }
+
+  .contact_content {
+    grid-area: contact_content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contact_map"
+      "contact_list"
+      "contact_message";
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f6f6f6;
+  }
+
+  /* Contact Us Page Map */
+  .contact_map {
+    grid-area: contact_map;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 24px;
+    background-color: white;
+  }
+
+  .contact_map iframe {
+    max-width: 100%;
+    height: 200px;
+    border: 0;
+    margin: auto;
+    display: block;
+  }
+
+  /* Contact Us Page List */
+  .contact_list {
+    grid-area: contact_list;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .contact_list a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    padding-bottom: 12px;
+  }
+
+  #contact_icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Contact Us Message */
+  .contact_message {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .contact_message input,
+  .contact_message textarea {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .contact_message textarea {
+    height: 160px;
+    resize: none;
+    margin-bottom: 24px;
+  }
+
+  /* Submit Button */
+  .contact_message input[type="submit"] {
+    background-color: #4C7DBD;
+    width: 120px;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0;
   }
 }
