@@ -654,11 +654,10 @@ h1 {
   }
 
   /* Bulletin Headings */
-  .heading {
+  .bulletin_heading {
     grid-area: heading;
     background-color: white;
     padding: 48px 24px 0px;
-
   }
 
   /* Current Bulletin Cards */
@@ -1556,9 +1555,128 @@ h1 {
 
 
 
-  /* YOUTH PAGE */
-  /* YOUTH PAGE */
+  /* BULLETINS PAGE */
+  /* BULLETINS PAGE */
+  .bulletin_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "bulletin_content"
+      "footer";
+  }
 
+  .bulletin_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "current_bulletin"
+      "past_bulletin";
+    grid-area: bulletin_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
+  }
+
+  .current_bulletin {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heading"
+      "bulletin_card";
+    grid-area: current_bulletin;
+    background-color: white;
+    text-align: center;
+  }
+
+  .past_bulletin {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heading"
+      "bulletins";
+    grid-area: past_bulletin;
+    background-color: white;
+
+  }
+
+  /* Bulletin Headings */
+  .bulletin_heading {
+    grid-area: heading;
+    background-color: white;
+    padding: 48px 24px 0px;
+    text-align: center;
+  }
+
+  /* Current Bulletin Cards */
+  .bulletin_card {
+    grid-area: bulletin_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px;
+  }
+
+  #bulletin_button {
+    display: flex;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    font-size: 12px;
+  }
+
+  #bulletin_button:hover {
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  #bulletin_button img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  /* Past Bulletins */
+  .bulletins {
+    grid-area: bulletins;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .bulletins li {
+    font-size: 12px;
+    padding: 0 6vw 10px 6vw;
+  }
+
+  .bulletins a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+  /* YOUTH PAGE */
+  /* YOUTH PAGE */
   .youth_container {
     display: grid;
     grid-template-columns: 1fr;
