@@ -1550,6 +1550,94 @@ h1 {
 
 
 
+  /* ABOUT US PAGE */
+  /* ABOUT US PAGE */
+  .about_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "about_content"
+      "footer";
+  }
+
+  .about_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about_us"
+      "priests"
+      "history";
+    grid-area: about_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f6f6f6;
+  }
+
+  .about_us {
+    grid-area: about_us;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .priests {
+    grid-area: priests;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "heading"
+      "parish_priest"
+      "assistant_priest";
+    background-color: white;
+    padding: 0px 24px 48px;
+    text-align: center;
+  }
+
+
+  .priests p {
+    margin: 0;
+    padding: 12px 0 0;
+  }
+
+  .parish_priest {
+    grid-area: parish_priest;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .assistant_priest {
+    grid-area: assistant_priest;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #portraits {
+    width: 60%;
+    height: 100%;
+  }
+
+  .history {
+    grid-area: history;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+
+
   /* BULLETINS PAGE */
   /* BULLETINS PAGE */
   .bulletin_container {
