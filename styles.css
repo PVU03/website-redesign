@@ -578,6 +578,94 @@ h1 {
     }
   }
 
+
+
+  /* SACRAMENTS PROGRAMME PAGE */
+  /* SACRAMENTS PROGRAMME PAGE */
+  .sacraProgramme_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "sacraProgramme_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/sacraments_banner.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .sacraments_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .sacraments_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .sacraProgramme_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "chosen_sacrament"
+      "child_details"
+      "parent_details"
+      "preferred_session"
+      "sacrament_submit";
+    grid-area: sacraProgramme_content;
+  }
+
+  .chosen_sacrament {
+    grid-area: chosen_sacrament;
+  }
+
+  .child_details {
+    grid-area: child_details;
+  }
+
+  .parent_details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "parent_1 parent_2";
+    grid-area: parent_details;
+  }
+
+  .parent_1 {
+    grid-area: parent_1;
+  }
+
+  .parent_2 {
+    grid-area: parent_2;
+  }
+
+  .preferred_session {
+    grid-area: preferred_session;
+  }
+
+  .sacrament_submit {
+    grid-area: sacrament_submit;
+  }
+
+
+
   /* BULLETINS PAGE */
   /* BULLETINS PAGE */
   .bulletin_container {
@@ -1784,6 +1872,7 @@ h1 {
       opacity: 1
     }
   }
+
 
 
   /* BULLETINS PAGE */
