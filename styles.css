@@ -580,8 +580,8 @@ h1 {
 
 
 
-  /* SACRAMENTS PROGRAMME PAGE */
-  /* SACRAMENTS PROGRAMME PAGE */
+  /* SACRAMENTS PROGRAMME FORM PAGE */
+  /* SACRAMENTS PROGRAMME FORM PAGE */
   .sacraProgramme_container {
     display: grid;
     grid-template-columns: 1fr;
@@ -598,7 +598,7 @@ h1 {
     background-size: cover;
   }
 
-  .sacraments_container::before {
+  .sacraProgramme_container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -609,7 +609,7 @@ h1 {
     z-index: 0;
   }
 
-  .sacraments_container>* {
+  .sacraProgramme_container>* {
     position: relative;
     z-index: 1;
   }
@@ -627,10 +627,12 @@ h1 {
       "preferred_session"
       "sacrament_submit";
     grid-area: sacraProgramme_content;
+    padding: 48px 16.67vw 48px 16.67vw;
   }
 
   .chosen_sacrament {
     grid-area: chosen_sacrament;
+    background-color: white;
   }
 
   .child_details {
