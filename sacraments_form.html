@@ -18,8 +18,7 @@
         <!-- Desktop Header/Nav Menu -->
         <nav class="header">
             <a class="header_button" href="about.html" alt="Button to About Page"><b>About Us</b></a>
-            <a class="header_button" href="sacraments.html"
-                alt="Button to Sacraments Page"><b>Sacraments</b></a>
+            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page"><b>Sacraments</b></a>
             <a class="header_button" href="bulletin.html" alt="Button to Bulletins Page"><b>Bulletins</b></a>
 
             <!--Logo Home Button-->
@@ -75,16 +74,119 @@
 
 
         <!-- Content -->
-        <div class="sacraProgramme_content">
-            <div class="chosen_sacrament"></div>
-            <div class="child_details"></div>
-            <div class="parent_details">
-                <div class="parent_1"></div>
-                <div class="parent_2"></div>
+        <form action="process_form.php" method="POST" class="sacraProgramme_content">
+
+            <!-- Chosen Sacrament -->
+            <div class="chosen_sacrament">
+                <h2>Enrolment Form</h2>
+                <p>Select Sacrament:</p>
+                <label>
+                    <input type="radio" name="sacramentselect" value="baptism" required> Baptism
+                </label>
+                <label>
+                    <input type="radio" name="sacramentselect" value="confirmation" required> Confirmation
+                </label>
             </div>
-            <div class="preferred_session"></div>
-            <div class="sacrament_submit"></div>
-        </div>
+
+            <!-- Child Details -->
+            <div class="child_details">
+                <h3>Child's Details:</h3>
+                <label for="childfullname">Child's Full Name:</label>
+                <input type="text" name="childfullname" id="childfullname" required><br><br>
+
+                <label for="childdob">Date of Birth:</label>
+                <input type="date" name="childdob" id="childdob" required><br><br>
+
+                <label for="childschool">School Name:</label>
+                <input type="text" name="childschool" id="childschool" required><br><br>
+
+                <label for="grade">Grade:</label>
+                <input type="text" name="grade" id="grade" required><br><br>
+
+                <label for="year">Year:</label>
+                <input type="text" name="year" id="year" required><br><br>
+
+                <p>Was your child baptised at Sacred Heart Cabramatta Parish?*</p>
+
+                <label>
+                    <input type="radio" name="baptisedatparish" id="baptisedatparish" value="yes"> Yes
+                </label>
+
+                <label>
+                    <input type="radio" name="notbaptisedatparish" id="notbaptisedatparish" value="yes"> No
+                </label><br><br>
+
+                <label for="bapparishreceived">Parish of Baptism:</label>
+                <input type="text" name="bapparishreceived" id="bapparishreceived"><br><br>
+
+                <label for="bapdatereceived">Date of Baptism:</label>
+                <input type="date" name="bapdatereceived" id="bapdatereceived"><br><br>
+
+                <label for="recparishreceived">Parish of First Reconciliation:</label>
+                <input type="text" name="recparishreceived" id="recparishreceived"><br><br>
+
+                <label for="recdatereceived">Date of First Reconciliation:</label>
+                <input type="date" name="recdatereceived" id="recdatereceived"><br><br>
+            </div>
+
+            <!-- Parent Details -->
+            <div class="parent_details">
+                <div class="parent_1">
+                    <h3>Parent's Details:</h3>
+                    <label for="motherfullname">Mother's Full Name:</label>
+                    <input type="text" name="motherfullname" id="motherfullname" required><br><br>
+
+                    <label for="motherreligion">Mother's Religion:</label>
+                    <input type="text" name="motherreligion" id="motherreligion" required>
+                </div>
+
+                <div class="parent_2">
+                    <label for="fatherfullname">Father's Full Name:</label>
+                    <input type="text" name="fatherfullname" id="fatherfullname" required><br><br>
+
+                    <label for="fatherreligion">Father's Religion:</label>
+                    <input type="text" name="fatherreligion" id="fatherreligion" required>
+                </div>
+            </div>
+
+            <!-- Residential Details -->
+
+            <div class="residentials">
+                <label for="streetname">Street Name:</label>
+                <input type="text" name="streetname" id="streetname" required><br><br>
+
+                <label for="suburb">Suburb:</label>
+                <input type="text" name="suburb" id="suburb" required><br><br>
+
+                <label for="postcode">Postcode:</label>
+                <input type="text" name="postcode" id="postcode" required><br><br>
+
+                <label for="tel">Telephone:</label>
+                <input type="text" name="tel" id="tel" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br><br>
+            </div>
+
+
+            <!-- Contact -->
+            <div class="preferred_session">
+                <p>Preferred Session:</p>
+                <label>
+                    <input type="radio" name="preferredsession" id="saturday5pm" value="yes"> Saturday 5pm
+                </label>
+
+                <label>
+                    <input type="radio" name="preferredsession" id="sunday9am" value="yes"> Sunday 9am
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="sacrament_submit">
+                <button type="submit" href="/">Submit</button>
+            </div>
+        </form>
+
 
 
 
@@ -93,10 +195,10 @@
             <div class="agencies">
                 <h3>Agencies</h3>
                 <div class="list">
-                    <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png" id="footer_icon"
-                            alt="Catholic Weekly Logo">The Catholic Weekly</a>
-                    <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png" id="footer_icon"
-                            alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
+                    <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png"
+                            id="footer_icon" alt="Catholic Weekly Logo">The Catholic Weekly</a>
+                    <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png"
+                            id="footer_icon" alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
                     <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
                             src="images/footer_icons/sg_logo.png" id="footer_icon"
                             alt="Safegarding Logo">Safeguarding</a>
@@ -107,13 +209,14 @@
                 <h3>Contact Us</h3>
                 <div class="list">
 
-                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img src="images/footer_icons/email_logo.png"
-                            id="footer_icon" alt="Email icon">office@sacredheartcabramatta.org.au</a>
+                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img
+                            src="images/footer_icons/email_logo.png" id="footer_icon"
+                            alt="Email icon">office@sacredheartcabramatta.org.au</a>
                     <a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
                         2151</a>
-                    <a
-                        href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111" target="_blank"><img
-                            src="images/footer_icons/location_logo.png" id="footer_icon" alt="Location icon">13 Park
+                    <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111"
+                        target="_blank"><img src="images/footer_icons/location_logo.png" id="footer_icon"
+                            alt="Location icon">13 Park
                         Road,
                         Cabramatta NSW 2166</a>
                 </div>
@@ -123,20 +226,20 @@
                 <h3>Socials</h3>
                 <div class="list">
 
-                    <a href="https://www.facebook.com/cabraparish/" target="_blank"><img src="images/footer_icons/facebook_logo.png"
-                            id="footer_icon" alt="Facebook Logo">Facebook</a>
+                    <a href="https://www.facebook.com/cabraparish/" target="_blank"><img
+                            src="images/footer_icons/facebook_logo.png" id="footer_icon"
+                            alt="Facebook Logo">Facebook</a>
                     <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
                             src="images/footer_icons/youtube_logo.png" id="footer_icon" alt="Youtube Logo">Youtube</a>
-                    <a
-                        href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img
-                            src="images/footer_icons/instagram_logo.png" id="footer_icon"
+                    <a href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank"><img src="images/footer_icons/instagram_logo.png" id="footer_icon"
                             alt="Instagram Logo">Instagram</a>
                 </div>
             </div>
         </div>
 
 
-        
+
     </div>
 
     <script src="script.js"></script>

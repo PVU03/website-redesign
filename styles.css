@@ -34,7 +34,7 @@ h1 {
   }
 
   #indent {
-    padding-left: 32px;
+    margin-left: 32px;
   }
 
 
@@ -178,7 +178,6 @@ h1 {
   #footer_icon {
     width: 48px;
     height: 48px;
-    padding-left: 10px;
   }
 
   .agencies {
@@ -485,6 +484,7 @@ h1 {
     font-size: 24px;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
 
   }
 
@@ -617,26 +617,34 @@ h1 {
   .sacraProgramme_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "chosen_sacrament"
       "child_details"
       "parent_details"
+      "residential"
       "preferred_session"
       "sacrament_submit";
     grid-area: sacraProgramme_content;
     padding: 48px 16.67vw 48px 16.67vw;
   }
 
+  .sacraProgramme_content p {
+    margin: 0 0 12px;
+  }
+
   .chosen_sacrament {
     grid-area: chosen_sacrament;
+    padding: 48px 24px;
     background-color: white;
   }
 
   .child_details {
     grid-area: child_details;
+    padding: 0px 24px 48px;
+    background-color: red;
   }
 
   .parent_details {
@@ -652,19 +660,53 @@ h1 {
 
   .parent_1 {
     grid-area: parent_1;
+    padding: 0px 24px 48px;
+    background-color: green;
   }
 
   .parent_2 {
     grid-area: parent_2;
+    padding: 60px 24px 48px;
+    background-color: orange;
+  }
+
+  .residentials {
+    grid-area: residential;
+    padding: 0px 24px 48px;
+    background-color: pink;
   }
 
   .preferred_session {
     grid-area: preferred_session;
+    padding: 0px 24px 48px;
+    background-color: purple;
   }
 
   .sacrament_submit {
     grid-area: sacrament_submit;
+    padding: 0px 24px 48px;
+    background-color: blue;
+    text-align: center;
   }
+
+  .sacrament_submit button {
+    width: 150px;
+    padding: 10px 20px;
+    width: 120px;
+    border: none;
+    border-radius: 8px;
+    background: #3870C7;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  .sacrament_submit button:hover {
+    background: #223F89;
+  }
+
 
 
 
@@ -1294,15 +1336,21 @@ h1 {
 
   /* Submit Button */
   .contact_message input[type="submit"] {
-    background-color: #4C7DBD;
+    display: inline-block;
+    padding: 10px 20px;
     width: 120px;
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
+    background-color: #3870C7;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
     font-size: 16px;
+    transition: background-color 0.3s ease;
     cursor: pointer;
-    border-radius: 4px;
-    margin: 0;
+  }
+
+  .contact_message input[type="submit"]:hover {
+    background-color: #223F89;
   }
 }
 
@@ -1552,7 +1600,6 @@ h1 {
   #footer_icon {
     width: 24px;
     height: 24px;
-    padding-left: 10px;
   }
 
   .agencies {
