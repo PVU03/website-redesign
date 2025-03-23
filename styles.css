@@ -1348,6 +1348,7 @@ h1 {
     font-size: 16px;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    border: none;
   }
 
   .contact_message input[type="submit"]:hover {
