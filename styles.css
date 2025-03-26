@@ -617,12 +617,13 @@ h1 {
   .sacraProgramme_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "chosen_sacrament"
       "child_details"
+      "child_reconeuch"
       "parent_details"
       "residential"
       "preferred_session"
@@ -635,6 +636,28 @@ h1 {
     margin: 0 0 12px;
   }
 
+  .sacraProgramme_content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .sacraProgramme_content input:focus {
+    border-color: #3870C7;
+    outline: none;
+    box-shadow: 0 0 5px rgba(56, 112, 199, 0.5);
+  }
+
+  .sacraProgramme_content input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
   .chosen_sacrament {
     grid-area: chosen_sacrament;
     padding: 48px 24px;
@@ -644,7 +667,13 @@ h1 {
   .child_details {
     grid-area: child_details;
     padding: 0px 24px 48px;
-    background-color: red;
+    background-color: white;
+  }
+
+  .child_reconeuch {
+    grid-area: child_reconeuch;
+    padding: 0px 24px 48px;
+    background-color: blue;
   }
 
   .parent_details {
@@ -706,6 +735,32 @@ h1 {
   .sacrament_submit button:hover {
     background: #223F89;
   }
+
+  .child_details label,
+  .parent_details label,
+  .residentials label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .child_details input,
+  .parent_details input,
+  .residentials input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  .chosen_sacrament label,
+  .child_details input[type="radio"],
+  .preferred_session input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+  }
+
 
 
 

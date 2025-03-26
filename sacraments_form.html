@@ -103,7 +103,7 @@
                 <label for="grade">Grade:</label>
                 <input type="text" name="grade" id="grade" required><br><br>
 
-                <label for="year">Year:</label>
+                <label for="year">Year of Baptism:</label>
                 <input type="text" name="year" id="year" required><br><br>
 
                 <p>Was your child baptised at Sacred Heart Cabramatta Parish?*</p>
@@ -113,20 +113,34 @@
                 </label>
 
                 <label>
-                    <input type="radio" name="notbaptisedatparish" id="notbaptisedatparish" value="yes"> No
-                </label><br><br>
+                    <input type="radio" name="baptisedatparish" id="notbaptisedatparish" value="yes"> No
+                </label>
+                <br>
+                <p>If Yes, go to Parents Details section. If No, please provide details below:</p>
+                <br><br>
 
                 <label for="bapparishreceived">Parish of Baptism:</label>
                 <input type="text" name="bapparishreceived" id="bapparishreceived"><br><br>
 
                 <label for="bapdatereceived">Date of Baptism:</label>
-                <input type="date" name="bapdatereceived" id="bapdatereceived"><br><br>
+                <input type="date" name="bapdatereceived" id="bapdatereceived">
+            </div>
 
+             <!-- Child Reconciliation and Eucharist Details -->
+
+            <div class="child_reconeuch">
+                <h3>Reconciliation and Eucharist:</h3>
                 <label for="recparishreceived">Parish of First Reconciliation:</label>
                 <input type="text" name="recparishreceived" id="recparishreceived"><br><br>
 
                 <label for="recdatereceived">Date of First Reconciliation:</label>
                 <input type="date" name="recdatereceived" id="recdatereceived"><br><br>
+
+                <label for="fhcparishreceived">Parish of First Holy Communion:</label>
+                <input type="text" name="fhcparishreceived" id="fhcparishreceived"><br><br>
+
+                <label for="fhcdatereceived">Date of First Holy Communion:</label>
+                <input type="date" name="fhcdatereceived" id="fhcdatereceived">
             </div>
 
             <!-- Parent Details -->
@@ -165,7 +179,7 @@
                 <input type="text" name="tel" id="tel" required><br><br>
 
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required><br><br>
+                <input type="email" name="email" id="email" required>
             </div>
 
 
