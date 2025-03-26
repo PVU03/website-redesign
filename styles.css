@@ -648,7 +648,7 @@ h1 {
   }
 
   .sacraProgramme_content input:focus {
-    border-color: #3870C7;
+    border-color: #223F89;
     outline: none;
     box-shadow: 0 0 5px rgba(56, 112, 199, 0.5);
   }
