@@ -711,6 +711,10 @@ h1 {
     background-color: purple;
   }
 
+  #important_information {
+    color: red;
+  }
+
   .sacrament_submit {
     grid-area: sacrament_submit;
     padding: 0px 24px 48px;
