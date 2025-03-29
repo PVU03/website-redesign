@@ -1432,9 +1432,1503 @@ h1 {
 
 
 
+/* Tablet screens width between 720px and 1279px*/
+@media (min-width: 720px) and (max-width: 1279px) {
 
-/* Mobile screens max width 1279px */
-@media only screen and (max-width: 1279px) {
+  h1 {
+    font-size: 96px;
+  }
+
+  h2 {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  #indent {
+    margin-left: 32px;
+  }
+
+
+  /* UNIVERSAL MOBILE HEADER */
+  /* UNIVERSAL MOBILE HEADER */
+  .mobile_header {
+    display: none;
+    background-color: white;
+    padding: 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display SC', serif;
+  }
+
+  /* Menu Button */
+  #menu_toggle {
+    font-size: 64px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: black;
+  }
+
+  /* Mobile Menu */
+  #mobile_menu {
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 66.6vw;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    transition: right 0.7s ease-in-out;
+    z-index: 1000;
+  }
+
+  #mobile_menu.active {
+    right: 0;
+  }
+
+  #menu_close {
+    position: absolute;
+    top: 10px;
+    font-size: 64px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    color: black;
+    right: 24px;
+  }
+
+  #mobile_menu a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  #mobile_menu a::after {
+    content: "";
+    width: 66.6%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #mobile_menu a:last-child::after {
+    display: none;
+  }
+
+  /* Hides the desktop version of the header */
+  .header {
+    display: none;
+    position: relative;
+    background-color: white;
+    padding: 10px 16px;
+  }
+
+  /* Changes side menu button colour to show selected page */
+  #mobile_menu #selectedPage {
+    color: #812036;
+  }
+
+  /* logo */
+  #logo_button img {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    background: white;
+  }
+
+  #logo_button {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+  }
+
+  #logo_button img {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    display: block;
+  }
+
+  /* Darkens page when menu opens */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.7s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  #mobile_menu.active~#overlay {
+    background: rgba(0, 0, 0, 1);
+    pointer-events: all;
+  }
+
+  /* UNIVERSAL BANNER */
+  /* UNIVERSAL BANNER */
+  .banner {
+    grid-area: banner;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .banner img {
+    min-width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+  }
+
+  #banner_text {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    color: #5e1625;
+    padding: 0px 16.66vw 0px 16.66vw;
+  }
+
+  /* UNIVERSAL FOOTER */
+  /* UNIVERSAL FOOTER */
+  .footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 300px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "agencies quick_contact media";
+    grid-area: footer;
+    background-color: #223F89;
+    padding: 0px 16.66vw 32px 16.66vw;
+    text-align: center;
+  }
+
+  .footer h3 {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+
+  }
+
+  .footer a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  #footer_icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .agencies {
+    grid-area: agencies;
+  }
+
+  .quick_contact {
+    grid-area: quick_contact;
+  }
+
+  .media {
+    grid-area: media;
+  }
+
+  .agencies,
+  .quick_contact,
+  .media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+  /* HOME PAGE */
+  /* HOME PAGE */
+  .home_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1fr 300px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "home_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .home_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .home_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .home_content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 200px auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "latest_video mass_times"
+      "parish_news mass_times"
+      "archdiocese_news mass_times"
+      "filler mass_times";
+    grid-area: home_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .latest_video {
+    grid-area: latest_video;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .video_container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video_container iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mass_times {
+    grid-area: mass_times;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .mass_times h3 {
+    padding-left: 16px;
+  }
+
+  .mass_times p {
+    padding-left: 32px;
+  }
+
+  .parish_news {
+    grid-area: parish_news;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .parish_news li {
+    font-size: 16px;
+  }
+
+  .parish_news ul {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #event {
+    padding-left: 32px;
+    padding-bottom: 12px
+  }
+
+  .archdiocese_news {
+    grid-area: archdiocese_news;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .filler {
+    grid-area: filler;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+
+
+  /* ABOUT US PAGE */
+  /* ABOUT US PAGE */
+  .about_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1fr 300px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "about_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/about_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .about_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .about_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  .about_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "about_us"
+      "priests"
+      "history";
+    grid-area: about_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .about_us {
+    grid-area: about_us;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .priests {
+    grid-area: priests;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "heading heading"
+      "parish_priest assistant_priest";
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .priests p {
+    margin: 0;
+    padding: 12px 0 0;
+  }
+
+  .parish_priest {
+    grid-area: parish_priest;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .assistant_priest {
+    grid-area: assistant_priest;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #portraits {
+    width: 60%;
+    height: 100%;
+  }
+
+  .history {
+    grid-area: history;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+
+
+  /* SACRAMENTS PAGE */
+  /* SACRAMENTS PAGE */
+  .sacraments_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1fr 300px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "sacraments_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/sacraments_banner.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .sacraments_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .sacraments_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .sacraments_content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "side_menu sacraments_information";
+    grid-area: sacraments_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .side_menu {
+    grid-area: side_menu;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .menu_button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: black;
+    text-align: left;
+    cursor: pointer;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+
+  }
+
+  .menu_button:hover,
+  .menu_button.active {
+    text-decoration: underline;
+
+  }
+
+  .sacraments_information {
+    grid-area: sacraments_information;
+    padding: 48px 24px;
+    background-color: white;
+  }
+
+  .content_item {
+    display: none;
+  }
+
+  .content_item.active {
+    display: block;
+  }
+
+  .content_item img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  * {
+    box-sizing: border-box
+  }
+
+  .slideshow-container {
+    width: 75%;
+    position: relative;
+    margin: auto;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #223F89;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+
+
+  /* SACRAMENTS PROGRAMME FORM PAGE */
+  /* SACRAMENTS PROGRAMME FORM PAGE */
+  .sacraProgramme_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "sacraProgramme_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/sacraments_banner.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .sacraProgramme_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .sacraProgramme_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .sacraProgramme_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "chosen_sacrament"
+      "child_details"
+      "child_reconeuch"
+      "parent_details"
+      "residential"
+      "preferred_session"
+      "sacrament_submit";
+    grid-area: sacraProgramme_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .sacraProgramme_content p {
+    margin: 0 0 12px;
+  }
+
+  .chosen_sacrament {
+    grid-area: chosen_sacrament;
+    padding: 48px 24px;
+    background-color: white;
+  }
+
+  .child_details {
+    grid-area: child_details;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .child_reconeuch {
+    grid-area: child_reconeuch;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .parent_details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "parent_1 parent_2";
+    grid-area: parent_details;
+  }
+
+  .parent_1 {
+    grid-area: parent_1;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .parent_2 {
+    grid-area: parent_2;
+    padding: 60px 24px 48px;
+    background-color: white;
+  }
+
+  .residentials {
+    grid-area: residential;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .preferred_session {
+    grid-area: preferred_session;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .sacrament_submit {
+    grid-area: sacrament_submit;
+    padding: 0px 24px 48px;
+    background-color: white;
+    text-align: center;
+  }
+
+  .sacraProgramme_content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .sacraProgramme_content input[type=text],
+  input[type=date] {
+    height: 48px;
+  }
+
+  .sacraProgramme_content input:focus {
+    border-color: #223F89;
+    outline: none;
+    box-shadow: 0 0 5px rgba(56, 112, 199, 0.5);
+  }
+
+  .sacraProgramme_content input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .columns div {
+    width: 48%;
+  }
+
+  #important_information {
+    color: red;
+  }
+
+  .sacrament_submit button {
+    width: 150px;
+    padding: 10px 20px;
+    width: 120px;
+    border: none;
+    border-radius: 8px;
+    background: #3870C7;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  .sacrament_submit button:hover {
+    background: #223F89;
+  }
+
+  .child_details label,
+  .parent_details label,
+  .residentials label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .child_reconeuch input,
+  .child_details input,
+  .parent_details input,
+  .residentials input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  .chosen_sacrament label,
+  .child_details input[type="radio"],
+  .preferred_session input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+  }
+
+
+
+
+
+  /* BULLETINS PAGE */
+  /* BULLETINS PAGE */
+  .bulletin_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1fr 300px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "bulletin_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/bulletin_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .bulletin_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .bulletin_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .bulletin_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "current_bulletin"
+      "past_bulletin";
+    grid-area: bulletin_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .current_bulletin {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heading"
+      "bulletin_card";
+    grid-area: current_bulletin;
+    background-color: white;
+  }
+
+  .past_bulletin {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heading"
+      "bulletins";
+    grid-area: past_bulletin;
+    background-color: white;
+
+  }
+
+  /* Bulletin Headings */
+  .bulletin_heading {
+    grid-area: heading;
+    background-color: white;
+    padding: 48px 24px 0px;
+  }
+
+  /* Current Bulletin Cards */
+  .bulletin_card {
+    grid-area: bulletin_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #bulletin_button {
+    display: flex;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    max-width: 300px;
+    font-size: 20px;
+  }
+
+  #bulletin_button:hover {
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  #bulletin_button img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  /* Past Bulletins */
+  .bulletins {
+    grid-area: bulletins;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .bulletins li {
+    font-size: 24px;
+    padding: 0 6vw 10px 6vw;
+  }
+
+  .bulletins a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+  /* YOUTH PAGE */
+  /* YOUTH PAGE */
+
+  .youth_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1fr 300px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "youth_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/youth_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .youth_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .youth_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .youth_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "youth_intro"
+      "instagram"
+      "youth_events"
+      "gallery"
+      "sydney_catholic_youth";
+    grid-area: youth_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .youth_intro {
+    grid-area: youth_intro;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+  .instagram {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "instagram_text instagram_code";
+    grid-area: instagram;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .instagram_text {
+    grid-area: instagram_text;
+  }
+
+  .instagram_code {
+    grid-area: instagram_code;
+    text-align: center;
+  }
+
+  .instagram_code img {
+    width: 75%;
+  }
+
+  .youth_events {
+    grid-area: youth_events;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+
+  /* Youth Events */
+  .event_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .event_card {
+    width: calc(33.33% - 20px);
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+
+  .event_card:hover {
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .event_card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .event_description {
+    padding: 24px;
+  }
+
+  .event_description p {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .gallery {
+    grid-area: gallery;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .sydney_catholic_youth {
+    grid-area: sydney_catholic_youth;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+
+
+  /* GET INVOLVED PAGE */
+  /* GET INVOLVED PAGE */
+  .involved_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1000 388px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "banner"
+      "involved_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .involved_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .involved_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .involved_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "intro intro"
+      "altar_servers_card choir_card"
+      "readers_card sick_dying_card"
+      "emhc_card emhc_card";
+    grid-area: involved_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .intro {
+    grid-area: intro;
+    background-color: white;
+    padding: 48px 24px 0;
+  }
+
+  .intro h2 {
+    padding-top: 48px;
+  }
+
+  .intro p {
+    margin-bottom: 0;
+  }
+
+  .altar_servers_card {
+    grid-area: altar_servers_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px 48px;
+    background-color: white;
+  }
+
+  .choir_card {
+    grid-area: choir_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px 48px 24px;
+    background-color: white;
+  }
+
+  .readers_card {
+    grid-area: readers_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px 48px;
+    background-color: white;
+  }
+
+  .sick_dying_card {
+    grid-area: sick_dying_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px 48px 24px;
+    background-color: white;
+  }
+
+  .emhc_card {
+    grid-area: emhc_card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px 48px;
+    background-color: white;
+  }
+
+  /* Involved Cards */
+
+  .involved_cards {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+
+  .involved_card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .involved_cards:hover {
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .involved_cards img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .involved_description {
+    padding: 24px;
+    height: 144px;
+    text-align: center;
+  }
+
+  .involved_description p {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .emhc_card .involved_cards {
+    width: 50%;
+  }
+
+
+
+  /* MINISTRY PAGES */
+  /* MINISTRY PAGES */
+  .ministry_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1000 388px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "ministry_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/contact_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .ministry_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .ministry_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ministry_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "back_button"
+      "information";
+    grid-area: ministry_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  .back_button {
+    grid-area: back_button;
+    background-color: white;
+    padding: 48px 24px 0px;
+  }
+
+  .back_button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3870C7;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .back_button a:hover {
+    background-color: #223F89;
+  }
+
+  .information {
+    grid-area: information;
+    background-color: white;
+    padding: 48px 24px;
+  }
+
+
+
+  /* CONTACT US PAGE */
+  /* CONTACT US PAGE */
+  .contact_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 224px 540px 1000 388px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "contact_content"
+      "footer";
+    position: relative;
+    background: url('images/banner_images/contact_banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .contact_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+  }
+
+  .contact_container>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact_content {
+    grid-area: contact_content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contact_map contact_map"
+      "contact_list contact_message";
+    padding: 48px 16.67vw 48px 16.67vw;
+  }
+
+  /* Contact Us Page Map */
+  .contact_map {
+    grid-area: contact_map;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 24px;
+    background-color: white;
+  }
+
+  .contact_map iframe {
+    min-width: 100%;
+    height: 750px;
+    border: 0;
+    margin: auto;
+    display: block;
+  }
+
+  /* Contact Us Page List */
+  .contact_list {
+    grid-area: contact_list;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .contact_list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    padding-bottom: 12px;
+  }
+
+  #contact_icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Contact Us Message */
+  .contact_message {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 0px 24px 48px;
+  }
+
+  .contact_message input,
+  .contact_message textarea {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .contact_message textarea {
+    height: 160px;
+    resize: none;
+    margin-bottom: 24px;
+  }
+
+  /* Submit Button */
+  .contact_message input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 120px;
+    background-color: #3870C7;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .contact_message input[type="submit"]:hover {
+    background-color: #223F89;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile screens max width 719px*/
+@media only screen and (max-width: 719px) {
   h1 {
     font-size: 40px;
   }
