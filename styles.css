@@ -1724,6 +1724,7 @@ h1 {
       "filler mass_times";
     grid-area: home_content;
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   .latest_video {
@@ -1822,6 +1823,7 @@ h1 {
       "history";
     grid-area: about_content;
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   .about_us {
@@ -1905,6 +1907,7 @@ h1 {
       "side_menu sacraments_information";
     grid-area: sacraments_content;
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   .side_menu {
@@ -2060,6 +2063,7 @@ h1 {
       "sacrament_submit";
     grid-area: sacraProgramme_content;
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   .sacraProgramme_content p {
@@ -2243,6 +2247,7 @@ h1 {
       "past_bulletin";
     grid-area: bulletin_content;
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   .current_bulletin {
@@ -2365,6 +2370,7 @@ h1 {
       "sydney_catholic_youth";
     grid-area: youth_content;
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   .youth_intro {
@@ -2487,6 +2493,7 @@ h1 {
       "emhc_card emhc_card";
     grid-area: involved_content;
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   .intro {
@@ -2683,6 +2690,7 @@ h1 {
       "contact_map contact_map"
       "contact_list contact_message";
     padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
   }
 
   /* Contact Us Page Map */
