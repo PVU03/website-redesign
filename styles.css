@@ -1663,15 +1663,15 @@ h1 {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     padding-bottom: 20px;
     color: white;
     text-align: center;
   }
 
   #footer_icon {
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
   }
 
   .agencies {
