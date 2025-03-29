@@ -659,13 +659,13 @@ h1 {
 
   .parent_1 {
     grid-area: parent_1;
-    padding: 0px 24px 48px;
+    padding: 0px 24px;
     background-color: white;
   }
 
   .parent_2 {
     grid-area: parent_2;
-    padding: 60px 24px 48px;
+    padding: 60px 24px 0px;
     background-color: white;
   }
 
@@ -2153,13 +2153,13 @@ h1 {
 
   .parent_1 {
     grid-area: parent_1;
-    padding: 0px 24px 48px;
+    padding: 0px 24px;
     background-color: white;
   }
 
   .parent_2 {
     grid-area: parent_2;
-    padding: 60px 24px 48px;
+    padding: 60px 24px 0px;
     background-color: white;
   }
 
@@ -3511,6 +3511,186 @@ h1 {
     to {
       opacity: 1
     }
+  }
+
+
+
+  /* SACRAMENTS PROGRAMME FORM PAGE */
+  /* SACRAMENTS PROGRAMME FORM PAGE */
+  .sacraProgramme_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 112px 240px 1 470px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "banner"
+      "sacraProgramme_content"
+      "footer";
+    position: relative;
+  }
+
+  .sacraProgramme_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "chosen_sacrament"
+      "child_details"
+      "child_reconeuch"
+      "parent_details"
+      "residential"
+      "preferred_session"
+      "sacrament_submit";
+    grid-area: sacraProgramme_content;
+    padding: 48px 16.67vw 48px 16.67vw;
+    background-color: #f9f9f9;
+  }
+
+  .sacraProgramme_content p {
+    margin: 0 0 12px;
+  }
+
+  .chosen_sacrament {
+    grid-area: chosen_sacrament;
+    padding: 48px 24px;
+    background-color: white;
+  }
+
+  .child_details {
+    grid-area: child_details;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .child_reconeuch {
+    grid-area: child_reconeuch;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .parent_details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 230px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "parent_1"
+      "parent_2";
+    grid-area: parent_details;
+  }
+
+  .parent_1 {
+    grid-area: parent_1;
+    padding: 0px 24px;
+    background-color: white;
+  }
+
+  .parent_2 {
+    grid-area: parent_2;
+    padding: 0px 24px;
+    background-color: white;
+  }
+
+  .residentials {
+    grid-area: residential;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .preferred_session {
+    grid-area: preferred_session;
+    padding: 0px 24px 48px;
+    background-color: white;
+  }
+
+  .sacrament_submit {
+    grid-area: sacrament_submit;
+    padding: 0px 24px 48px;
+    background-color: white;
+    text-align: center;
+  }
+
+  .sacraProgramme_content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .sacraProgramme_content input[type=text],
+  input[type=date] {
+    height: 48px;
+  }
+
+  .sacraProgramme_content input:focus {
+    border-color: #223F89;
+    outline: none;
+    box-shadow: 0 0 5px rgba(56, 112, 199, 0.5);
+  }
+
+  .sacraProgramme_content input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  #important_information {
+    color: red;
+  }
+
+  .sacrament_submit button {
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #3870C7;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  .sacrament_submit button:hover {
+    background: #223F89;
+  }
+
+  .child_details label,
+  .child_reconeuch label,
+  .parent_details label,
+  .residentials label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  .child_reconeuch input,
+  .child_details input,
+  .parent_details input,
+  .residentials input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+  .chosen_sacrament label,
+  .child_details input[type="radio"],
+  .preferred_session input[type="radio"],
+  .preferred_session label {
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+    font-size: 12px;
   }
 
 
