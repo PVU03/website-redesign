@@ -2629,6 +2629,7 @@ h1 {
   .contact_message input[type="submit"] {
     background-color: #4C7DBD;
     width: 120px;
+    height: 60px;
     color: #ffffff;
     border: none;
     padding: 12px 20px;
