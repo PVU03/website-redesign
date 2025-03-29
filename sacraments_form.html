@@ -91,56 +91,87 @@
             <!-- Child Details -->
             <div class="child_details">
                 <h3>Child's Details:</h3>
-                <label for="childfullname">Child's Full Name:</label>
-                <input type="text" name="childfullname" id="childfullname" required><br><br>
+                <div class="columns">
 
-                <label for="childdob">Date of Birth:</label>
-                <input type="date" name="childdob" id="childdob" required><br><br>
+                    <div>
+                        <label for="childfullname">Child's Full Name: <span id="important_information">*</span></label>
+                        <input type="text" name="childfullname" id="childfullname" required><br>
+                    </div>
 
-                <label for="childschool">School Name:</label>
-                <input type="text" name="childschool" id="childschool" required><br><br>
+                    <div>
+                        <label for="childdob">Date of Birth: <span id="important_information">*</span></label>
+                        <input type="date" name="childdob" id="childdob" required><br>
+                    </div>
 
-                <label for="grade">Grade:</label>
-                <input type="text" name="grade" id="grade" required><br><br>
+                    <div>
+                        <label for="childschool">School Name: <span id="important_information">*</span></label>
+                        <input type="text" name="childschool" id="childschool" required><br>
+                    </div>
 
-                <label for="year">Year of Baptism:</label>
-                <input type="text" name="year" id="year" required><br><br>
+                    <div>
+                        <label for="grade">Grade: <span id="important_information">*</span></label>
+                        <input type="text" name="grade" id="grade" required><br>
+                    </div>
 
-                <p>Was your child baptised at Sacred Heart Cabramatta Parish?*</p>
+                    <div>
+                        <label for="year">Year of Baptism: <span id="important_information">*</span></label>
+                        <input type="text" name="year" id="year" required><br>
+                    </div>
+                </div>
 
-                <label>
-                    <input type="radio" name="baptisedatparish" id="baptisedatparish" value="yes"> Yes
-                </label>
+                <div>
+                    <p>Was your child baptised at Sacred Heart Cabramatta Parish? <span
+                            id="important_information">*</span></p>
 
-                <label>
-                    <input type="radio" name="baptisedatparish" id="notbaptisedatparish" value="yes"> No
-                </label>
-                <br>
-                <p>If Yes, go to Parents Details section. If No, please provide details below:</p>
-                <br><br>
+                    <label>
+                        <input type="radio" name="baptisedatparish" id="baptisedatparish" value="yes"> Yes
+                    </label>
 
-                <label for="bapparishreceived">Parish of Baptism:</label>
-                <input type="text" name="bapparishreceived" id="bapparishreceived"><br><br>
+                    <label>
+                        <input type="radio" name="baptisedatparish" id="notbaptisedatparish" value="yes"> No
+                    </label>
+                    <br>
+                    <p>If Yes, go to Parents Details section. If No, please provide details below:</p><br>
+                </div>
 
-                <label for="bapdatereceived">Date of Baptism:</label>
-                <input type="date" name="bapdatereceived" id="bapdatereceived">
+                <div class="columns">
+                    <div>
+                        <label for="bapparishreceived">Parish of Baptism:</label>
+                        <input type="text" name="bapparishreceived" id="bapparishreceived"><br>
+                    </div>
+
+                    <div>
+                        <label for="bapdatereceived">Date of Baptism:</label>
+                        <input type="date" name="bapdatereceived" id="bapdatereceived">
+                    </div>
+                </div>
             </div>
 
             <!-- Child Reconciliation and Eucharist Details -->
 
             <div class="child_reconeuch">
                 <h3>Reconciliation and Eucharist:</h3>
-                <label for="recparishreceived">Parish of First Reconciliation:</label>
-                <input type="text" name="recparishreceived" id="recparishreceived"><br><br>
+                <div class="columns">
+                    <div>
+                        <label for="recparishreceived">Parish of First Reconciliation:</label>
+                        <input type="text" name="recparishreceived" id="recparishreceived"><br>
+                    </div>
 
-                <label for="recdatereceived">Date of First Reconciliation:</label>
-                <input type="date" name="recdatereceived" id="recdatereceived"><br><br>
+                    <div>
+                        <label for="recdatereceived">Date of First Reconciliation:</label>
+                        <input type="date" name="recdatereceived" id="recdatereceived"><br>
+                    </div>
 
-                <label for="fhcparishreceived">Parish of First Holy Communion:</label>
-                <input type="text" name="fhcparishreceived" id="fhcparishreceived"><br><br>
+                    <div>
+                        <label for="fhcparishreceived">Parish of First Holy Communion:</label>
+                        <input type="text" name="fhcparishreceived" id="fhcparishreceived"><br>
+                    </div>
 
-                <label for="fhcdatereceived">Date of First Holy Communion:</label>
-                <input type="date" name="fhcdatereceived" id="fhcdatereceived">
+                    <div>
+                        <label for="fhcdatereceived">Date of First Holy Communion:</label>
+                        <input type="date" name="fhcdatereceived" id="fhcdatereceived">
+                    </div>
+                </div>
             </div>
 
             <!-- Parent Details -->
@@ -148,7 +179,7 @@
                 <div class="parent_1">
                     <h3>Parent's Details:</h3>
                     <label for="motherfullname">Mother's Full Name:</label>
-                    <input type="text" name="motherfullname" id="motherfullname" required><br><br>
+                    <input type="text" name="motherfullname" id="motherfullname" required><br>
 
                     <label for="motherreligion">Mother's Religion:</label>
                     <input type="text" name="motherreligion" id="motherreligion" required>
@@ -156,7 +187,7 @@
 
                 <div class="parent_2">
                     <label for="fatherfullname">Father's Full Name:</label>
-                    <input type="text" name="fatherfullname" id="fatherfullname" required><br><br>
+                    <input type="text" name="fatherfullname" id="fatherfullname" required><br>
 
                     <label for="fatherreligion">Father's Religion:</label>
                     <input type="text" name="fatherreligion" id="fatherreligion" required>
@@ -166,22 +197,29 @@
             <!-- Residential Details -->
 
             <div class="residentials">
-                <label for="streetname">Street Name:</label>
-                <input type="text" name="streetname" id="streetname" required><br><br>
-
-                <label for="suburb">Suburb:</label>
-                <input type="text" name="suburb" id="suburb" required><br><br>
-
-                <label for="postcode">Postcode:</label>
-                <input type="text" name="postcode" id="postcode" required><br><br>
-
-                <label for="tel">Telephone:</label>
-                <input type="text" name="tel" id="tel" required><br><br>
-
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
+                <div class="columns">
+                    <div>
+                        <label for="streetname">Street Name:</label>
+                        <input type="text" name="streetname" id="streetname" required><br>
+                    </div>
+                    <div>
+                        <label for="suburb">Suburb:</label>
+                        <input type="text" name="suburb" id="suburb" required><br>
+                    </div>
+                    <div>
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" name="postcode" id="postcode" required><br>
+                    </div>
+                    <div>
+                        <label for="tel">Telephone:</label>
+                        <input type="text" name="tel" id="tel" required><br>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </div>
             </div>
-
 
             <!-- Contact -->
             <div class="preferred_session">
@@ -193,15 +231,20 @@
                 <label>
                     <input type="radio" name="preferredsession" id="sunday9am" value="yes"> Sunday 9am
                 </label><br><br><br>
-                <p>I hereby give permission for my child to have their photo taken by the official photographer at the
+                <p>I hereby give permission for my child to have their photo taken by the official photographer at
+                    the
                     Sacred Heart Cabramatta Confirmation and for photos featuring them to be distributed among other
                     families involved in these ceremonies. I also agree that such photos may be used for news or
-                    promotional purposes by the Parish, the Archdiocese of Sydney and/or Sacred Heart Primary School,
+                    promotional purposes by the Parish, the Archdiocese of Sydney and/or Sacred Heart Primary
+                    School,
                     Cabramatta.
                     <br><br>
-                    Please <span id="important_information">send a copy of your child’s Baptism Certificate / Reconcilation &
-                    Eucharist</span> (if baptised at a parish other than Sacred Heart) to the parish's email:
-                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank">office@sacredheartcabramatta.org.au</a></p>
+                    Please <span id="important_information">send a copy of your child’s Baptism Certificate /
+                        Reconcilation &
+                        Eucharist</span> (if baptised at a parish other than Sacred Heart) to the parish's email:
+                    <a href="mailto:office@sacredheartcabramatta.org.au"
+                        target="_blank">office@sacredheartcabramatta.org.au</a>
+                </p>
             </div>
 
             <!-- Submit Button -->

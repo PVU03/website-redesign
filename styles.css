@@ -515,24 +515,20 @@ h1 {
     margin: 0 auto;
   }
 
-  /* styling for slideshow */
   * {
     box-sizing: border-box
   }
 
-  /* Slideshow container */
   .slideshow-container {
-    width: 50%;
+    width: 75%;
     position: relative;
     margin: auto;
   }
 
-  /* Hide the images by default */
   .mySlides {
     display: none;
   }
 
-  /* Next & previous buttons */
   .prev,
   .next {
     cursor: pointer;
@@ -541,7 +537,7 @@ h1 {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: #223F89;
     font-weight: bold;
     font-size: 24px;
     transition: 0.6s ease;
@@ -549,20 +545,16 @@ h1 {
     user-select: none;
   }
 
-  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
 
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
-
-  /* Fading animation */
   .fade {
     animation-name: fade;
     animation-duration: 3s;
@@ -636,28 +628,6 @@ h1 {
     margin: 0 0 12px;
   }
 
-  .sacraProgramme_content input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    transition: border-color 0.3s ease-in-out;
-  }
-
-  .sacraProgramme_content input:focus {
-    border-color: #223F89;
-    outline: none;
-    box-shadow: 0 0 5px rgba(56, 112, 199, 0.5);
-  }
-
-  .sacraProgramme_content input[type="radio"] {
-    width: auto;
-    margin-right: 10px;
-  }
-
   .chosen_sacrament {
     grid-area: chosen_sacrament;
     padding: 48px 24px;
@@ -673,7 +643,7 @@ h1 {
   .child_reconeuch {
     grid-area: child_reconeuch;
     padding: 0px 24px 48px;
-    background-color: blue;
+    background-color: white;
   }
 
   .parent_details {
@@ -690,36 +660,74 @@ h1 {
   .parent_1 {
     grid-area: parent_1;
     padding: 0px 24px 48px;
-    background-color: green;
+    background-color: white;
   }
 
   .parent_2 {
     grid-area: parent_2;
     padding: 60px 24px 48px;
-    background-color: orange;
+    background-color: white;
   }
 
   .residentials {
     grid-area: residential;
     padding: 0px 24px 48px;
-    background-color: pink;
+    background-color: white;
   }
 
   .preferred_session {
     grid-area: preferred_session;
     padding: 0px 24px 48px;
-    background-color: purple;
-  }
-
-  #important_information {
-    color: red;
+    background-color: white;
   }
 
   .sacrament_submit {
     grid-area: sacrament_submit;
     padding: 0px 24px 48px;
-    background-color: blue;
+    background-color: white;
     text-align: center;
+  }
+
+  .sacraProgramme_content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .sacraProgramme_content input[type=text],
+  input[type=date] {
+    height: 48px;
+  }
+
+  .sacraProgramme_content input:focus {
+    border-color: #223F89;
+    outline: none;
+    box-shadow: 0 0 5px rgba(56, 112, 199, 0.5);
+  }
+
+  .sacraProgramme_content input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .columns div {
+    width: 48%;
+  }
+
+  #important_information {
+    color: red;
   }
 
   .sacrament_submit button {
@@ -747,6 +755,7 @@ h1 {
     margin-bottom: 4px;
   }
 
+  .child_reconeuch input,
   .child_details input,
   .parent_details input,
   .residentials input {
@@ -1636,13 +1645,13 @@ h1 {
     grid-area: footer;
     background-color: #223F89;
     padding: 0px 16.66vw 32px 16.66vw;
-    text-align: center;
+    text-align: left;
   }
 
   .footer h3 {
     margin-top: 32px;
     margin-bottom: 24px;
-    text-align: center;
+    text-align: left;
     color: white;
 
   }
@@ -1655,7 +1664,7 @@ h1 {
     font-size: 10px;
     padding-bottom: 20px;
     color: white;
-    text-align: center;
+    text-align: left;
   }
 
   #footer_icon {
@@ -1680,8 +1689,9 @@ h1 {
   .media {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
+    padding-left: 12px;
   }
 
 
