@@ -1709,24 +1709,6 @@ h1 {
       "home_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .home_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .home_container>* {
-    position: relative;
-    z-index: 1;
   }
 
   .home_content {
@@ -1825,24 +1807,6 @@ h1 {
       "about_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/about_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .about_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .about_container>* {
-    position: relative;
-    z-index: 1;
   }
 
 
@@ -1929,24 +1893,6 @@ h1 {
       "sacraments_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/sacraments_banner.png') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .sacraments_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .sacraments_container>* {
-    position: relative;
-    z-index: 1;
   }
 
   .sacraments_content {
@@ -2080,8 +2026,6 @@ h1 {
       "sacraProgramme_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/sacraments_banner.png') no-repeat center center fixed;
-    background-size: cover;
   }
 
   .sacraProgramme_container::before {
@@ -2286,24 +2230,6 @@ h1 {
       "bulletin_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/bulletin_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .bulletin_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .bulletin_container>* {
-    position: relative;
-    z-index: 1;
   }
 
   .bulletin_content {
@@ -2423,24 +2349,6 @@ h1 {
       "youth_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/youth_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .youth_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .youth_container>* {
-    position: relative;
-    z-index: 1;
   }
 
   .youth_content {
@@ -2565,24 +2473,6 @@ h1 {
       "involved_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .involved_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .involved_container>* {
-    position: relative;
-    z-index: 1;
   }
 
   .involved_content {
@@ -2721,24 +2611,6 @@ h1 {
       "ministry_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/contact_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .ministry_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .ministry_container>* {
-    position: relative;
-    z-index: 1;
   }
 
   .ministry_content {
@@ -2798,24 +2670,6 @@ h1 {
       "contact_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/contact_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  .contact_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
-
-  .contact_container>* {
-    position: relative;
-    z-index: 1;
   }
 
   .contact_content {
