@@ -2428,12 +2428,12 @@ h1 {
   }
 
   .event_description {
-    padding: 24px;
+    padding: 16px;
   }
 
   .event_description p {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .gallery {
@@ -2579,7 +2579,7 @@ h1 {
 
   .involved_description p {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .emhc_card .involved_cards {
@@ -2707,7 +2707,7 @@ h1 {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     padding-bottom: 12px;
   }
 
