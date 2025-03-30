@@ -175,9 +175,20 @@ h1 {
     text-align: center;
   }
 
+  #facebook_link,
+  #instagram_link {
+    padding-left: 8px;
+  }
+
   #footer_icon {
     width: 48px;
     height: 48px;
+  }
+
+  #footer_icon_facebook,
+  #footer_icon_instagram {
+    width: 32px;
+    height: 32px;
   }
 
   .agencies {
