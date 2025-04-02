@@ -1022,7 +1022,6 @@ h1 {
     padding: 0px 24px 48px;
   }
 
-
   /* Youth Events */
   .event_cards {
     display: flex;
@@ -2005,7 +2004,7 @@ h1 {
   }
 
   .slideshow-container {
-    width: 75%;
+    width: 100%;
     position: relative;
     margin: auto;
   }
@@ -3359,6 +3358,7 @@ h1 {
   }
 
   /* styling for slideshow */
+  /* styling for slideshow */
   * {
     box-sizing: border-box
   }
@@ -3368,11 +3368,14 @@ h1 {
     width: 50%;
     position: relative;
     margin: auto;
+    overflow: hidden;
   }
 
   /* Hide the images by default */
   .mySlides {
     display: none;
+    position: absolute;
+    width: 100%;
   }
 
   /* Next & previous buttons */
@@ -3390,6 +3393,7 @@ h1 {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 2;
   }
 
   /* Position the "next button" to the right */
@@ -3404,22 +3408,50 @@ h1 {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 3s;
+  /* Sliding animation */
+  .slide {
+    animation-name: slide;
+    animation-duration: 1s;
   }
 
-  @keyframes fade {
+  @keyframes slide {
     from {
-      opacity: 0
+      transform: translateX(100%);
     }
 
     to {
-      opacity: 1
+      transform: translateX(0);
     }
   }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .slide-right {
+    animation: slideInRight 0.6s ease-in-out;
+  }
+
+  .slide-left {
+    animation: slideInLeft 0.6s ease-in-out;
+  }
+
 
 
 
