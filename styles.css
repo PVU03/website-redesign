@@ -891,7 +891,7 @@ h1 {
       "bulletin_content"
       "footer";
     position: relative;
-    background: url('images/banner_images/bulletin_banner.jpg') no-repeat center center fixed;
+    background: url('images/banner_images/bulletin_banner.png') no-repeat center center fixed;
     background-size: cover;
   }
 
