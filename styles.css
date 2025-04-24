@@ -1532,7 +1532,7 @@ h1 {
 
 
 /* Tablet screens width between 720px and 1279px*/
-@media (min-width: 720px) and (max-width: 1279px) {
+@media (min-width: 811px) and (max-width: 1279px) {
 
   h1 {
     font-size: 96px;
@@ -1763,7 +1763,7 @@ h1 {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     padding-bottom: 20px;
     color: white;
     text-align: center;
@@ -1813,7 +1813,7 @@ h1 {
   }
 
   .copyright p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
 
@@ -2894,7 +2894,7 @@ h1 {
 
 
 /* Mobile screens max width 719px*/
-@media only screen and (max-width: 719px) {
+@media only screen and (max-width: 810px) {
   h1 {
     font-size: 40px;
   }
