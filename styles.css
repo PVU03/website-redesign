@@ -1193,13 +1193,12 @@ h1 {
   .involved_content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
     gap: 0px 0px;
     grid-template-areas:
       "intro intro"
       "altar_servers_card choir_card"
-      "readers_card sick_dying_card"
-      "emhc_card emhc_card";
+      "readers_card emhc_card";
     grid-area: involved_content;
     padding: 48px 16.67vw 48px 16.67vw;
   }
@@ -1245,21 +1244,12 @@ h1 {
     background-color: white;
   }
 
-  .sick_dying_card {
-    grid-area: sick_dying_card;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 48px 48px 24px;
-    background-color: white;
-  }
-
   .emhc_card {
     grid-area: emhc_card;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 24px 48px;
+    padding: 0 48px 48px 24px;
     background-color: white;
   }
 
@@ -1304,10 +1294,6 @@ h1 {
   .involved_description p {
     margin-top: 0;
     font-size: 24px;
-  }
-
-  .emhc_card .involved_cards {
-    width: 50%;
   }
 
 
@@ -2588,13 +2574,12 @@ h1 {
   .involved_content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
     gap: 0px 0px;
     grid-template-areas:
       "intro intro"
       "altar_servers_card choir_card"
-      "readers_card sick_dying_card"
-      "emhc_card emhc_card";
+      "readers_card emhc_card";
     grid-area: involved_content;
     padding: 48px 16.67vw 48px 16.67vw;
     background-color: #f9f9f9;
@@ -2641,21 +2626,12 @@ h1 {
     background-color: white;
   }
 
-  .sick_dying_card {
-    grid-area: sick_dying_card;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 48px 48px 24px;
-    background-color: white;
-  }
-
   .emhc_card {
     grid-area: emhc_card;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 24px 48px;
+    padding: 0 48px 48px 24px;
     background-color: white;
   }
 
@@ -2700,10 +2676,6 @@ h1 {
   .involved_description p {
     margin-top: 0;
     font-size: 16px;
-  }
-
-  .emhc_card .involved_cards {
-    width: 50%;
   }
 
 
@@ -4043,14 +4015,13 @@ h1 {
   .involved_content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     gap: 0px 0px;
     grid-template-areas:
       "intro"
       "altar_servers_card"
       "choir_card"
       "readers_card"
-      "sick_dying_card"
       "emhc_card";
     grid-area: involved_content;
     padding: 48px 16.67vw 48px 16.67vw;
@@ -4092,15 +4063,6 @@ h1 {
 
   .readers_card {
     grid-area: readers_card;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 24px 48px;
-    background-color: white;
-  }
-
-  .sick_dying_card {
-    grid-area: sick_dying_card;
     display: flex;
     justify-content: center;
     align-items: center;
