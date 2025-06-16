@@ -15,7 +15,7 @@ $verify = json_decode(file_get_contents($url));
 
 /* [PROCESS YOUR FORM] */
 if ($verify->success) {
-  $to = "office@sacredheartcabramatta.org.au"; // CHANGE THIS TO YOUR OWN!
+  $to = "peter.vu003@gmail.com"; // CHANGE THIS TO YOUR OWN!
   $subject = "Contact Form";
   $name = $_POST['name'] . "<br>";
   $message .= "Name - " . $_POST['name'] . "<br>";
