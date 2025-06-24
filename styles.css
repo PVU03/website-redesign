@@ -605,6 +605,7 @@ h1 {
 
   .content_item.active {
     display: block;
+    background-color: white;
   }
 
   .content_item img {
@@ -2133,6 +2134,7 @@ h1 {
 
   .content_item.active {
     display: block;
+    background-color: white;
   }
 
   .content_item img {
@@ -3556,6 +3558,7 @@ h1 {
 
   .content_item.active {
     display: block;
+    background-color: white;
   }
 
   .content_item img {
