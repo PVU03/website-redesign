@@ -631,6 +631,12 @@ h1 {
 
   .mySlides {
     display: none;
+    text-align: center;
+  }
+
+  .mySlides img {
+    display: block;
+    margin: 0 auto;
   }
 
   .prev,
@@ -3621,50 +3627,6 @@ h1 {
   .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Sliding animation */
-  .slide {
-    animation-name: slide;
-    animation-duration: 1s;
-  }
-
-  @keyframes slide {
-    from {
-      transform: translateX(100%);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideInLeft {
-    from {
-      transform: translateX(-100%);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  .slide-right {
-    animation: slideInRight 0.6s ease-in-out;
-  }
-
-  .slide-left {
-    animation: slideInLeft 0.6s ease-in-out;
   }
 
 
