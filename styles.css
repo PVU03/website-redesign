@@ -571,6 +571,10 @@ h1 {
     padding: 48px 24px;
   }
 
+  .sacrament_dropdown {
+    display: none;
+  }
+
   .menu_button {
     display: block;
     width: 100%;
@@ -2086,6 +2090,10 @@ h1 {
     padding: 48px 24px;
   }
 
+  .sacrament_dropdown {
+    display: none;
+  }
+
   .menu_button {
     display: block;
     width: 100%;
@@ -3487,9 +3495,36 @@ h1 {
   }
 
   .side_menu {
+    display: none;
+  }
+
+  .sacrament_dropdown {
     grid-area: side_menu;
     background-color: white;
-    padding: 48px 24px;
+    padding: 12px 24px;
+  }
+
+  #sacrament_dropdown {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+
+    width: 100%;
+
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 18px;
+
+    padding: 8px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 40px center;
   }
 
   .menu_button {
@@ -3514,7 +3549,7 @@ h1 {
 
   .sacraments_information {
     grid-area: sacraments_information;
-    padding: 48px 24px;
+    padding: 0px 24px 48px;
     background-color: white;
   }
 

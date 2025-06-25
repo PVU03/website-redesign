@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to open menu
   function openMenu() {
-      mobileMenu.classList.add("active");
-      overlay.style.background = "rgba(0, 0, 0, 0.3)";
-      overlay.style.pointerEvents = "all";
+    mobileMenu.classList.add("active");
+    overlay.style.background = "rgba(0, 0, 0, 0.3)";
+    overlay.style.pointerEvents = "all";
   }
 
   // Function to close menu
   function closeMenu() {
-      mobileMenu.classList.remove("active");
-      overlay.style.background = "rgba(0, 0, 0, 0)";
-      overlay.style.pointerEvents = "none";
+    mobileMenu.classList.remove("active");
+    overlay.style.background = "rgba(0, 0, 0, 0)";
+    overlay.style.pointerEvents = "none";
   }
 
   menuToggle.addEventListener("click", openMenu);
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('.menu_button');
   const contents = document.querySelectorAll('.content_item');
+  const dropdown = document.getElementById('sacrament_dropdown');
 
   buttons.forEach(button => {
     button.addEventListener('click', function () {
@@ -47,13 +48,35 @@ document.addEventListener('DOMContentLoaded', function () {
       // Show the clicked content item
       const contentId = this.getAttribute('data_content');
       document.getElementById(contentId).classList.add('active');
+
+      // Update dropdown value to match the clicked button (sync)
+      if (dropdown) {
+        dropdown.value = contentId;
+      }
     });
   });
+
+  // Handle dropdown change on mobile
+  if (dropdown) {
+    dropdown.addEventListener('change', function () {
+      const value = this.value;
+      const button = document.querySelector(`.menu_button[data_content="${value}"]`);
+      if (button) {
+        button.click(); // Trigger the existing logic
+      }
+    });
+  }
 
   // Show the first content item by default and set the first button as active
   contents[0].classList.add('active');
   buttons[0].classList.add('active');
+
+  // Sync dropdown to first item
+  if (dropdown) {
+    dropdown.value = buttons[0].getAttribute('data_content');
+  }
 });
+
 
 // SACRAMENTS PAGE - slideshow
 let slideIndex = 1;
@@ -66,7 +89,7 @@ function plusSlides(n) {
 
 function showSlides(n, direction = 1) {
   let slides = document.getElementsByClassName("mySlides");
-  
+
   if (n > slides.length) {
     slideIndex = 1;
   } else if (n < 1) {
