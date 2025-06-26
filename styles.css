@@ -3147,7 +3147,7 @@ h1 {
       "copyright";
     grid-area: footer;
     background-color: #223F89;
-    padding: 0px 16.66vw 32px 16.66vw;
+    padding: 0px 10vw 32px 10vw;
     text-align: left;
   }
 
@@ -3245,7 +3245,7 @@ h1 {
       "parish_news"
       "archdiocese_news";
     grid-area: home_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f6f6f6;
   }
 
@@ -3334,7 +3334,7 @@ h1 {
       "priests"
       "history";
     grid-area: about_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f6f6f6;
   }
 
@@ -3503,7 +3503,7 @@ h1 {
       "side_menu"
       "sacraments_information";
     grid-area: sacraments_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f9f9f9;
   }
 
@@ -3616,11 +3616,11 @@ h1 {
   .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 100%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: #223F89;
     font-weight: bold;
     font-size: 24px;
     transition: 0.6s ease;
@@ -3628,19 +3628,6 @@ h1 {
     user-select: none;
     z-index: 2;
   }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
 
 
 
@@ -3675,7 +3662,7 @@ h1 {
       "preferred_session"
       "sacrament_submit";
     grid-area: sacraProgramme_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f9f9f9;
   }
 
@@ -3849,7 +3836,7 @@ h1 {
       "current_bulletin"
       "past_bulletin";
     grid-area: bulletin_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f9f9f9;
   }
 
@@ -3972,7 +3959,7 @@ h1 {
       "gallery"
       "sydney_catholic_youth";
     grid-area: youth_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f6f6f6;
   }
 
@@ -4096,9 +4083,8 @@ h1 {
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -37px;
     padding: 4px;
-    color: white;
+    color: #223F89;
     font-weight: bold;
     font-size: 24px;
     transition: 0.6s ease;
@@ -4110,12 +4096,6 @@ h1 {
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .sydney_catholic_youth {
@@ -4152,7 +4132,7 @@ h1 {
       "readers_card"
       "emhc_card";
     grid-area: involved_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f6f6f6;
   }
 
@@ -4276,7 +4256,7 @@ h1 {
       "back_button"
       "information";
     grid-area: ministry_content;
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f9f9f9;
   }
 
@@ -4335,7 +4315,7 @@ h1 {
       "contact_map"
       "contact_list"
       "contact_message";
-    padding: 48px 16.67vw 48px 16.67vw;
+    padding: 48px 13vw 48px 13vw;
     background-color: #f6f6f6;
   }
 
