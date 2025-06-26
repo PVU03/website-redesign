@@ -3970,7 +3970,7 @@ h1 {
   .youth_intro {
     grid-area: youth_intro;
     background-color: white;
-    padding: 48px 24px;
+    padding: 48px 24px 24px;
   }
 
   .instagram {
@@ -3983,7 +3983,7 @@ h1 {
       "instagram_code";
     grid-area: instagram;
     background-color: white;
-    padding: 0px 24px 48px;
+    padding: 0px 24px 24px;
   }
 
   .instagram_text {
@@ -4002,7 +4002,7 @@ h1 {
   .youth_events {
     grid-area: youth_events;
     background-color: white;
-    padding: 0px 24px 48px;
+    padding: 0px 24px 24px;
   }
 
   /* Youth Events */
@@ -4049,7 +4049,7 @@ h1 {
   .gallery {
     grid-area: gallery;
     background-color: white;
-    padding: 0px 24px 48px;
+    padding: 0px 24px 24px;
   }
 
   /* styling for slideshow */
