@@ -3514,7 +3514,7 @@ h1 {
   .sacrament_dropdown {
     grid-area: side_menu;
     background-color: white;
-    padding: 12px 24px;
+    padding: 48px 12px 12px;
   }
 
   #sacrament_dropdown {
