@@ -3443,12 +3443,12 @@ h1 {
 
   .HPrev,
   .HNext {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background: white;
     color: #3870C7;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     border-radius: 5px;
   }
 
@@ -3459,12 +3459,12 @@ h1 {
 
   .dots {
     display: flex;
-    gap: 5px;
+    gap: 2px;
   }
 
   .dot {
-    height: 10px;
-    width: 10px;
+    height: 8px;
+    width: 8px;
     background-color: gray;
     display: inline-block;
     border-radius: 50%;
