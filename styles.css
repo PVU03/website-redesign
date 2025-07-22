@@ -98,8 +98,8 @@ h1 {
 
   /* logo */
   #logo_button img {
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
     background: #FFFFFF;
   }
 
@@ -227,7 +227,7 @@ h1 {
   .home_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px 1fr 300px;
+    grid-template-rows: 124.5px 540px 1fr 300px;
     grid-auto-flow: row;
     grid-template-areas:
       "header"
@@ -343,7 +343,7 @@ h1 {
   .about_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px fit-content 300px;
+    grid-template-rows: 124.5px 540px fit-content 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -524,7 +524,7 @@ h1 {
   .sacraments_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px 1fr 300px;
+    grid-template-rows: 124.5px 540px 1fr 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -878,7 +878,7 @@ h1 {
   .bulletin_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px 1fr 300px;
+    grid-template-rows: 124.5px 540px 1fr 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -1015,7 +1015,7 @@ h1 {
   .youth_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px 1fr 300px;
+    grid-template-rows: 124.5px 540px 1fr 300px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -1157,7 +1157,7 @@ h1 {
   .involved_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px 1000 388px;
+    grid-template-rows: 124.5px 540px 1000 388px;
     gap: 0px 0px;
     grid-template-areas:
       "header"
@@ -1298,7 +1298,7 @@ h1 {
   .ministry_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px 1000 388px;
+    grid-template-rows: 124.5px 540px 1000 388px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -1375,7 +1375,7 @@ h1 {
   .contact_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 224px 540px 1000 388px;
+    grid-template-rows: 124.5px 540px 1000 388px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
