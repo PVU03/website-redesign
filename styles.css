@@ -221,267 +221,269 @@ h1 {
   }
 
 
+  .home_styling {
 
-  /* HOME PAGE */
-  /* HOME PAGE */
-  .home_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto 300px;
-    grid-template-areas:
-      "banner"
-      "latest_video"
-      "timetable"
-      "announcements"
-      "footer";
-    position: relative;
-    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
+    /* HOME PAGE */
+    /* HOME PAGE */
+    .home_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto 300px;
+      grid-template-areas:
+        "banner"
+        "latest_video"
+        "timetable"
+        "announcements"
+        "footer";
+      position: relative;
+      background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-  .home_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
+    .home_container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.93);
+      z-index: 0;
+    }
 
-  .home_container>* {
-    position: relative;
-    z-index: 1;
-  }
+    .home_container>* {
+      position: relative;
+      z-index: 1;
+    }
 
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 16.66vw;
-    font-family: 'Playfair Display SC', serif;
-    height: 124.5px;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 16.66vw;
+      font-family: 'Playfair Display SC', serif;
+      height: 124.5px;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
 
-  #logo_button img {
-    background: none;
-  }
+    #logo_button img {
+      background: none;
+    }
 
-  .snap_scroll_container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
+    .snap_scroll_container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
 
-  .home_container>* {
-    scroll-snap-align: start;
-    min-height: 100vh;
-  }
+    .home_container>* {
+      scroll-snap-align: start;
+      min-height: 100vh;
+    }
 
-  .banner {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+    .banner {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
 
-  #banner_text {
-    position: absolute;
-    text-align: center;
-    z-index: 1;
-    color: #5e1625;
-    padding: 0px 16.66vw 0px 16.66vw;
-  }
+    #banner_text {
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+      color: #5e1625;
+      padding: 0px 16.66vw 0px 16.66vw;
+    }
 
-  .latest_video {
-    grid-area: latest_video;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(124.5px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "video_title imbedded_video imbedded_video";
-  }
+    .latest_video {
+      grid-area: latest_video;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(124.5px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "video_title imbedded_video imbedded_video";
+    }
 
-  .video_title {
-    grid-area: video_title;
-    background-color: white;
-    padding: 2vw;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+    .video_title {
+      grid-area: video_title;
+      background-color: white;
+      padding: 2vw;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
 
-  .video_title h2 {
-    font-size: 52px;
-  }
+    .video_title h2 {
+      font-size: 52px;
+    }
 
-  .imbedded_video {
-    grid-area: imbedded_video;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .imbedded_video {
+      grid-area: imbedded_video;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .imbedded_video iframe {
-    width: 100%;
-    height: 100%;
-  }
+    .imbedded_video iframe {
+      width: 100%;
+      height: 100%;
+    }
 
-  .timetable {
-    grid-area: timetable;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(124.5px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr 1.5fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "section_title section_title section_title"
-      "eng_times viet_times other_times";
-    gap: 2vw;
+    .timetable {
+      grid-area: timetable;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(124.5px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: .5fr 1.5fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "section_title section_title section_title"
+        "eng_times viet_times other_times";
+      gap: 2vw;
 
-  }
+    }
 
-  .section_title {
-    grid-area: section_title;
-    background-color: white;
-    padding: 2vw;
-    padding-bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-  }
+    .section_title {
+      grid-area: section_title;
+      background-color: white;
+      padding: 2vw;
+      padding-bottom: 0;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      text-align: center;
+    }
 
-  .eng_times {
-    grid-area: eng_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .eng_times {
+      grid-area: eng_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .viet_times {
-    grid-area: viet_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .viet_times {
+      grid-area: viet_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .other_times {
-    grid-area: other_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .other_times {
+      grid-area: other_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .announcements {
-    grid-area: announcements;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(124.5px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 15fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "parish_news archdiocese_news";
-    gap: 2vw;
-  }
+    .announcements {
+      grid-area: announcements;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(124.5px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 15fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "parish_news archdiocese_news";
+      gap: 2vw;
+    }
 
-  .parish_news {
-    grid-area: parish_news;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .parish_news {
+      grid-area: parish_news;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .parish_news li {
-    font-size: 16px;
-    padding-bottom: 12px;
-  }
+    .parish_news li {
+      font-size: 16px;
+      padding-bottom: 12px;
+    }
 
-  .parish_news ul {
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-  }
+    .parish_news ul {
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+    }
 
-  #event {
-    padding-left: 32px;
-    padding-bottom: 12px
-  }
+    #event {
+      padding-left: 32px;
+      padding-bottom: 12px
+    }
 
-  .archdiocese_news {
-    grid-area: archdiocese_news;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .archdiocese_news {
+      grid-area: archdiocese_news;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .footer {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 300px 100px;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "agencies quick_contact media"
-      ". copyright .";
-    grid-area: footer;
-    background-color: #223F89;
-    padding: 124.5px 16.66vw 32px 16.66vw;
-    text-align: center;
-    z-index: 0;
-    overflow: hidden;
-  }
+    .footer {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 300px 100px;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "agencies quick_contact media"
+        ". copyright .";
+      grid-area: footer;
+      background-color: #223F89;
+      padding: 124.5px 16.66vw 32px 16.66vw;
+      text-align: center;
+      z-index: 0;
+      overflow: hidden;
+    }
 
-  .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 124.5px;
-    width: 100%;
-    background-color: white;
-    z-index: -1;
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 124.5px;
+      width: 100%;
+      background-color: white;
+      z-index: -1;
+    }
   }
 
 
@@ -1946,268 +1948,270 @@ h1 {
   }
 
 
+  .home_styling {
 
-  /* HOME PAGE */
-  /* HOME PAGE */
-  .home_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto 1000px;
-    grid-template-areas:
-      "banner"
-      "latest_video"
-      "timetable"
-      "announcements"
-      "footer";
-    position: relative;
-    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
+    /* HOME PAGE */
+    /* HOME PAGE */
+    .home_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto 1000px;
+      grid-template-areas:
+        "banner"
+        "latest_video"
+        "timetable"
+        "announcements"
+        "footer";
+      position: relative;
+      background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-  .home_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
+    .home_container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.93);
+      z-index: 0;
+    }
 
-  .home_container>* {
-    position: relative;
-    z-index: 1;
-  }
+    .home_container>* {
+      position: relative;
+      z-index: 1;
+    }
 
-  .mobile_header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 16px;
-    font-family: 'Playfair Display SC', serif;
-    height: 112px;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
+    .mobile_header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 16px;
+      font-family: 'Playfair Display SC', serif;
+      height: 112px;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
 
-  #logo_button img {
-    background: none;
-  }
+    #logo_button img {
+      background: none;
+    }
 
-  .snap_scroll_container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
+    .snap_scroll_container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
 
-  .home_container>* {
-    scroll-snap-align: start;
-    min-height: 100vh;
+    .home_container>* {
+      scroll-snap-align: start;
+      min-height: 100vh;
 
-  }
+    }
 
-  .banner {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+    .banner {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
 
-  #banner_text {
-    position: absolute;
-    text-align: center;
-    z-index: 1;
-    color: #5e1625;
-    padding: 0px 16.66vw 0px 16.66vw;
-  }
+    #banner_text {
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+      color: #5e1625;
+      padding: 0px 16.66vw 0px 16.66vw;
+    }
 
-  .latest_video {
-    grid-area: latest_video;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(124.5px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "video_title imbedded_video imbedded_video";
-  }
+    .latest_video {
+      grid-area: latest_video;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(124.5px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "video_title imbedded_video imbedded_video";
+    }
 
-  .video_title {
-    grid-area: video_title;
-    background-color: white;
-    padding: 2vw;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+    .video_title {
+      grid-area: video_title;
+      background-color: white;
+      padding: 2vw;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
 
-  .video_title h2 {
-    font-size: 52px;
-  }
+    .video_title h2 {
+      font-size: 52px;
+    }
 
-  .imbedded_video {
-    grid-area: imbedded_video;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .imbedded_video {
+      grid-area: imbedded_video;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .imbedded_video iframe {
-    width: 100%;
-    height: 100%;
-  }
+    .imbedded_video iframe {
+      width: 100%;
+      height: 100%;
+    }
 
-  .timetable {
-    grid-area: timetable;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(124.5px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr 1.5fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "section_title section_title section_title"
-      "eng_times viet_times other_times";
-    gap: 2vw;
+    .timetable {
+      grid-area: timetable;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(124.5px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: .5fr 1.5fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "section_title section_title section_title"
+        "eng_times viet_times other_times";
+      gap: 2vw;
 
-  }
+    }
 
-  .section_title {
-    grid-area: section_title;
-    background-color: white;
-    padding: 2vw;
-    padding-bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    text-align: center;
-  }
+    .section_title {
+      grid-area: section_title;
+      background-color: white;
+      padding: 2vw;
+      padding-bottom: 0;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      text-align: center;
+    }
 
-  .eng_times {
-    grid-area: eng_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .eng_times {
+      grid-area: eng_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .viet_times {
-    grid-area: viet_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .viet_times {
+      grid-area: viet_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .other_times {
-    grid-area: other_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .other_times {
+      grid-area: other_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .announcements {
-    grid-area: announcements;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(124.5px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 15fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "parish_news archdiocese_news";
-    gap: 2vw;
-  }
+    .announcements {
+      grid-area: announcements;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(124.5px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 15fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "parish_news archdiocese_news";
+      gap: 2vw;
+    }
 
-  .parish_news {
-    grid-area: parish_news;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .parish_news {
+      grid-area: parish_news;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .parish_news li {
-    font-size: 16px;
-    padding-bottom: 12px;
-  }
+    .parish_news li {
+      font-size: 16px;
+      padding-bottom: 12px;
+    }
 
-  .parish_news ul {
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-  }
+    .parish_news ul {
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+    }
 
-  #event {
-    padding-left: 32px;
-    padding-bottom: 12px
-  }
+    #event {
+      padding-left: 32px;
+      padding-bottom: 12px
+    }
 
-  .archdiocese_news {
-    grid-area: archdiocese_news;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .archdiocese_news {
+      grid-area: archdiocese_news;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .footer {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 300px 100px;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "agencies quick_contact media"
-      ". copyright .";
-    grid-area: footer;
-    background-color: #223F89;
-    padding: 124.5px 16.66vw 32px 16.66vw;
-    text-align: center;
-    z-index: 0;
-    overflow: hidden;
-  }
+    .footer {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 300px 100px;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "agencies quick_contact media"
+        ". copyright .";
+      grid-area: footer;
+      background-color: #223F89;
+      padding: 124.5px 16.66vw 32px 16.66vw;
+      text-align: center;
+      z-index: 0;
+      overflow: hidden;
+    }
 
-  .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 124.5px;
-    width: 100%;
-    background-color: white;
-    z-index: -1;
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 124.5px;
+      width: 100%;
+      background-color: white;
+      z-index: -1;
+    }
   }
 
 
@@ -3532,278 +3536,279 @@ h1 {
     padding-left: 12px;
   }
 
+  .home_styling {
 
+    /* HOME PAGE */
+    /* HOME PAGE */
+    .home_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+        "banner"
+        "latest_video"
+        "timetable"
+        "announcements"
+        "footer";
+      position: relative;
+      background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-  /* HOME PAGE */
-  /* HOME PAGE */
-  .home_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-      "banner"
-      "latest_video"
-      "timetable"
-      "announcements"
-      "footer";
-    position: relative;
-    background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
+    .home_container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.93);
+      z-index: 0;
+    }
 
-  .home_container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.93);
-    z-index: 0;
-  }
+    .home_container>* {
+      position: relative;
+      z-index: 1;
+    }
 
-  .home_container>* {
-    position: relative;
-    z-index: 1;
-  }
+    .mobile_header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 16px;
+      font-family: 'Playfair Display SC', serif;
+      height: 112px;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
 
-  .mobile_header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 16px;
-    font-family: 'Playfair Display SC', serif;
-    height: 112px;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
+    #logo_button img {
+      background: none;
+    }
 
-  #logo_button img {
-    background: none;
-  }
+    .snap_scroll_container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
 
-  .snap_scroll_container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
+    .home_container>* {
+      scroll-snap-align: start;
+      min-height: 100vh;
 
-  .home_container>* {
-    scroll-snap-align: start;
-    min-height: 100vh;
+    }
 
-  }
+    .banner {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .banner {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
 
-  .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
+    #banner_text {
+      position: absolute;
+      text-align: center;
+      z-index: 1;
+      color: #5e1625;
+      padding: 0px 16.66vw 0px 16.66vw;
+    }
 
-  #banner_text {
-    position: absolute;
-    text-align: center;
-    z-index: 1;
-    color: #5e1625;
-    padding: 0px 16.66vw 0px 16.66vw;
-  }
+    .latest_video {
+      grid-area: latest_video;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(112px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "video_title"
+        "imbedded_video";
+    }
 
-  .latest_video {
-    grid-area: latest_video;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(112px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "video_title"
-      "imbedded_video";
-  }
+    .video_title {
+      grid-area: video_title;
+      background-color: white;
+      padding: 2vw;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+    }
 
-  .video_title {
-    grid-area: video_title;
-    background-color: white;
-    padding: 2vw;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-  }
+    .video_title h2 {
+      font-size: 30px;
+    }
 
-  .video_title h2 {
-    font-size: 30px;
-  }
+    .imbedded_video {
+      grid-area: imbedded_video;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .imbedded_video {
-    grid-area: imbedded_video;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .imbedded_video iframe {
+      width: 100%;
+      height: 100%;
+    }
 
-  .imbedded_video iframe {
-    width: 100%;
-    height: 100%;
-  }
+    .timetable {
+      grid-area: timetable;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(112px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 0px 0px;
+      grid-template-areas:
+        "section_title section_title"
+        "eng_times viet_times"
+        "other_times other_times";
+    }
 
-  .timetable {
-    grid-area: timetable;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(112px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    gap: 0px 0px;
-    grid-template-areas:
-      "section_title section_title"
-      "eng_times viet_times"
-      "other_times other_times";
-  }
+    .section_title {
+      grid-area: section_title;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
 
-  .section_title {
-    grid-area: section_title;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
+    .eng_times {
+      grid-area: eng_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .eng_times {
-    grid-area: eng_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .viet_times {
+      grid-area: viet_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .viet_times {
-    grid-area: viet_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .other_times {
+      grid-area: other_times;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .other_times {
-    grid-area: other_times;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .announcements {
+      grid-area: announcements;
+      height: 100vh;
+      max-width: 100vw;
+      padding: 4vw;
+      padding-top: calc(124.5px + 4vw);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "parish_news"
+        "archdiocese_news";
+      gap: 2vw;
+    }
 
-  .announcements {
-    grid-area: announcements;
-    height: 100vh;
-    max-width: 100vw;
-    padding: 4vw;
-    padding-top: calc(124.5px + 4vw);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "parish_news"
-      "archdiocese_news";
-    gap: 2vw;
-  }
+    .parish_news {
+      grid-area: parish_news;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .parish_news {
-    grid-area: parish_news;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .parish_news h2 {
+      text-align: center;
+    }
 
-  .parish_news h2 {
-    text-align: center;
-  }
+    .parish_news li {
+      font-size: 12px;
+      padding-bottom: 12px;
+    }
 
-  .parish_news li {
-    font-size: 12px;
-    padding-bottom: 12px;
-  }
+    .parish_news ul {
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+    }
 
-  .parish_news ul {
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
-  }
+    #event {
+      padding-left: 32px;
+      padding-bottom: 12px
+    }
 
-  #event {
-    padding-left: 32px;
-    padding-bottom: 12px
-  }
+    .archdiocese_news {
+      grid-area: archdiocese_news;
+      background-color: white;
+      padding: 2vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
 
-  .archdiocese_news {
-    grid-area: archdiocese_news;
-    background-color: white;
-    padding: 2vw;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-  }
+    .archdiocese_news h2 {
+      text-align: center;
+    }
 
-  .archdiocese_news h2 {
-    text-align: center;
-  }
+    .footer {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "agencies"
+        "quick_contact"
+        "media"
+        "copyright";
+      grid-area: footer;
+      background-color: #223F89;
+      padding: 112px 16.66vw 32px 16.66vw;
+      text-align: center;
+      z-index: 0;
+      overflow: hidden;
+    }
 
-  .footer {
-    position: relative;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "agencies"
-      "quick_contact"
-      "media"
-      "copyright";
-    grid-area: footer;
-    background-color: #223F89;
-    padding: 112px 16.66vw 32px 16.66vw;
-    text-align: center;
-    z-index: 0;
-    overflow: hidden;
-  }
-
-  .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 112px;
-    width: 100%;
-    background-color: white;
-    z-index: -1;
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 112px;
+      width: 100%;
+      background-color: white;
+      z-index: -1;
+    }
   }
 
 
