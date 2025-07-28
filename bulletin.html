@@ -2,224 +2,229 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/sacred_heart_logo.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <title>Bulletins</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/sacred_heart_logo.png">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<title>Bulletins</title>
 </head>
 
 <body>
-    <div class="bulletin_container">
-        <!-- Desktop Header/Nav Menu -->
-        <nav class="header">
-            <a class="header_button" href="about.html" alt="Button to About Page"><b>About Us</b></a>
-            <a class="header_button" href="sacraments.html" alt="Button to Sacraments Page"><b>Sacraments</b></a>
-            <a class="header_button" id="selectedPage" href="bulletin.html"
-                alt="Button to Bulletins Page"><b>Bulletins</b></a>
+	<div class="bulletin_container">
+		<!-- Desktop Header/Nav Menu -->
+		<nav class="header">
+			<a class="header_button" href="about.html" alt="Button to About Page"><b>About Us</b></a>
+			<a class="header_button" href="sacraments.html" alt="Button to Sacraments Page"><b>Sacraments</b></a>
+			<a class="header_button" id="selectedPage" href="bulletin.html"
+				alt="Button to Bulletins Page"><b>Bulletins</b></a>
 
-            <!--Logo Home Button-->
-            <button type="button" id="logo_button">
-                <a href="index.html" class="home_link">
-                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
-                </a>
-            </button>
+			<!--Logo Home Button-->
+			<button type="button" id="logo_button">
+				<a href="index.html" class="home_link">
+					<img src="images/sacred_heart_logo.png" alt="Church Logo">
+				</a>
+			</button>
 
-            <a class="header_button" href="youth.html" alt="Button to Youth Page"><b>Youth</b></a>
-            <a class="header_button" href="involved.html" alt="Button to Get Involved Page"><b>Get Involved</b></a>
-            <a class="header_button" href="contact.html" alt="Button to Contact Us Page"><b>Contact
-                    Us</b></a>
-        </nav>
+			<a class="header_button" href="youth.html" alt="Button to Youth Page"><b>Youth</b></a>
+			<a class="header_button" href="involved.html" alt="Button to Get Involved Page"><b>Get Involved</b></a>
+			<a class="header_button" href="contact.html" alt="Button to Contact Us Page"><b>Contact
+					Us</b></a>
+		</nav>
 
-        <!-- Mobile Header/Nav Menu -->
-        <nav class="mobile_header">
-            <button type="button" id="logo_button">
-                <a href="index.html" class="home_link">
-                    <img src="images/sacred_heart_logo.png" alt="Church Logo">
-                </a>
-            </button>
+		<!-- Mobile Header/Nav Menu -->
+		<nav class="mobile_header">
+			<button type="button" id="logo_button">
+				<a href="index.html" class="home_link">
+					<img src="images/sacred_heart_logo.png" alt="Church Logo">
+				</a>
+			</button>
 
-            <!-- Dropdown Menu Button -->
-            <button id="menu_toggle">&#9776;</button>
+			<!-- Dropdown Menu Button -->
+			<button id="menu_toggle">&#9776;</button>
 
-            <!-- Dropdown Menu -->
-            <div id="mobile_menu">
-                <button id="menu_close">&times;</button>
-                <a class="mobile_button" href="index.html"><b>Home</b></a>
-                <a class="mobile_button" href="about.html"><b>About Us</b></a>
-                <a class="mobile_button" href="sacraments.html"><b>Sacraments</b></a>
-                <a class="mobile_button" id="selectedPage" href="bulletin.html"><b>Bulletins</b></a>
-                <a class="mobile_button" href="youth.html"><b>Youth</b></a>
-                <a class="mobile_button" href="involved.html"><b>Get Involved</b></a>
-                <a class="mobile_button" href="contact.html"><b>Contact Us</b></a>
-            </div>
-        </nav>
+			<!-- Dropdown Menu -->
+			<div id="mobile_menu">
+				<button id="menu_close">&times;</button>
+				<a class="mobile_button" href="index.html"><b>Home</b></a>
+				<a class="mobile_button" href="about.html"><b>About Us</b></a>
+				<a class="mobile_button" href="sacraments.html"><b>Sacraments</b></a>
+				<a class="mobile_button" id="selectedPage" href="bulletin.html"><b>Bulletins</b></a>
+				<a class="mobile_button" href="youth.html"><b>Youth</b></a>
+				<a class="mobile_button" href="involved.html"><b>Get Involved</b></a>
+				<a class="mobile_button" href="contact.html"><b>Contact Us</b></a>
+			</div>
+		</nav>
 
-        <div id="overlay"></div>
-
-
-
-        <!-- Banner -->
-        <div class="banner">
-            <img src="images/banner_images/bulletin_banner.png" alt="Image of the front of the church">
-            <div id="banner_text">
-                <h1 id="banner_title">Bulletins</h1>
-            </div>
-        </div>
+		<div id="overlay"></div>
 
 
 
-        <!-- Content -->
-        <div class="bulletin_content">
-            <div class="current_bulletin">
-                <div class="bulletin_heading">
-                    <h2>Check out our latest Bulletin:</h2>
-                </div>
-                <!-- STEPS TO UPDATE BULLETIN 
+		<!-- Banner -->
+		<div class="banner">
+			<img src="images/banner_images/bulletin_banner.png" alt="Image of the front of the church">
+			<div id="banner_text">
+				<h1 id="banner_title">Bulletins</h1>
+			</div>
+		</div>
+
+
+
+		<!-- Content -->
+		<div class="bulletin_content">
+			<div class="current_bulletin">
+				<div class="bulletin_heading">
+					<h2>Check out our latest Bulletin:</h2>
+				</div>
+				<!-- STEPS TO UPDATE BULLETIN 
                  1. Download file
                  2. Convert pdf to jpg using https://www.ilovepdf.com/pdf_to_jpg to keep images the same size
                  3. Name the bulletin PDF Bulletin_XXXXXX (X represents date) and move it to "bulletins" folder
                  4. Name the bulletin JPG XXXXXX (X represents date) and move it to "images/bulletin_covers" folder
                  5. Edit the bulletin_card div to the current bulletin
                  -->
-                <div class="bulletin_card">
-                    <a href="bulletins/Bulletin_220625.pdf" target="_blank" id="bulletin_button">
-                        <img src="images/bulletin_covers/220625.jpg" alt="Bulletin cover page June 1st 2025">
-                        THE MOST HOLY BODY AND BLOOD OF CHRIST<br>YEAR C<br>JUNE 22ND 2025
-                    </a>
-                </div>
-            </div>
-            <div class="past_bulletin">
-                <div class="bulletin_heading">
-                    <h2>Our Past Bulletins:</h2>
-                </div>
-                <div class="bulletins">
-                    <!-- 6. copy and paste this into the past bulletins list and add the previous week's bulletin
+				<div class="bulletin_card">
+					<a href="bulletins/Bulletin_200725.pdf" target="_blank" id="bulletin_button">
+						<img src="images/bulletin_covers/200725.jpg" alt="Bulletin cover page July 20th 2025">
+						SIXTEENTH SUNDAY IN ORDINARY TIME<br>YEAR C<br>JULY 20TH 2025
+					</a>
+				</div>
+			</div>
+			<div class="past_bulletin">
+				<div class="bulletin_heading">
+					<h2>Our Past Bulletins:</h2>
+				</div>
+				<div class="bulletins">
+					<!-- 6. copy and paste this into the past bulletins list and add the previous week's bulletin
                         <li><a href="bulletins/Bulletin_XXXXXX.pdf" target="_blank">[INSERT NAME OF BULLETIN]</a></li>
                     -->
-                    <li><a href="bulletins/Bulletin_080625.pdf" target="_blank">THE MOST HOLY TRINITY - YEAR C -
-                            JUNE 15TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_080625.pdf" target="_blank">PENTECOST SUNDAY - YEAR C -
-                            JUNE 8TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_010625.pdf" target="_blank">THE ASCENSION OF THE LORD - YEAR C -
-                            JUNE 1ST 2025</a></li>
-                    <li><a href="bulletins/Bulletin_250525.pdf" target="_blank">SIXTH SUNDAY OF EASTER - YEAR C - MAY
-                            25TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_180525.pdf" target="_blank">FIFTH SUNDAY OF EASTER - YEAR C - MAY
-                            18TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_110525.pdf" target="_blank">FOURTH SUNDAY OF EASTER - YEAR C - MAY
-                            11TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_040525.pdf" target="_blank">THIRD SUNDAY OF EASTER - YEAR C - MAY
-                            4TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_270425.pdf" target="_blank">SECOND SUNDAY OF EASTER - YEAR C - APRIL
-                            27TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_200425.pdf" target="_blank">EASTER SUNDAY OF THE RESURRECTION OF THE
-                            LORD - YEAR C - APRIL 20TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_130425.pdf" target="_blank">PALM SUNDAY OF THE PASSION OF THE LORD -
-                            YEAR C - APRIL
-                            13TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_060425.pdf" target="_blank">FIFTH SUNDAY OF LENT - YEAR C - APRIL
-                            6TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_300325.pdf" target="_blank">FOURTH SUNDAY OF LENT - YEAR C - MARCH
-                            30TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_230325.pdf" target="_blank">THIRD SUNDAY OF LENT - YEAR C - MARCH
-                            23RD 2025</a></li>
-                    <li><a href="bulletins/Bulletin_160325.pdf" target="_blank">SECOND SUNDAY OF LENT - YEAR C - MARCH
-                            16TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_090325.pdf" target="_blank">FIRST SUNDAY OF LENT - YEAR C - MARCH
-                            9TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_020325.pdf" target="_blank">EIGHTH SUNDAY IN ORDINARY TIME - YEAR C
-                            - MARCH 2ND 2025</a></li>
-                    <li><a href="bulletins/Bulletin_230225.pdf" target="_blank">SEVENTH SUNDAY IN ORDINARY TIME - YEAR C
-                            - FEBURARY 23RD 2025</a></li>
-                    <li><a href="bulletins/Bulletin_160225.pdf" target="_blank">SIXTH SUNDAY IN ORDINARY TIME - YEAR C -
-                            FEBRUARY 16TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_090225.pdf" target="_blank">FIFTH SUNDAY IN ORDINARY TIME - YEAR C -
-                            FEBRUARY 9TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_020225.pdf" target="_blank">FOURTH SUNDAY IN ORDINARY TIME - YEAR C
-                            - FEBRUARY 2ND 2025</a></li>
-                    <li><a href="bulletins/Bulletin_260125.pdf" target="_blank">THIRD SUNDAY IN ORDINARY TIME - YEAR C -
-                            JANUARY 26TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_190125.pdf" target="_blank">SECOND SUNDAY IN ORDINARY TIME - YEAR C
-                            - JANUARY 19TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_120125.pdf" target="_blank">FIRST SUNDAY IN ORDINARY TIME - YEAR C -
-                            JANUARY 12TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_050125.pdf" target="_blank">THE EPIPHANY OF THE LORD - YEAR C -
-                            JANUARY 5TH 2025</a></li>
-                    <li><a href="bulletins/Bulletin_291224.pdf" target="_blank">THE HOLY FAMILY OF JESUS, MARY AND
-                            JOSEPH - YEAR C - DECEMBER 29TH 2024</a></li>
-                    <li><a href="bulletins/Bulletin_251224.pdf" target="_blank">THE NATIVITY OF THE LORD - YEAR C -
-                            DECEMBER 25TH 2024</a></li>
-                    <li><a href="bulletins/Bulletin_221224.pdf" target="_blank">FOURTH SUNDAY OF ADVENT - YEAR C -
-                            DECEMBER 22ND 2024</a></li>
-                    <li><a href="bulletins/Bulletin_151224.pdf" target="_blank">THIRD SUNDAY OF ADVENT - YEAR C -
-                            DECEMBER 15TH 2024</a></li>
-                    <li><a href="bulletins/Bulletin_081224.pdf" target="_blank">SECOND SUNDAY OF ADVENT - YEAR C -
-                            DECEMBER 8TH 2024</a></li>
-                    <li><a href="bulletins/Bulletin_011224.pdf" target="_blank">FIRST SUNDAY OF ADVENT - YEAR C -
-                            DECEMBER 1ST 2024</a></li>
-                </div>
-            </div>
-        </div>
+					<li><a href="bulletins/Bulletin_130725.pdf" target="_blank">FIFTEENTH SUNDAY IN ORDINARY TIME - YEAR C -
+							JULY 13TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_060725.pdf" target="_blank">FOURTEENTH SUNDAY IN ORDINARY TIME - YEAR C -
+							JULY 6TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_220625.pdf" target="_blank">THE MOST HOLY BODY AND BLOOD OF CHRIST -
+							YEAR C - JUNE 22ND 2025</a></li>
+					<li><a href="bulletins/Bulletin_150625.pdf" target="_blank">THE MOST HOLY TRINITY - YEAR C -
+							JUNE 15TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_080625.pdf" target="_blank">PENTECOST SUNDAY - YEAR C -
+							JUNE 8TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_010625.pdf" target="_blank">THE ASCENSION OF THE LORD - YEAR C -
+							JUNE 1ST 2025</a></li>
+					<li><a href="bulletins/Bulletin_250525.pdf" target="_blank">SIXTH SUNDAY OF EASTER - YEAR C - MAY
+							25TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_180525.pdf" target="_blank">FIFTH SUNDAY OF EASTER - YEAR C - MAY
+							18TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_110525.pdf" target="_blank">FOURTH SUNDAY OF EASTER - YEAR C - MAY
+							11TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_040525.pdf" target="_blank">THIRD SUNDAY OF EASTER - YEAR C - MAY
+							4TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_270425.pdf" target="_blank">SECOND SUNDAY OF EASTER - YEAR C - APRIL
+							27TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_200425.pdf" target="_blank">EASTER SUNDAY OF THE RESURRECTION OF THE
+							LORD - YEAR C - APRIL 20TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_130425.pdf" target="_blank">PALM SUNDAY OF THE PASSION OF THE LORD -
+							YEAR C - APRIL 13TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_060425.pdf" target="_blank">FIFTH SUNDAY OF LENT - YEAR C - APRIL
+							6TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_300325.pdf" target="_blank">FOURTH SUNDAY OF LENT - YEAR C - MARCH
+							30TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_230325.pdf" target="_blank">THIRD SUNDAY OF LENT - YEAR C - MARCH
+							23RD 2025</a></li>
+					<li><a href="bulletins/Bulletin_160325.pdf" target="_blank">SECOND SUNDAY OF LENT - YEAR C - MARCH
+							16TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_090325.pdf" target="_blank">FIRST SUNDAY OF LENT - YEAR C - MARCH
+							9TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_020325.pdf" target="_blank">EIGHTH SUNDAY IN ORDINARY TIME - YEAR C
+							- MARCH 2ND 2025</a></li>
+					<li><a href="bulletins/Bulletin_230225.pdf" target="_blank">SEVENTH SUNDAY IN ORDINARY TIME - YEAR C
+							- FEBURARY 23RD 2025</a></li>
+					<li><a href="bulletins/Bulletin_160225.pdf" target="_blank">SIXTH SUNDAY IN ORDINARY TIME - YEAR C -
+							FEBRUARY 16TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_090225.pdf" target="_blank">FIFTH SUNDAY IN ORDINARY TIME - YEAR C -
+							FEBRUARY 9TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_020225.pdf" target="_blank">FOURTH SUNDAY IN ORDINARY TIME - YEAR C
+							- FEBRUARY 2ND 2025</a></li>
+					<li><a href="bulletins/Bulletin_260125.pdf" target="_blank">THIRD SUNDAY IN ORDINARY TIME - YEAR C -
+							JANUARY 26TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_190125.pdf" target="_blank">SECOND SUNDAY IN ORDINARY TIME - YEAR C
+							- JANUARY 19TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_120125.pdf" target="_blank">FIRST SUNDAY IN ORDINARY TIME - YEAR C -
+							JANUARY 12TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_050125.pdf" target="_blank">THE EPIPHANY OF THE LORD - YEAR C -
+							JANUARY 5TH 2025</a></li>
+					<li><a href="bulletins/Bulletin_291224.pdf" target="_blank">THE HOLY FAMILY OF JESUS, MARY AND
+							JOSEPH - YEAR C - DECEMBER 29TH 2024</a></li>
+					<li><a href="bulletins/Bulletin_251224.pdf" target="_blank">THE NATIVITY OF THE LORD - YEAR C -
+							DECEMBER 25TH 2024</a></li>
+					<li><a href="bulletins/Bulletin_221224.pdf" target="_blank">FOURTH SUNDAY OF ADVENT - YEAR C -
+							DECEMBER 22ND 2024</a></li>
+					<li><a href="bulletins/Bulletin_151224.pdf" target="_blank">THIRD SUNDAY OF ADVENT - YEAR C -
+							DECEMBER 15TH 2024</a></li>
+					<li><a href="bulletins/Bulletin_081224.pdf" target="_blank">SECOND SUNDAY OF ADVENT - YEAR C -
+							DECEMBER 8TH 2024</a></li>
+					<li><a href="bulletins/Bulletin_011224.pdf" target="_blank">FIRST SUNDAY OF ADVENT - YEAR C -
+							DECEMBER 1ST 2024</a></li>
+				</div>
+			</div>
+		</div>
 
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="agencies">
-                <h3>Agencies</h3>
-                <div class="list">
-                    <a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png"
-                            id="footer_icon" alt="Catholic Weekly Logo">The Catholic Weekly</a>
-                    <a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png"
-                            id="footer_icon" alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
-                    <a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
-                            src="images/footer_icons/sg_logo.png" id="footer_icon"
-                            alt="Safegarding Logo">Safeguarding</a>
-                </div>
-            </div>
-            <div class="quick_contact">
-                <h3>Contact Us</h3>
-                <div class="list">
-                    <a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img
-                            src="images/footer_icons/email_logo.png" id="footer_icon"
-                            alt="Email icon">office@sacredheartcabramatta.org.au</a>
-                    <a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
-                        2151</a>
-                    <a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111"
-                        target="_blank"><img src="images/footer_icons/location_logo.png" id="footer_icon"
-                            alt="Location icon">13 Park
-                        Road,
-                        Cabramatta NSW 2166</a>
-                </div>
-            </div>
-            <div class="media">
-                <h3>Socials</h3>
-                <div class="list">
-                    <a href="https://www.facebook.com/cabraparish/" target="_blank" id="facebook_link"><img
-                            src="images/footer_icons/Facebook_Logo_Secondary.png" id="footer_icon_facebook"
-                            alt="Facebook Logo">Facebook</a>
-                    <a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
-                            src="images/footer_icons/youtube_social_square_dark.png" id="footer_icon"
-                            alt="Youtube Logo">Youtube</a>
-                    <a href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        target="_blank" id="instagram_link"><img src="images/footer_icons/Instagram_Glyph_White.png"
-                            id="footer_icon_instagram" alt="Instagram Logo">Instagram</a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2025 Sacred Heart Parish Cabramatta</p>
-            </div>
-        </div>
+		<!-- Footer -->
+		<div class="footer">
+			<div class="agencies">
+				<h3>Agencies</h3>
+				<div class="list">
+					<a href="https://catholicweekly.com.au/" target="_blank"><img src="images/footer_icons/cw_logo.png"
+							id="footer_icon" alt="Catholic Weekly Logo">The Catholic Weekly</a>
+					<a href="https://www.catholiccare.org/" target="_blank"><img src="images/footer_icons/ccs_logo.png"
+							id="footer_icon" alt="CatholcCare Sydney Logo">CatholicCare Sydney</a>
+					<a href="https://www.sydneycatholic.org/safeguarding-and-child-protection/" target="_blank"><img
+							src="images/footer_icons/sg_logo.png" id="footer_icon"
+							alt="Safegarding Logo">Safeguarding</a>
+				</div>
+			</div>
+			<div class="quick_contact">
+				<h3>Contact Us</h3>
+				<div class="list">
+					<a href="mailto:office@sacredheartcabramatta.org.au" target="_blank"><img
+							src="images/footer_icons/email_logo.png" id="footer_icon"
+							alt="Email icon">office@sacredheartcabramatta.org.au</a>
+					<a><img src="images/footer_icons/phone_logo.png" id="footer_icon" alt="Phone icon">(02) 9724
+						2151</a>
+					<a href="https://www.google.com/maps/place/Sacred+Heart+Catholic+Church,+Cabramatta/data=!4m2!3m1!1s0x0:0x3cc1ed8d11542b7?sa=X&ved=1t:2428&ictx=111"
+						target="_blank"><img src="images/footer_icons/location_logo.png" id="footer_icon"
+							alt="Location icon">13 Park
+						Road,
+						Cabramatta NSW 2166</a>
+				</div>
+			</div>
+			<div class="media">
+				<h3>Socials</h3>
+				<div class="list">
+					<a href="https://www.facebook.com/cabraparish/" target="_blank" id="facebook_link"><img
+							src="images/footer_icons/Facebook_Logo_Secondary.png" id="footer_icon_facebook"
+							alt="Facebook Logo">Facebook</a>
+					<a href="https://www.youtube.com/@sacredheartparishcabramatt7058" target="_blank"><img
+							src="images/footer_icons/youtube_social_square_dark.png" id="footer_icon"
+							alt="Youtube Logo">Youtube</a>
+					<a href="https://www.instagram.com/sacredheartcabraparish?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+						target="_blank" id="instagram_link"><img src="images/footer_icons/Instagram_Glyph_White.png"
+							id="footer_icon_instagram" alt="Instagram Logo">Instagram</a>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>© 2025 Sacred Heart Parish Cabramatta</p>
+			</div>
+		</div>
 
 
 
-    </div>
+	</div>
 
-    <script src="script.js"></script>
+	<script src="script.js"></script>
 
 </body>
 
