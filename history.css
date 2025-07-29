@@ -1,0 +1,128 @@
+@media only screen and (min-width: 1280px) {
+
+    p.content {
+        margin: 0px;
+    }
+
+    /* Post War Slide */
+    .history-post-war {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "description description"
+            "photo1 photo3"
+            "photo2 photo2";
+    }
+
+    .history-post-war .description {
+        grid-area: description;
+    }
+
+    .history-post-war .photo1 {
+        grid-area: photo1;
+        padding: 24px 128px 0px;
+    }
+
+    .history-post-war .photo2 {
+        grid-area: photo2;
+        padding: 24px 128px 0px;
+    }
+
+    .history-post-war .photo3 {
+        grid-area: photo3;
+        padding: 24px 128px 0px;
+    }
+
+    .history-post-war .photo1 img,
+    .history-post-war .photo3 img {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Migration Slide */
+    .history-migration {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            "description description"
+            "description2 photo1"
+            "photo2 photo3"
+            "description3 description3";
+    }
+
+    .history-migration .description {
+        grid-area: description;
+    }
+
+    .history-migration .description2 {
+        grid-area: description2;
+        margin: auto;
+    }
+
+    .history-migration .description3 {
+        grid-area: description3;
+        margin: auto;
+        padding-left: 24px;
+    }
+
+    .history-migration .photo1 {
+        grid-area: photo1;
+        padding: 0px 128px 0px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .history-migration .photo2 {
+        grid-area: photo2;
+        width: 100%;
+        padding: 0px 24px 0px;
+    }
+
+    .history-migration .photo3 {
+        grid-area: photo3;
+        width: 100%;
+        padding: 0px 24px 0px;
+    }
+
+    /* Faithful Shepherds Slide */
+    .history-faithful-shepherds {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "description description"
+            "photo2 photo1";
+    }
+
+    .history-faithful-shepherds .description {
+        grid-area: description;
+    }
+
+    .history-faithful-shepherds .photo1 {
+        grid-area: photo2;
+        padding: 24px 128px 0px;
+    }
+
+    .history-faithful-shepherds .photo2 {
+        grid-area: photo1;
+        padding: 24px 128px 0px;
+    }
+
+    .history-faithful-shepherds .photo1 img,
+    .history-faithful-shepherds .photo2 img {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        display: block;
+    }
+}
