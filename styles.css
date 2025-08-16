@@ -288,24 +288,50 @@ h1 {
     }
 
     .banner {
-      height: 100vh;
+      height: calc(100vh);
       width: 100%;
       position: relative;
       overflow: hidden;
+      background: rgba(255, 255, 255, 0.93);
+      background: url('images/banner_images/home_banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.93);
+      z-index: 0;
     }
 
     .banner img {
-      width: 100%;
-      height: 100%;
+      min-width: 100%;
+      height: calc(100vh - 249px);
       object-fit: cover;
       object-position: center;
       display: block;
+      z-index: 1;
+    }
+
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+      z-index: 2;
     }
 
     #banner_text {
       position: absolute;
       text-align: center;
-      z-index: 1;
+      z-index: 3;
       color: #5e1625;
       padding: 0px 16.66vw 0px 16.66vw;
     }
@@ -414,11 +440,12 @@ h1 {
       padding: 4vw;
       padding-top: calc(124.5px + 4vw);
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 15fr;
       gap: 0px 0px;
       grid-template-areas:
-        "parish_news archdiocese_news";
+        "parish_news latest_facebook latest_instagram"
+        "archdiocese_news latest_facebook latest_instagram";
       gap: 2vw;
     }
 
