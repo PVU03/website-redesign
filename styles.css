@@ -3617,19 +3617,6 @@ h1 {
       background: none;
     }
 
-    .snap_scroll_container {
-      height: 100vh;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-      scroll-behavior: smooth;
-    }
-
-    .home_container>* {
-      scroll-snap-align: start;
-      min-height: 100vh;
-
-    }
-
     .banner {
       height: 100vh;
       width: 100%;
@@ -3655,10 +3642,8 @@ h1 {
 
     .latest_video {
       grid-area: latest_video;
-      height: 100vh;
       max-width: 100vw;
       padding: 4vw;
-      padding-top: calc(112px + 4vw);
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
@@ -3701,7 +3686,6 @@ h1 {
       height: 100vh;
       max-width: 100vw;
       padding: 4vw;
-      padding-top: calc(112px + 4vw);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto auto;
@@ -3727,7 +3711,6 @@ h1 {
       padding: 2vw;
       width: 100%;
       max-width: 100%;
-      height: 100%;
     }
 
     .viet_times {
@@ -3736,7 +3719,6 @@ h1 {
       padding: 2vw;
       width: 100%;
       max-width: 100%;
-      height: 100%;
     }
 
     .other_times {
@@ -3745,7 +3727,6 @@ h1 {
       padding: 2vw;
       width: 100%;
       max-width: 100%;
-      height: 100%;
     }
 
     .announcements {
@@ -3753,7 +3734,6 @@ h1 {
       height: 100vh;
       max-width: 100vw;
       padding: 4vw;
-      padding-top: calc(124.5px + 4vw);
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
